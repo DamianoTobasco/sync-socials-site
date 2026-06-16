@@ -90,16 +90,24 @@ faqItems.forEach(item => item.addEventListener('toggle', () => {
 
 // ---- Theme toggle (persisted) ----
 const root = document.documentElement;
-const themeBtn = document.getElementById('themeToggle');
+const themeButtons = document.querySelectorAll('[data-theme-toggle]');
 const stored = localStorage.getItem('ss-theme');
 if (stored) root.setAttribute('data-theme', stored);
-const syncIcon = () => themeBtn.textContent = root.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
+const syncIcon = () => {
+  const dark = root.getAttribute('data-theme') === 'dark';
+  themeButtons.forEach((button) => {
+    button.textContent = dark ? '☀️' : '🌙';
+    button.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+  });
+};
 syncIcon();
-themeBtn.addEventListener('click', () => {
-  const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  root.setAttribute('data-theme', next);
-  localStorage.setItem('ss-theme', next);
-  syncIcon();
+themeButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('ss-theme', next);
+    syncIcon();
+  });
 });
 
 // ---- Reveal on scroll ----

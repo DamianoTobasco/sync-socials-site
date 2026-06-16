@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sync Socials — Schedule once, publish everywhere.</title>
-  <meta name="description" content="Plan, schedule, and publish content across Instagram, Facebook, YouTube and X from one simple dashboard. Honestly priced, with real human support from the founder." />
+  <meta name="description" content="Plan, schedule, and publish content across Instagram, Facebook, and YouTube from one simple dashboard. TikTok and X are coming soon." />
 
   <!-- Open Graph / social -->
   <meta property="og:type" content="website" />
@@ -41,10 +41,12 @@
       </nav>
 
       <div class="nav-actions">
+        <button class="theme-toggle nav-theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
         <a class="btn btn-ghost" href="https://app.sync-socials.com/login">Log in</a>
         <a class="btn btn-primary" href="https://app.sync-socials.com/login">Try it free</a>
       </div>
 
+      <button class="theme-toggle compact-theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -66,7 +68,7 @@
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="container hero-inner">
         <a class="eyebrow" href="#integrations">
-          <span class="dot"></span> Now posting to Instagram, Facebook, YouTube &amp; X
+          <span class="dot"></span> Now posting to Instagram, Facebook &amp; YouTube
         </a>
         <h1 class="hero-title">Schedule once,<br /><span class="grad">publish everywhere.</span></h1>
         <p class="hero-sub">
@@ -98,12 +100,12 @@
           <span>Instagram</span><span class="sep">•</span>
           <span>Facebook</span><span class="sep">•</span>
           <span>YouTube</span><span class="sep">•</span>
-          <span>X / Twitter</span><span class="sep">•</span>
+          <span>X / Twitter <em>soon</em></span><span class="sep">•</span>
           <span>TikTok <em>soon</em></span><span class="sep">•</span>
           <span>Instagram</span><span class="sep">•</span>
           <span>Facebook</span><span class="sep">•</span>
           <span>YouTube</span><span class="sep">•</span>
-          <span>X / Twitter</span><span class="sep">•</span>
+          <span>X / Twitter <em>soon</em></span><span class="sep">•</span>
           <span>TikTok <em>soon</em></span><span class="sep">•</span>
         </div>
       </div>
@@ -132,92 +134,130 @@
       <div class="container">
         <div class="section-head">
           <p class="kicker">Features</p>
-          <h2>Schedule posts effortlessly.</h2>
-          <p class="lead">Plan your strategy ahead, tailor each post per platform, and let
-            the queue do the publishing. Spend your time creating — not posting.</p>
+          <h2>Schedule posts effortlessly, then get back to creating.</h2>
+          <p class="lead">Batch your week in one focused session, tune each post per platform, and let
+            Sync Socials keep the calendar moving for you.</p>
+        </div>
+
+        <div class="feature-showcase">
+          <article class="workflow-panel">
+            <span class="feature-label">Weekly planner</span>
+            <h3>One calm workflow from idea to scheduled post.</h3>
+            <p>Write once, choose the channels, make platform-specific tweaks, and publish days ahead without babysitting every account.</p>
+
+            <div class="workflow-steps" aria-label="Scheduling workflow">
+              <div class="workflow-step">
+                <span class="step-number">01</span>
+                <div>
+                  <strong>Batch your ideas</strong>
+                  <span>Draft a full week of posts while the content is fresh.</span>
+                </div>
+              </div>
+              <div class="workflow-step">
+                <span class="step-number">02</span>
+                <div>
+                  <strong>Polish each platform</strong>
+                  <span>Adjust captions, media, and timing for Instagram, Facebook, and YouTube.</span>
+                </div>
+              </div>
+              <div class="workflow-step">
+                <span class="step-number">03</span>
+                <div>
+                  <strong>Let the queue publish</strong>
+                  <span>Sync Socials posts on schedule so your feeds stay active.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="workflow-metrics">
+              <div><strong>3</strong><span>live platforms</span></div>
+              <div><strong>30s</strong><span>fast posting flow</span></div>
+              <div><strong>24/7</strong><span>scheduled queue</span></div>
+            </div>
+          </article>
+
+          <aside class="schedule-board" aria-label="Example Sync Socials schedule queue">
+            <div class="board-top">
+              <div>
+                <span class="board-eyebrow">This week</span>
+                <h3>Content queue</h3>
+              </div>
+              <span class="board-date">Jun 16-22</span>
+            </div>
+
+            <div class="queue-list">
+              <div class="queue-item">
+                <div class="queue-time"><span>Mon</span><strong>9:00 AM</strong></div>
+                <div class="queue-content">
+                  <strong>Launch teaser</strong>
+                  <span>Caption tuned for every channel</span>
+                  <div class="chip-row">
+                    <span class="platform-chip ig">Instagram</span>
+                    <span class="platform-chip fb">Facebook</span>
+                  </div>
+                </div>
+                <span class="queue-status ready">Ready</span>
+              </div>
+
+              <div class="queue-item active">
+                <div class="queue-time"><span>Wed</span><strong>2:30 PM</strong></div>
+                <div class="queue-content">
+                  <strong>Behind-the-scenes short</strong>
+                  <span>Video queued with platform-safe copy</span>
+                  <div class="chip-row">
+                    <span class="platform-chip yt">YouTube</span>
+                    <span class="platform-chip ig">Instagram</span>
+                  </div>
+                </div>
+                <span class="queue-status live">Auto</span>
+              </div>
+
+              <div class="queue-item">
+                <div class="queue-time"><span>Fri</span><strong>5:15 PM</strong></div>
+                <div class="queue-content">
+                  <strong>Weekend promo</strong>
+                  <span>Scheduled once, publishing everywhere</span>
+                  <div class="chip-row">
+                    <span class="platform-chip ig">Instagram</span>
+                    <span class="platform-chip fb">Facebook</span>
+                    <span class="platform-chip yt">YouTube</span>
+                  </div>
+                </div>
+                <span class="queue-status queued">Queued</span>
+              </div>
+            </div>
+
+            <div class="board-footer">
+              <div><strong>12</strong><span>posts planned</span></div>
+              <div><strong>8</strong><span>already published</span></div>
+              <div><strong>0</strong><span>missed times</span></div>
+            </div>
+          </aside>
         </div>
 
         <div class="feature-grid">
-          <!-- Plan a whole week (tall, calendar) -->
-          <article class="feature-card fa-plan">
-            <div class="fc-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9h18"/><path d="M8 2.5v4"/><path d="M16 2.5v4"/></svg>
-            </div>
-            <h3>Plan a whole week in one sitting</h3>
-            <p>Draft, schedule, and queue posts across every platform from a single calendar.
-              Set it once and Sync Socials publishes on time — automatically.</p>
-            <div class="fc-visual">
-              <div class="mini-cal">
-                <span class="mc-d">Mon</span><span class="mc-d">Tue</span><span class="mc-d">Wed</span>
-                <span class="mc-d">Thu</span><span class="mc-d">Fri</span><span class="mc-d">Sat</span><span class="mc-d">Sun</span>
-                <span class="mc-c"><i class="mc-post ig"></i></span>
-                <span class="mc-c"></span>
-                <span class="mc-c"><i class="mc-post yt"></i><i class="mc-post fb"></i></span>
-                <span class="mc-c"><i class="mc-post x"></i></span>
-                <span class="mc-c"></span>
-                <span class="mc-c"><i class="mc-post ig"></i></span>
-                <span class="mc-c"></span>
-              </div>
-            </div>
+          <article class="feature-card">
+            <span class="feature-icon">🗓️</span>
+            <h3>Calendar-first planning</h3>
+            <p>See what is going out and when, so gaps in your content week are obvious before they cost you reach.</p>
           </article>
 
-          <!-- Customize per platform -->
-          <article class="feature-card fa-customize">
-            <div class="fc-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10"/><path d="M18 6h2"/><path d="M4 12h2"/><path d="M10 12h10"/><path d="M4 18h7"/><path d="M15 18h5"/><circle cx="16" cy="6" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="13" cy="18" r="2"/></svg>
-            </div>
-            <h3>Customize per platform</h3>
-            <p>One idea, tuned for each network — captions, crops and timing that fit where it lands.</p>
-            <div class="fc-visual">
-              <div class="pf-pills">
-                <span class="pf-pill"><i class="pf-dot ig"></i>Instagram</span>
-                <span class="pf-pill"><i class="pf-dot fb"></i>Facebook</span>
-                <span class="pf-pill"><i class="pf-dot yt"></i>YouTube</span>
-                <span class="pf-pill"><i class="pf-dot x"></i>X</span>
-              </div>
-            </div>
+          <article class="feature-card">
+            <span class="feature-icon">✍️</span>
+            <h3>Platform-specific copy</h3>
+            <p>Start with one idea, then make each caption feel native to the network it is landing on.</p>
           </article>
 
-          <!-- Auto-queue -->
-          <article class="feature-card fa-autoqueue">
-            <div class="fc-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg>
-            </div>
-            <h3>Auto-queue</h3>
-            <p>Drop posts into a recurring queue and keep your feeds alive without lifting a finger.</p>
+          <article class="feature-card">
+            <span class="feature-icon">⚡</span>
+            <h3>Fast publish flow</h3>
+            <p>No maze of settings. Pick accounts, choose the time, and schedule the post while momentum is high.</p>
           </article>
 
-          <!-- Post in 30 seconds -->
-          <article class="feature-card fa-speed">
-            <div class="fc-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5L19.5 10H13z"/></svg>
-            </div>
-            <h3>Post in 30 seconds</h3>
-            <p>No clutter, no learning curve. Write, pick your platforms, schedule — done.</p>
-            <div class="fc-visual">
-              <div class="speed-meter"><span class="speed-fill"></span></div>
-              <div class="speed-row"><span>Write &amp; publish</span><strong>~30s</strong></div>
-            </div>
-          </article>
-
-          <!-- Real human support (Damiano) -->
-          <article class="feature-card fa-support">
-            <div class="fc-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20.5l1.5-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>
-            </div>
-            <h3>Real human support — from the founder</h3>
-            <p>No ticket queues, no bots. When you need help, you hear back from Damiano,
-              usually the same day. Honest pricing and honest support.</p>
-            <div class="fc-visual support-chat">
-              <div class="sc-thread">
-                <div class="bubble them">Can I schedule a Reel and a Short at the same time?</div>
-                <div class="sc-reply">
-                  <img class="sc-avatar" src="assets/Damiano.jpg" alt="Damiano Tobasco" width="34" height="34" />
-                  <div class="bubble me">Yep — drafted both for you, live in 2 min 👍</div>
-                </div>
-              </div>
-              <div class="sc-by"><img class="sc-by-av" src="assets/Damiano.jpg" alt="" width="24" height="24" /> <strong>Damiano</strong> · replies personally</div>
-            </div>
+          <article class="feature-card">
+            <span class="feature-icon">💬</span>
+            <h3>Founder support</h3>
+            <p>When you need help, you hear from Damiano directly. Real answers, usually the same day.</p>
           </article>
         </div>
       </div>
@@ -235,7 +275,7 @@
           <div class="platform"><span class="pf-ic ig">📸</span><strong>Instagram</strong><span class="pf-status live">Live</span></div>
           <div class="platform"><span class="pf-ic fb">👍</span><strong>Facebook</strong><span class="pf-status live">Live</span></div>
           <div class="platform"><span class="pf-ic yt">▶️</span><strong>YouTube</strong><span class="pf-status live">Live</span></div>
-          <div class="platform"><span class="pf-ic x">𝕏</span><strong>X / Twitter</strong><span class="pf-status live">Live</span></div>
+          <div class="platform"><span class="pf-ic x">𝕏</span><strong>X / Twitter</strong><span class="pf-status soon">Soon</span></div>
           <div class="platform"><span class="pf-ic tt">🎵</span><strong>TikTok</strong><span class="pf-status soon">Soon</span></div>
           <div class="platform more"><span class="pf-ic">＋</span><strong>More to come</strong><span class="pf-status">In progress</span></div>
         </div>
@@ -606,7 +646,7 @@
           <ul class="pc-feats">
             <li>10 accounts per platform</li>
             <li>Unlimited scheduled posts</li>
-            <li>Post to Instagram, Facebook, YouTube &amp; X</li>
+            <li>Post to Instagram, Facebook &amp; YouTube</li>
             <li>Custom dashboards &amp; analytics</li>
             <li>Auto-queue &amp; per-platform customization</li>
             <li>Real human support from the founder</li>
@@ -632,7 +672,7 @@
           </details>
           <details class="faq-item">
             <summary>What platforms are supported?<span class="chev"></span></summary>
-            <div class="faq-a"><p>Instagram, Facebook, YouTube and X / Twitter are live today. TikTok is coming
+            <div class="faq-a"><p>Instagram, Facebook, and YouTube are live today. TikTok and X / Twitter are coming
               soon, with more networks in progress.</p></div>
           </details>
           <details class="faq-item">
@@ -701,7 +741,7 @@
     <div class="container footer-bottom">
       <span>© <span id="year">2026</span> Sync Socials. All rights reserved.</span>
       <div class="theme-toggle-wrap">
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
       </div>
     </div>
   </footer>
