@@ -21,37 +21,33 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 }));
 
 // ---- Referral capture ----
-// Reads ?ref=CODE (also accepts ?via / ?ref_code) from the URL, remembers it for
-// 90 days, and threads it into every CTA so the backend can attribute commission:
-//   • Stripe checkout links  -> ?client_reference_id=CODE  (lands in checkout.session.completed)
-//   • app.sync-socials.com   -> ?ref=CODE                  (for in-app signup attribution)
+// Reads ?ref=CODE (also accepts ?via / ?ref_code), remembers it, and threads it
+// into every CTA so the app can attribute commission whenever the visitor joins.
 const REF_KEY = 'ss_ref';
-const REF_TS_KEY = 'ss_ref_ts';
-const REF_TTL = 90 * 24 * 60 * 60 * 1000; // 90 days
 (function captureRef() {
   const p = new URLSearchParams(location.search);
   const incoming = (p.get('ref') || p.get('via') || p.get('ref_code') || '').trim();
   if (incoming) {
     localStorage.setItem(REF_KEY, incoming);
-    localStorage.setItem(REF_TS_KEY, String(Date.now()));
   }
 })();
 function getRef() {
   const code = localStorage.getItem(REF_KEY);
-  const ts = Number(localStorage.getItem(REF_TS_KEY) || 0);
-  if (!code || !ts || Date.now() - ts > REF_TTL) return null;
-  return code;
+  return code || null;
 }
 function withParam(url, key, value) {
   if (!value) return url;
-  return url + (url.indexOf('?') > -1 ? '&' : '?') + key + '=' + encodeURIComponent(value);
+  try {
+    const parsed = new URL(url, window.location.href);
+    parsed.searchParams.set(key, value);
+    return parsed.toString();
+  } catch (err) {
+    return url + (url.indexOf('?') > -1 ? '&' : '?') + key + '=' + encodeURIComponent(value);
+  }
 }
-// Append the referral code using the right param for the destination:
-//   Stripe checkout -> client_reference_id ; app links -> ref
 function withRef(url) {
   const ref = getRef();
   if (!ref) return url;
-  if (/buy\.stripe\.com/.test(url)) return withParam(url, 'client_reference_id', ref);
   if (/app\.sync-socials\.com/.test(url)) return withParam(url, 'ref', ref);
   return url;
 }
@@ -60,9 +56,7 @@ function applyReferralToLinks() {
   if (!ref) return;
   document.querySelectorAll('a[href]').forEach((a) => {
     const href = a.getAttribute('href');
-    if (/buy\.stripe\.com/.test(href) && href.indexOf('client_reference_id=') === -1) {
-      a.setAttribute('href', withParam(href, 'client_reference_id', ref));
-    } else if (/app\.sync-socials\.com/.test(href) && href.indexOf('ref=') === -1) {
+    if (/app\.sync-socials\.com/.test(href) && href.indexOf('ref=') === -1) {
       a.setAttribute('href', withParam(href, 'ref', ref));
     }
   });
