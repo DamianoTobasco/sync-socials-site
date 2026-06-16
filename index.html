@@ -20,7 +20,7 @@
   <link rel="apple-touch-icon" href="assets/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -35,6 +35,7 @@
       <nav class="nav-links" aria-label="Primary">
         <a href="#features">Features</a>
         <a href="#integrations">Integrations</a>
+        <a href="#mcp">For agents</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
       </nav>
@@ -51,6 +52,7 @@
     <div class="mobile-menu" hidden>
       <a href="#features">Features</a>
       <a href="#integrations">Integrations</a>
+      <a href="#mcp">For agents</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
       <a class="btn btn-ghost" href="https://app.sync-socials.com/login">Log in</a>
@@ -222,6 +224,316 @@
           <div class="platform"><span class="pf-ic tt">🎵</span><strong>TikTok</strong><span class="pf-status soon">Soon</span></div>
           <div class="platform more"><span class="pf-ic">＋</span><strong>More to come</strong><span class="pf-status">In progress</span></div>
         </div>
+      </div>
+    </section>
+
+    <!-- ===== MCP / Agents ===== -->
+    <section class="ss-mcp" id="mcp" aria-labelledby="ss-mcp-headline">
+      <div class="ss-mcp__inner">
+
+        <!-- HERO -->
+        <div class="ss-hero">
+          <div>
+            <span class="ss-eyebrow">
+              <span class="ss-eyebrow__dot"></span>
+              Sync Socials · MCP
+            </span>
+            <h2 id="ss-mcp-headline" class="ss-headline">
+              Hand your socials<br/>
+              to your <em>AI agent.</em>
+            </h2>
+          </div>
+          <div>
+            <p class="ss-body">
+              Plug Sync Socials into any skill-enabled agent and run your content pipeline from a prompt. Upload media, draft posts, schedule campaigns, and publish to Facebook, Instagram, and YouTube — no dashboards, no drag-and-drop, just instructions.
+            </p>
+            <div class="ss-cta-row">
+              <a class="ss-btn ss-btn--primary" href="https://app.sync-socials.com/login" target="_blank" rel="noopener">
+                Connect your agent
+                <svg class="ss-btn__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a class="ss-btn ss-btn--ghost" href="https://github.com/DamianoTobasco/sync-socials-agent" target="_blank" rel="noopener">View docs</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIAGRAM -->
+        <div class="ss-diagram" aria-label="MCP connection diagram">
+          <svg class="ss-lines" viewBox="0 0 1000 440" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="ss-grad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%"  stop-color="#36b173" stop-opacity="0.15"/>
+                <stop offset="50%" stop-color="#36b173" stop-opacity="0.85"/>
+                <stop offset="100%" stop-color="#36b173" stop-opacity="0.15"/>
+              </linearGradient>
+            </defs>
+            <path d="M 60,60  C 260,60  320,220  500,220"/>
+            <path d="M 60,150 C 260,150 320,220  500,220"/>
+            <path d="M 60,240 C 260,240 320,220  500,220"/>
+            <path d="M 60,330 C 260,330 320,220  500,220"/>
+            <path d="M 500,220 C 680,220 740,110 940,110"/>
+            <path d="M 500,220 C 680,220 740,220 940,220"/>
+            <path d="M 500,220 C 680,220 740,330 940,330"/>
+
+            <circle class="ss-pulse" r="3"><animateMotion dur="3.2s" repeatCount="indefinite" path="M 60,60 C 260,60 320,220 500,220"/></circle>
+            <circle class="ss-pulse" r="3"><animateMotion dur="3.6s" begin="0.9s" repeatCount="indefinite" path="M 60,240 C 260,240 320,220 500,220"/></circle>
+            <circle class="ss-pulse" r="3"><animateMotion dur="3.4s" begin="0.4s" repeatCount="indefinite" path="M 500,220 C 680,220 740,110 940,110"/></circle>
+            <circle class="ss-pulse" r="3"><animateMotion dur="3.8s" begin="1.2s" repeatCount="indefinite" path="M 500,220 C 680,220 740,330 940,330"/></circle>
+          </svg>
+
+          <div class="ss-diagram__grid">
+
+            <div class="ss-col ss-col--left">
+              <span class="ss-col__label">Your agents</span>
+
+              <div class="ss-node ss-reveal">
+                <div class="ss-node__icon" style="color:#2f9d63;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"/><path d="M5 8c1 4 3 6 7 6s6-2 7-6"/><path d="M8 14v6"/><path d="M12 14v7"/><path d="M16 14v6"/></svg>
+                </div>
+                <div class="ss-node__text">
+                  <span class="ss-node__title">OpenClaw</span>
+                  <span class="ss-node__sub">Skill-based agent</span>
+                </div>
+              </div>
+
+              <div class="ss-node ss-reveal">
+                <div class="ss-node__icon" style="color:#c77a4a;">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-2.4 12.6L7.2 10l1.8-.7 1.5 4.2L12 9.3l1.5 4.2 1.5-4.2 1.8.7-2.4 5.6-1.5.1-1.4-3.9-1.4 3.9-1.5-.1Z"/></svg>
+                </div>
+                <div class="ss-node__text">
+                  <span class="ss-node__title">Claude Code</span>
+                  <span class="ss-node__sub">Anthropic CLI agent</span>
+                </div>
+              </div>
+
+              <div class="ss-node ss-reveal">
+                <div class="ss-node__icon" style="color:#0b0b0c;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></svg>
+                </div>
+                <div class="ss-node__text">
+                  <span class="ss-node__title">Codex</span>
+                  <span class="ss-node__sub">OpenAI terminal agent</span>
+                </div>
+              </div>
+
+              <div class="ss-node ss-reveal">
+                <div class="ss-node__icon" style="color:#2f9d63;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="12" rx="3"/><path d="M9 10v4"/><path d="M15 10v4"/><path d="M12 3v3"/></svg>
+                </div>
+                <div class="ss-node__text">
+                  <span class="ss-node__title">Any MCP agent</span>
+                  <span class="ss-node__sub">Skills + MCP standard</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ss-hub">
+              <div class="ss-hub__ring">
+                <div class="ss-hub__core">
+                  <div class="ss-hub__logo">
+                    <strong>Sync</strong>
+                    Socials
+                  </div>
+                </div>
+              </div>
+              <span class="ss-hub__tag">MCP Gateway</span>
+            </div>
+
+            <div class="ss-col ss-col--right">
+              <span class="ss-col__label">Published to</span>
+
+              <div class="ss-node ss-reveal">
+                <div class="ss-node__icon" style="color:#ff0033;">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg>
+                </div>
+                <div class="ss-node__text">
+                  <span class="ss-node__title">YouTube</span>
+                  <span class="ss-node__sub">Video upload &amp; scheduling</span>
+                </div>
+              </div>
+
+              <div class="ss-node ss-reveal">
+                <div class="ss-node__icon" style="color:#e1306c;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+                </div>
+                <div class="ss-node__text">
+                  <span class="ss-node__title">Instagram</span>
+                  <span class="ss-node__sub">Reels, posts, carousels</span>
+                </div>
+              </div>
+
+              <div class="ss-node ss-reveal">
+                <div class="ss-node__icon" style="color:#1877f2;">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h2.7l.4-3H13V9.2c0-.9.3-1.5 1.5-1.5H16V5.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.2V11H7v3h2.3v8H13Z"/></svg>
+                </div>
+                <div class="ss-node__text">
+                  <span class="ss-node__title">Facebook</span>
+                  <span class="ss-node__sub">Pages &amp; scheduled posts</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- HOW IT WORKS + INSTALL -->
+        <div class="ss-how" id="ss-install">
+          <div>
+            <span class="ss-eyebrow">
+              <span class="ss-eyebrow__dot"></span>
+              How it works
+            </span>
+            <h3 class="ss-how__title">One install.<br/>Your agent gets the keys.</h3>
+            <p class="ss-how__text">
+              Sync Socials ships as a skill for MCP-compatible agents. Install it once and your agent gets a secure link to your workspace — backed by your own API key — so it can act on your accounts without you babysitting a dashboard.
+            </p>
+            <ul class="ss-how__list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Upload images and video from the prompt</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Draft, schedule, and publish across channels</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Inspect, reschedule, or cancel planned posts</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Scoped by your API key — revokable any time</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="ss-term">
+              <div class="ss-term__bar">
+                <div class="ss-term__dots"><span></span><span></span><span></span></div>
+                <span class="ss-term__label">install · sync-socials-agent</span>
+              </div>
+              <button class="ss-copy" type="button" data-copy="npx skills add DamianoTobasco/sync-socials-agent -g" aria-label="Copy install command">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span class="ss-copy__label">Copy</span>
+              </button>
+              <div class="ss-term__body">
+                <div class="ss-term__line">
+                  <span class="ss-term__prompt">$</span>
+                  <span class="ss-term__cmd">npx skills add DamianoTobasco/sync-socials-agent <span class="ss-term__flag">-g</span></span>
+                </div>
+                <span class="ss-term__comment"># Works with OpenClaw, Claude Code, Codex, and any agent that supports skills + MCP.</span>
+              </div>
+            </div>
+            <p class="ss-note">Requires a Sync Socials account and API key. Generate yours from your workspace settings.</p>
+          </div>
+        </div>
+
+        <!-- CHAT DEMO -->
+        <div class="ss-chats">
+          <div class="ss-chats__head">
+            <span class="ss-eyebrow">
+              <span class="ss-eyebrow__dot"></span>
+              Agent conversations
+            </span>
+            <h3 class="ss-chats__title">Real work. Real prompts.</h3>
+            <p class="ss-chats__sub">Here's what it looks like when your agent is actually running the show. No dashboards, no context switching — just tell it what you need.</p>
+          </div>
+
+          <div class="ss-chats__list">
+
+            <!-- Chat 1: Claude Code via MCP -->
+            <article class="ss-chat">
+              <header class="ss-chat__head">
+                <span class="ss-chat__head-icon" style="background:#f4ebe3; color:#c77a4a;">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-2.4 12.6L7.2 10l1.8-.7 1.5 4.2L12 9.3l1.5 4.2 1.5-4.2 1.8.7-2.4 5.6-1.5.1-1.4-3.9-1.4 3.9-1.5-.1Z"/></svg>
+                </span>
+                MCP · Claude Code
+              </header>
+              <div class="ss-chat__turns">
+                <div class="ss-turn ss-turn--user">
+                  <div class="ss-bubble ss-bubble--user">Post this Reel to Instagram, Facebook, and YouTube Shorts.</div>
+                  <div class="ss-avatar ss-avatar--user">YOU</div>
+                </div>
+                <div class="ss-turn ss-turn--agent">
+                  <div class="ss-avatar ss-avatar--agent" style="background:#f4ebe3; color:#c77a4a;">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-2.4 12.6L7.2 10l1.8-.7 1.5 4.2L12 9.3l1.5 4.2 1.5-4.2 1.8.7-2.4 5.6-1.5.1-1.4-3.9-1.4 3.9-1.5-.1Z"/></svg>
+                  </div>
+                  <div class="ss-bubble ss-bubble--agent">Published. Live on Instagram Reels, Facebook Page, and YouTube Shorts. All 3 posts confirmed with post IDs attached.</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Chat 2: OpenClaw -->
+            <article class="ss-chat">
+              <header class="ss-chat__head">
+                <span class="ss-chat__head-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"/><path d="M5 8c1 4 3 6 7 6s6-2 7-6"/><path d="M8 14v6"/><path d="M12 14v7"/><path d="M16 14v6"/></svg>
+                </span>
+                OpenClaw
+              </header>
+              <div class="ss-chat__turns">
+                <div class="ss-turn ss-turn--user">
+                  <div class="ss-bubble ss-bubble--user">Queue 5 posts from the /drafts folder across this week at 9am.</div>
+                  <div class="ss-avatar ss-avatar--user">YOU</div>
+                </div>
+                <div class="ss-turn ss-turn--agent">
+                  <div class="ss-avatar ss-avatar--agent">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"/><path d="M5 8c1 4 3 6 7 6s6-2 7-6"/><path d="M8 14v6"/><path d="M12 14v7"/><path d="M16 14v6"/></svg>
+                  </div>
+                  <div class="ss-bubble ss-bubble--agent">Queued. Mon–Fri at 9:00 AM EST, one post per day across Instagram, Facebook, and YouTube. I'll flag any that need approval before they go live.</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Chat 3: Any MCP agent -->
+            <article class="ss-chat">
+              <header class="ss-chat__head">
+                <span class="ss-chat__head-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="12" rx="3"/><path d="M9 10v4"/><path d="M15 10v4"/><path d="M12 3v3"/></svg>
+                </span>
+                Any MCP agent
+              </header>
+              <div class="ss-chat__turns">
+                <div class="ss-turn ss-turn--user">
+                  <div class="ss-bubble ss-bubble--user">What's scheduled for the rest of the week?</div>
+                  <div class="ss-avatar ss-avatar--user">YOU</div>
+                </div>
+                <div class="ss-turn ss-turn--agent">
+                  <div class="ss-avatar ss-avatar--agent">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="12" rx="3"/><path d="M9 10v4"/><path d="M15 10v4"/><path d="M12 3v3"/></svg>
+                  </div>
+                  <div class="ss-bubble ss-bubble--agent">3 posts queued — Thu 3pm (IG Reel), Fri 10am (YouTube video), Sat 8am (FB post). Want me to move Friday earlier, or swap in something from drafts?</div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- CAPABILITY CARDS -->
+        <div class="ss-caps">
+          <div class="ss-cap">
+            <div class="ss-cap__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 8 5-5 5 5"/><path d="M5 21h14"/></svg>
+            </div>
+            <h4 class="ss-cap__title">Media upload</h4>
+            <p class="ss-cap__desc">Drop assets straight from your agent — images, carousels, reels, long-form video.</p>
+          </div>
+
+          <div class="ss-cap">
+            <div class="ss-cap__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M4 12h10"/><path d="M4 17h16"/></svg>
+            </div>
+            <h4 class="ss-cap__title">Draft creation</h4>
+            <p class="ss-cap__desc">Spin up on-brand captions, hooks, and hashtags the agent can iterate on before publishing.</p>
+          </div>
+
+          <div class="ss-cap">
+            <div class="ss-cap__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>
+            </div>
+            <h4 class="ss-cap__title">Scheduling</h4>
+            <p class="ss-cap__desc">Queue single posts or entire campaigns. The agent respects your calendar and time zones.</p>
+          </div>
+
+          <div class="ss-cap">
+            <div class="ss-cap__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </div>
+            <h4 class="ss-cap__title">Publish &amp; manage</h4>
+            <p class="ss-cap__desc">Go live across Facebook, Instagram, and YouTube — or edit and reschedule on the fly.</p>
+          </div>
+        </div>
+
       </div>
     </section>
 

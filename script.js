@@ -59,3 +59,30 @@ const io = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
 }, { threshold: 0.12 });
 revealEls.forEach(el => io.observe(el));
+
+// ---- MCP section: copy install command ----
+document.querySelectorAll('.ss-mcp .ss-copy').forEach(function (btn) {
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    var text = btn.getAttribute('data-copy') || '';
+    var label = btn.querySelector('.ss-copy__label');
+    var done = function () {
+      btn.classList.add('is-copied');
+      if (label) label.textContent = 'Copied';
+      setTimeout(function () {
+        btn.classList.remove('is-copied');
+        if (label) label.textContent = 'Copy';
+      }, 1600);
+    };
+    var fallback = function () {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.style.position = 'fixed'; ta.style.left = '-9999px';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (err) {}
+      document.body.removeChild(ta); done();
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(fallback);
+    } else { fallback(); }
+  });
+});
