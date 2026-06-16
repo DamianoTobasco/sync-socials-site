@@ -85,30 +85,7 @@
               <span class="wb-dot"></span><span class="wb-dot"></span><span class="wb-dot"></span>
               <span class="wb-url">app.sync-socials.com</span>
             </div>
-            <div class="window-body">
-              <aside class="ws-side">
-                <div class="ws-logo"><img class="brand-badge sm" src="assets/logo.png" alt="" width="18" height="18" /> Sync Socials</div>
-                <div class="ws-nav active">📅 Schedule</div>
-                <div class="ws-nav">📝 Drafts</div>
-                <div class="ws-nav">📊 Analytics</div>
-                <div class="ws-nav">🔗 Connections</div>
-              </aside>
-              <div class="ws-main">
-                <div class="ws-row ws-head"><strong>This week</strong><span class="ws-chip">4 scheduled</span></div>
-                <div class="ws-card">
-                  <div class="ws-card-top"><span class="ws-av">IG</span> Instagram · Mon 9:00 AM <span class="ws-state ok">Scheduled</span></div>
-                  <p>New product drop is live ✨ Tap to shop the link in bio…</p>
-                </div>
-                <div class="ws-card">
-                  <div class="ws-card-top"><span class="ws-av yt">YT</span> YouTube · Tue 2:00 PM <span class="ws-state ok">Scheduled</span></div>
-                  <p>Behind the scenes: how we built this in a weekend…</p>
-                </div>
-                <div class="ws-card">
-                  <div class="ws-card-top"><span class="ws-av x">X</span> X · Wed 11:30 AM <span class="ws-state queue">Queued</span></div>
-                  <p>Thread: 7 things I wish I knew before going full-time…</p>
-                </div>
-              </div>
-            </div>
+            <img class="window-shot" src="assets/app-homepage.png" alt="Sync Socials dashboard — compose a post and publish it to Instagram, Facebook, and YouTube at once" width="3836" height="2152" />
           </div>
         </div>
       </div>
@@ -141,7 +118,7 @@
           instead of <em>creating</em> it.”
         </blockquote>
         <div class="founder-by">
-          <span class="founder-avatar">D</span>
+          <img class="founder-avatar" src="assets/Damiano.jpg" alt="Damiano Tobasco" width="56" height="56" />
           <div>
             <strong>Damiano Tobasco</strong>
             <span>Founder, Sync Socials</span>
@@ -161,47 +138,85 @@
         </div>
 
         <div class="feature-grid">
-          <article class="feature-card span-2">
-            <div class="fc-icon">🗓️</div>
+          <!-- Plan a whole week (tall, calendar) -->
+          <article class="feature-card fa-plan">
+            <div class="fc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9h18"/><path d="M8 2.5v4"/><path d="M16 2.5v4"/></svg>
+            </div>
             <h3>Plan a whole week in one sitting</h3>
             <p>Draft, schedule, and queue posts across every platform from a single calendar.
-              Set it once and Sync Socials publishes on time, automatically.</p>
+              Set it once and Sync Socials publishes on time — automatically.</p>
             <div class="fc-visual">
               <div class="mini-cal">
                 <span class="mc-d">Mon</span><span class="mc-d">Tue</span><span class="mc-d">Wed</span>
                 <span class="mc-d">Thu</span><span class="mc-d">Fri</span><span class="mc-d">Sat</span><span class="mc-d">Sun</span>
-                <span class="mc-c on"></span><span class="mc-c"></span><span class="mc-c on"></span>
-                <span class="mc-c on"></span><span class="mc-c"></span><span class="mc-c on"></span><span class="mc-c"></span>
+                <span class="mc-c"><i class="mc-post ig"></i></span>
+                <span class="mc-c"></span>
+                <span class="mc-c"><i class="mc-post yt"></i><i class="mc-post fb"></i></span>
+                <span class="mc-c"><i class="mc-post x"></i></span>
+                <span class="mc-c"></span>
+                <span class="mc-c"><i class="mc-post ig"></i></span>
+                <span class="mc-c"></span>
               </div>
             </div>
           </article>
 
-          <article class="feature-card">
-            <div class="fc-icon">🎯</div>
+          <!-- Customize per platform -->
+          <article class="feature-card fa-customize">
+            <div class="fc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10"/><path d="M18 6h2"/><path d="M4 12h2"/><path d="M10 12h10"/><path d="M4 18h7"/><path d="M15 18h5"/><circle cx="16" cy="6" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="13" cy="18" r="2"/></svg>
+            </div>
             <h3>Customize per platform</h3>
             <p>One idea, tuned for each network — captions, crops and timing that fit where it lands.</p>
+            <div class="fc-visual">
+              <div class="pf-pills">
+                <span class="pf-pill"><i class="pf-dot ig"></i>Instagram</span>
+                <span class="pf-pill"><i class="pf-dot fb"></i>Facebook</span>
+                <span class="pf-pill"><i class="pf-dot yt"></i>YouTube</span>
+                <span class="pf-pill"><i class="pf-dot x"></i>X</span>
+              </div>
+            </div>
           </article>
 
-          <article class="feature-card">
-            <div class="fc-icon">♻️</div>
+          <!-- Auto-queue -->
+          <article class="feature-card fa-autoqueue">
+            <div class="fc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg>
+            </div>
             <h3>Auto-queue</h3>
             <p>Drop posts into a recurring queue and keep your feeds alive without lifting a finger.</p>
           </article>
 
-          <article class="feature-card">
-            <div class="fc-icon">⚡</div>
+          <!-- Post in 30 seconds -->
+          <article class="feature-card fa-speed">
+            <div class="fc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5L19.5 10H13z"/></svg>
+            </div>
             <h3>Post in 30 seconds</h3>
             <p>No clutter, no learning curve. Write, pick your platforms, schedule — done.</p>
+            <div class="fc-visual">
+              <div class="speed-meter"><span class="speed-fill"></span></div>
+              <div class="speed-row"><span>Write &amp; publish</span><strong>~30s</strong></div>
+            </div>
           </article>
 
-          <article class="feature-card span-2">
-            <div class="fc-icon">💬</div>
+          <!-- Real human support (Damiano) -->
+          <article class="feature-card fa-support">
+            <div class="fc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20.5l1.5-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>
+            </div>
             <h3>Real human support — from the founder</h3>
             <p>No ticket queues, no bots. When you need help, you hear back from Damiano,
               usually the same day. Honest pricing and honest support.</p>
-            <div class="fc-visual chat">
-              <div class="bubble them">Hey, can I schedule a Reel and a Short at the same time?</div>
-              <div class="bubble me">Yep — drafted both for you, live in 2 min 👍</div>
+            <div class="fc-visual support-chat">
+              <div class="sc-thread">
+                <div class="bubble them">Can I schedule a Reel and a Short at the same time?</div>
+                <div class="sc-reply">
+                  <img class="sc-avatar" src="assets/Damiano.jpg" alt="Damiano Tobasco" width="34" height="34" />
+                  <div class="bubble me">Yep — drafted both for you, live in 2 min 👍</div>
+                </div>
+              </div>
+              <div class="sc-by"><img class="sc-by-av" src="assets/Damiano.jpg" alt="" width="24" height="24" /> <strong>Damiano</strong> · replies personally</div>
             </div>
           </article>
         </div>
