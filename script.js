@@ -46,6 +46,15 @@ function withParam(url, key, value) {
   if (!value) return url;
   return url + (url.indexOf('?') > -1 ? '&' : '?') + key + '=' + encodeURIComponent(value);
 }
+// Append the referral code using the right param for the destination:
+//   Stripe checkout -> client_reference_id ; app links -> ref
+function withRef(url) {
+  const ref = getRef();
+  if (!ref) return url;
+  if (/buy\.stripe\.com/.test(url)) return withParam(url, 'client_reference_id', ref);
+  if (/app\.sync-socials\.com/.test(url)) return withParam(url, 'ref', ref);
+  return url;
+}
 function applyReferralToLinks() {
   const ref = getRef();
   if (!ref) return;
@@ -68,7 +77,7 @@ function setPlan(plan) { // monthly | yearly
   amount.textContent = amount.dataset[plan];
   sub.textContent = sub.dataset[plan];
   if (pricingCta && pricingCta.dataset[plan]) {
-    pricingCta.setAttribute('href', withParam(pricingCta.dataset[plan], 'client_reference_id', getRef()));
+    pricingCta.setAttribute('href', withRef(pricingCta.dataset[plan]));
   }
 }
 opts.forEach(opt => opt.addEventListener('click', () => {
