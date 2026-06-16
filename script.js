@@ -20,17 +20,64 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   menu.hidden = true;
 }));
 
-// ---- Pricing billing toggle ----
+// ---- Referral capture ----
+// Reads ?ref=CODE (also accepts ?via / ?ref_code) from the URL, remembers it for
+// 90 days, and threads it into every CTA so the backend can attribute commission:
+//   • Stripe checkout links  -> ?client_reference_id=CODE  (lands in checkout.session.completed)
+//   • app.sync-socials.com   -> ?ref=CODE                  (for in-app signup attribution)
+const REF_KEY = 'ss_ref';
+const REF_TS_KEY = 'ss_ref_ts';
+const REF_TTL = 90 * 24 * 60 * 60 * 1000; // 90 days
+(function captureRef() {
+  const p = new URLSearchParams(location.search);
+  const incoming = (p.get('ref') || p.get('via') || p.get('ref_code') || '').trim();
+  if (incoming) {
+    localStorage.setItem(REF_KEY, incoming);
+    localStorage.setItem(REF_TS_KEY, String(Date.now()));
+  }
+})();
+function getRef() {
+  const code = localStorage.getItem(REF_KEY);
+  const ts = Number(localStorage.getItem(REF_TS_KEY) || 0);
+  if (!code || !ts || Date.now() - ts > REF_TTL) return null;
+  return code;
+}
+function withParam(url, key, value) {
+  if (!value) return url;
+  return url + (url.indexOf('?') > -1 ? '&' : '?') + key + '=' + encodeURIComponent(value);
+}
+function applyReferralToLinks() {
+  const ref = getRef();
+  if (!ref) return;
+  document.querySelectorAll('a[href]').forEach((a) => {
+    const href = a.getAttribute('href');
+    if (/buy\.stripe\.com/.test(href) && href.indexOf('client_reference_id=') === -1) {
+      a.setAttribute('href', withParam(href, 'client_reference_id', ref));
+    } else if (/app\.sync-socials\.com/.test(href) && href.indexOf('ref=') === -1) {
+      a.setAttribute('href', withParam(href, 'ref', ref));
+    }
+  });
+}
+
+// ---- Pricing billing toggle (also swaps the Stripe checkout link) ----
 const opts = document.querySelectorAll('.bt-opt');
 const amount = document.querySelector('.pc-amount');
 const sub = document.querySelector('.pc-sub');
+const pricingCta = document.getElementById('pricingCta');
+function setPlan(plan) { // monthly | yearly
+  amount.textContent = amount.dataset[plan];
+  sub.textContent = sub.dataset[plan];
+  if (pricingCta && pricingCta.dataset[plan]) {
+    pricingCta.setAttribute('href', withParam(pricingCta.dataset[plan], 'client_reference_id', getRef()));
+  }
+}
 opts.forEach(opt => opt.addEventListener('click', () => {
   opts.forEach(o => o.classList.remove('active'));
   opt.classList.add('active');
-  const plan = opt.dataset.plan; // monthly | yearly
-  amount.textContent = amount.dataset[plan];
-  sub.textContent = sub.dataset[plan];
+  setPlan(opt.dataset.plan);
 }));
+setPlan('monthly');
+applyReferralToLinks();
 
 // ---- FAQ: keep one open at a time ----
 const faqItems = document.querySelectorAll('.faq-item');
