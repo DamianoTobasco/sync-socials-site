@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sync Socials — Schedule once, publish everywhere.</title>
-  <meta name="description" content="Plan, schedule, and publish content across TikTok, Instagram, Facebook, and YouTube from one simple dashboard. X is coming soon." />
+  <meta name="description" content="Plan, schedule, and publish content across Instagram, Facebook, and YouTube from one simple dashboard. TikTok and X are coming soon." />
 
   <!-- Open Graph / social -->
   <meta property="og:type" content="website" />
@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
   <!-- ===== Header ===== -->
@@ -105,12 +105,12 @@
           <span>Instagram</span><span class="sep">•</span>
           <span>Facebook</span><span class="sep">•</span>
           <span>YouTube</span><span class="sep">•</span>
-          <span>TikTok</span><span class="sep">•</span>
+          <span>TikTok <em>soon</em></span><span class="sep">•</span>
           <span>X / Twitter <em>soon</em></span><span class="sep">•</span>
           <span>Instagram</span><span class="sep">•</span>
           <span>Facebook</span><span class="sep">•</span>
           <span>YouTube</span><span class="sep">•</span>
-          <span>TikTok</span><span class="sep">•</span>
+          <span>TikTok <em>soon</em></span><span class="sep">•</span>
           <span>X / Twitter <em>soon</em></span><span class="sep">•</span>
         </div>
       </div>
@@ -140,17 +140,17 @@
         <div class="section-head">
           <p class="kicker">Features</p>
           <h2>Schedule posts effortlessly, then get back to creating.</h2>
-          <p class="lead">Batch your week in one focused session, tune each post per platform, and let
-            Sync Socials keep the calendar moving for you.</p>
+          <p class="lead">Batch your week once, tune each post per platform, and let the queue
+            do the rest.</p>
         </div>
 
         <div class="feature-showcase">
           <article class="workflow-panel">
             <span class="feature-label">Weekly planner</span>
             <h3>One calm workflow from idea to scheduled post.</h3>
-            <p>Write once, choose the channels, make platform-specific tweaks, and publish days ahead without babysitting every account.</p>
+            <p>Write once, pick your channels, tweak per platform, and publish days ahead.</p>
 
-            <div class="workflow-steps" aria-label="Scheduling workflow">
+            <div class="workflow-steps" aria-label="Scheduling workflow" data-stagger>
               <div class="workflow-step">
                 <span class="step-number">01</span>
                 <div>
@@ -162,7 +162,7 @@
                 <span class="step-number">02</span>
                 <div>
                   <strong>Polish each platform</strong>
-                  <span>Adjust captions, media, and timing for Instagram, Facebook, and YouTube.</span>
+                  <span>Adjust captions, media, and timing per network.</span>
                 </div>
               </div>
               <div class="workflow-step">
@@ -274,11 +274,9 @@
         <div class="studio-shell">
         <div class="section-head">
           <p class="kicker">Content Studio <span class="beta-tag">Beta</span></p>
-          <h2>Drop your link. Get a month of scroll-stopping content.</h2>
-          <p class="beta-note">In active beta — we're shipping improvements every week.</p>
-          <p class="lead">Our AI studio turns your website into platform-native posts — text, photo,
-            and short-form video — modeled on proven viral formats, then sends them straight to your
-            queue. Posting is only half the job; this is the other half.</p>
+          <h2>Drop your link. Get a month of content.</h2>
+          <p class="lead">The studio turns your website into ready-to-post text, photo, and video —
+            built on proven viral formats.</p>
         </div>
 
         <div class="studio-prompt" aria-hidden="true">
@@ -297,10 +295,10 @@
           <article class="workflow-panel">
             <span class="feature-label">From idea to ready-to-post</span>
             <h3>You bring the business. The studio brings the content.</h3>
-            <p>No blank page, no agency retainer. Paste a link or a sentence about what you do, pick
-              your platforms and format, and get a batch of ready-to-post concepts engineered to perform.</p>
+            <p>Paste a link or a one-line brief, pick your platforms, and get back concepts
+              engineered to perform.</p>
 
-            <div class="workflow-steps" aria-label="Content generation workflow">
+            <div class="workflow-steps" aria-label="Content generation workflow" data-stagger>
               <div class="workflow-step">
                 <span class="step-number">01</span>
                 <div>
@@ -312,14 +310,14 @@
                 <span class="step-number">02</span>
                 <div>
                   <strong>AI builds the content</strong>
-                  <span>Hooks, captions, portrait images, and short-form video — shaped by proven viral formats and tuned to your goal.</span>
+                  <span>Hooks, captions, images, and short-form video — tuned to your goal.</span>
                 </div>
               </div>
               <div class="workflow-step">
                 <span class="step-number">03</span>
                 <div>
                   <strong>Distribute everywhere</strong>
-                  <span>Send any concept to your scheduler, or let your AI agent run the whole pipeline.</span>
+                  <span>One click to your queue — or let your AI agent run it all.</span>
                 </div>
               </div>
             </div>
@@ -445,7 +443,7 @@
           </div>
           <div class="platform">
             <span class="pf-ic tt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>
-            <strong>TikTok</strong><span class="pf-status live">Live</span>
+            <strong>TikTok</strong><span class="pf-status soon">Soon</span>
           </div>
           <div class="platform">
             <span class="pf-ic x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231ZM17.083 19.77h1.833L7.084 4.126H5.117Z"/></svg></span>
@@ -850,8 +848,8 @@
           </details>
           <details class="faq-item">
             <summary>What platforms are supported?<span class="chev"></span></summary>
-            <div class="faq-a"><p>TikTok, Instagram, Facebook, and YouTube are live today. X / Twitter is coming
-              soon, with more networks in progress.</p></div>
+            <div class="faq-a"><p>Instagram, Facebook, and YouTube are live today. TikTok and X / Twitter are
+              coming soon, with more networks in progress.</p></div>
           </details>
           <details class="faq-item">
             <summary>How many posts can I schedule each month?<span class="chev"></span></summary>
@@ -926,6 +924,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>

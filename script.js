@@ -20,6 +20,24 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   menu.hidden = true;
 }));
 
+// ---- Marquee: fill the track so the -50% loop never shows a seam ----
+// The track holds two identical halves; doubling keeps them identical, and the
+// animation duration scales with width so the speed stays constant.
+const marqueeTrack = document.querySelector('.marquee-track');
+if (marqueeTrack) {
+  const fillMarquee = () => {
+    const target = Math.max(window.innerWidth, (window.screen && screen.width) || 0) + 120;
+    let guard = 0;
+    while (marqueeTrack.scrollWidth / 2 < target && guard < 5) {
+      marqueeTrack.innerHTML += marqueeTrack.innerHTML;
+      guard++;
+    }
+    marqueeTrack.style.animationDuration = Math.round(marqueeTrack.scrollWidth / 2 / 40) + 's';
+  };
+  fillMarquee();
+  window.addEventListener('resize', fillMarquee);
+}
+
 // ---- Referral capture ----
 // Reads ?ref=CODE (also accepts ?via / ?ref_code), remembers it, and threads it
 // into every CTA so the app can attribute commission whenever the visitor joins.
