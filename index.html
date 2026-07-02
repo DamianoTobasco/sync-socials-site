@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
   <!-- ===== Header ===== -->
@@ -190,7 +190,7 @@
               <span class="board-date">Jun 16-22</span>
             </div>
 
-            <div class="queue-list">
+            <div class="queue-list" data-stagger>
               <div class="queue-item">
                 <div class="queue-time"><span>Mon</span><strong>9:00 AM</strong></div>
                 <div class="queue-content">
@@ -240,27 +240,27 @@
           </aside>
         </div>
 
-        <div class="feature-grid">
+        <div class="feature-grid" data-stagger>
           <article class="feature-card">
-            <span class="feature-icon">🗓️</span>
+            <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="m9 15.5 2 2 4-4"/></svg></span>
             <h3>Calendar-first planning</h3>
             <p>See what is going out and when, so gaps in your content week are obvious before they cost you reach.</p>
           </article>
 
           <article class="feature-card">
-            <span class="feature-icon">✍️</span>
+            <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
             <h3>Platform-specific copy</h3>
             <p>Start with one idea, then make each caption feel native to the network it is landing on.</p>
           </article>
 
           <article class="feature-card">
-            <span class="feature-icon">⚡</span>
+            <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 11-13h-7l1-7z"/></svg></span>
             <h3>Fast publish flow</h3>
             <p>No maze of settings. Pick accounts, choose the time, and schedule the post while momentum is high.</p>
           </article>
 
           <article class="feature-card">
-            <span class="feature-icon">💬</span>
+            <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4.7-1.4L3 20l1.4-4.8A8.5 8.5 0 1 1 21 11.5Z"/></svg></span>
             <h3>Founder support</h3>
             <p>When you need help, you hear from Damiano directly. Real answers, usually the same day.</p>
           </article>
@@ -269,8 +269,9 @@
     </section>
 
     <!-- ===== Content Studio ===== -->
-    <section class="section" id="studio">
+    <section class="section studio" id="studio">
       <div class="container">
+        <div class="studio-shell">
         <div class="section-head">
           <p class="kicker">Content Studio <span class="beta-tag">Beta</span></p>
           <h2>Drop your link. Get a month of scroll-stopping content.</h2>
@@ -278,6 +279,18 @@
           <p class="lead">Our AI studio turns your website into platform-native posts — text, photo,
             and short-form video — modeled on proven viral formats, then sends them straight to your
             queue. Posting is only half the job; this is the other half.</p>
+        </div>
+
+        <div class="studio-prompt" aria-hidden="true">
+          <div class="sp-field">
+            <svg class="sp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            <span class="sp-typed" data-phrases='["sync-socials.com","a cozy coffee shop in Brooklyn","an indie fitness app","your-website.com"]'>sync-socials.com</span>
+            <span class="sp-caret"></span>
+          </div>
+          <span class="sp-generate">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+            Generate
+          </span>
         </div>
 
         <div class="feature-showcase">
@@ -327,7 +340,7 @@
               <span class="board-date">For sync-socials.com</span>
             </div>
 
-            <div class="queue-list">
+            <div class="queue-list" data-stagger>
               <div class="queue-item active">
                 <div class="queue-time"><span>Video</span><strong>0:22</strong></div>
                 <div class="queue-content">
@@ -376,34 +389,35 @@
           </aside>
         </div>
 
-        <div class="feature-grid">
+        <div class="feature-grid" data-stagger>
           <article class="feature-card">
-            <span class="feature-icon">🎬</span>
+            <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 4"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg></span>
             <h3>Text, photo &amp; video</h3>
             <p>Generate captions, portrait images, and short-form video — scripts and AI-rendered clips — in a single pass.</p>
           </article>
 
           <article class="feature-card">
-            <span class="feature-icon">🧠</span>
+            <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/><path d="M5 3v4"/><path d="M3 5h4"/></svg></span>
             <h3>Built to go viral</h3>
             <p>Every piece is shaped by proven hooks and retention formats, then pointed at your goal: downloads, signups, or sales.</p>
           </article>
 
           <article class="feature-card">
-            <span class="feature-icon">🔑</span>
+            <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/><circle cx="7.5" cy="15.5" r="5.5"/></svg></span>
             <h3>$0 with your own key</h3>
             <p>Bring your own AI key for image and video generation. You stay in control and there's no markup from us.</p>
           </article>
 
           <article class="feature-card">
-            <span class="feature-icon">🚀</span>
+            <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span>
             <h3>One-click distribution</h3>
             <p>Push any concept to your scheduler, or run the entire generate-and-post pipeline from your AI agent via MCP.</p>
           </article>
         </div>
 
-        <div class="section-cta" style="text-align:center;margin-top:2.5rem;">
+        <div class="section-cta">
           <a class="btn btn-primary btn-lg" href="https://app.sync-socials.com/login">Try the Content Studio free</a>
+        </div>
         </div>
       </div>
     </section>
@@ -416,13 +430,31 @@
           <h2>All your platforms, in one place.</h2>
           <p class="lead">Connect once and publish everywhere. More networks are on the way.</p>
         </div>
-        <div class="platform-grid">
-          <div class="platform"><span class="pf-ic ig">📸</span><strong>Instagram</strong><span class="pf-status live">Live</span></div>
-          <div class="platform"><span class="pf-ic fb">👍</span><strong>Facebook</strong><span class="pf-status live">Live</span></div>
-          <div class="platform"><span class="pf-ic yt">▶️</span><strong>YouTube</strong><span class="pf-status live">Live</span></div>
-          <div class="platform"><span class="pf-ic tt">🎵</span><strong>TikTok</strong><span class="pf-status live">Live</span></div>
-          <div class="platform"><span class="pf-ic x">𝕏</span><strong>X / Twitter</strong><span class="pf-status soon">Soon</span></div>
-          <div class="platform more"><span class="pf-ic">＋</span><strong>More to come</strong><span class="pf-status">In progress</span></div>
+        <div class="platform-grid" data-stagger>
+          <div class="platform">
+            <span class="pf-ic ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+            <strong>Instagram</strong><span class="pf-status live">Live</span>
+          </div>
+          <div class="platform">
+            <span class="pf-ic fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h2.7l.4-3H13V9.2c0-.9.3-1.5 1.5-1.5H16V5.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.2V11H7v3h2.3v8H13Z"/></svg></span>
+            <strong>Facebook</strong><span class="pf-status live">Live</span>
+          </div>
+          <div class="platform">
+            <span class="pf-ic yt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></span>
+            <strong>YouTube</strong><span class="pf-status live">Live</span>
+          </div>
+          <div class="platform">
+            <span class="pf-ic tt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>
+            <strong>TikTok</strong><span class="pf-status live">Live</span>
+          </div>
+          <div class="platform">
+            <span class="pf-ic x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231ZM17.083 19.77h1.833L7.084 4.126H5.117Z"/></svg></span>
+            <strong>X / Twitter</strong><span class="pf-status soon">Soon</span>
+          </div>
+          <div class="platform more">
+            <span class="pf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg></span>
+            <strong>More to come</strong><span class="pf-status">In progress</span>
+          </div>
         </div>
       </div>
     </section>
@@ -744,7 +776,7 @@
           <p class="kicker">Loved by creators</p>
           <h2>Hear what others say about us.</h2>
         </div>
-        <div class="quote-grid">
+        <div class="quote-grid" data-stagger>
           <figure class="quote">
             <p>“I switched from a $99/mo tool and honestly haven't missed a single feature. This just works.”</p>
             <figcaption><span class="q-av">M</span> Maya R. <span>· Content creator</span></figcaption>
@@ -894,6 +926,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>

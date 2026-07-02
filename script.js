@@ -118,6 +118,51 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 revealEls.forEach(el => io.observe(el));
 
+// ---- Staggered child reveals ----
+// Class is added by JS so content stays visible if JS never runs.
+const staggerEls = document.querySelectorAll('[data-stagger]');
+staggerEls.forEach(el => el.classList.add('stagger'));
+const sio = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); sio.unobserve(e.target); } });
+}, { threshold: 0.15 });
+staggerEls.forEach(el => sio.observe(el));
+
+// ---- Content Studio: cycling prompt typing ----
+(function promptTyping() {
+  const el = document.querySelector('.sp-typed');
+  if (!el) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let phrases = [];
+  try { phrases = JSON.parse(el.dataset.phrases || '[]'); } catch (err) { return; }
+  if (!phrases.length) return;
+
+  let phrase = 0, char = phrases[0].length, deleting = false;
+  const tick = () => {
+    const current = phrases[phrase];
+    if (deleting) {
+      char--;
+      el.textContent = current.slice(0, char);
+      if (char === 0) {
+        deleting = false;
+        phrase = (phrase + 1) % phrases.length;
+        setTimeout(tick, 400);
+      } else {
+        setTimeout(tick, 26);
+      }
+    } else {
+      char++;
+      el.textContent = current.slice(0, char);
+      if (char >= current.length) {
+        deleting = true;
+        setTimeout(tick, 2400);
+      } else {
+        setTimeout(tick, 55 + Math.random() * 45);
+      }
+    }
+  };
+  setTimeout(() => { deleting = true; tick(); }, 2600);
+})();
+
 // ---- MCP section: copy install command ----
 document.querySelectorAll('.ss-mcp .ss-copy').forEach(function (btn) {
   btn.addEventListener('click', function (e) {
