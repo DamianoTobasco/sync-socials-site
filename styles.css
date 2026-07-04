@@ -634,6 +634,7 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
 .pf-ic.dc { color: #5865f2; background: rgba(88,101,242,.12); border-color: rgba(88,101,242,.28); }
 .pf-ic.sl { background: color-mix(in srgb, var(--text) 6%, transparent); border-color: color-mix(in srgb, var(--text) 14%, transparent); }
 .pf-ic.tg { color: #229ed9; background: rgba(34,158,217,.12); border-color: rgba(34,158,217,.28); }
+.pf-ic.wh { color: #ff6243; background: rgba(255,98,67,.12); border-color: rgba(255,98,67,.28); }
 .platform strong { font-size: 16px; }
 .pf-status { margin-left: auto; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 999px; color: var(--muted); background: var(--surface-2); white-space: nowrap; }
 .pf-status.live { color: var(--accent-ink); background: var(--accent-soft); }
