@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=7" />
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body>
   <!-- ===== Header ===== -->
@@ -335,61 +335,41 @@
             </div>
           </article>
 
-          <aside class="schedule-board" aria-label="Example generated content batch">
-            <div class="board-top">
-              <div>
-                <span class="board-eyebrow">Generated just now</span>
-                <h3>Content batch</h3>
-              </div>
-              <span class="board-date">For sync-socials.com</span>
-            </div>
-
-            <div class="queue-list" data-stagger>
-              <div class="queue-item active">
-                <div class="queue-time"><span>Video</span><strong>0:22</strong></div>
-                <div class="queue-content">
-                  <strong>“3 hours a day → 20 minutes a week”</strong>
-                  <span>Hook + shot list, AI-rendered clip</span>
-                  <div class="chip-row">
-                    <span class="platform-chip yt">YouTube</span>
-                    <span class="platform-chip ig">Instagram</span>
-                  </div>
+          <aside class="viral-demo" aria-label="Preview of the Viral Studio review interface">
+            <div class="vd-stack">
+              <div class="vd-card vd-card--ghost" aria-hidden="true"></div>
+              <div class="vd-card" id="vdCard">
+                <div class="vd-top">
+                  <span class="vd-chip" data-vd="chip">3 things</span>
+                  <span class="vd-why">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01"/><path d="M12 11v5"/></svg>
+                    Why this content?
+                  </span>
                 </div>
-                <span class="queue-status live">Rendering</span>
-              </div>
 
-              <div class="queue-item">
-                <div class="queue-time"><span>Photo</span><strong>4:5</strong></div>
-                <div class="queue-content">
-                  <strong>“Stop running your socials in 8 tabs”</strong>
-                  <span>Portrait image + ready-to-post caption</span>
-                  <div class="chip-row">
-                    <span class="platform-chip fb">Facebook</span>
-                    <span class="platform-chip ig">Instagram</span>
+                <div class="vd-video vd-scene-1" data-vd="video">
+                  <div class="vd-video-btns" aria-hidden="true">
+                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m22 9-6 6"/><path d="m16 9 6 6"/></svg></span>
+                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg></span>
                   </div>
+                  <p class="vd-hook" data-vd="hook">1. You're posting inconsistently</p>
                 </div>
-                <span class="queue-status ready">Ready</span>
-              </div>
 
-              <div class="queue-item">
-                <div class="queue-time"><span>Text</span><strong>Hook</strong></div>
-                <div class="queue-content">
-                  <strong>“You don't have a posting problem…”</strong>
-                  <span>Contrarian hook, tuned per platform</span>
-                  <div class="chip-row">
-                    <span class="platform-chip ig">Instagram</span>
-                    <span class="platform-chip fb">Facebook</span>
-                  </div>
+                <p class="vd-caption" data-vd="caption">Are you struggling with your social media? Here are 3 signs it's time for an upgrade. Hint: Sync Socials can help!</p>
+                <div class="vd-meta" data-vd="meta">Facebook · YouTube</div>
+
+                <div class="vd-actions" aria-hidden="true">
+                  <span class="vd-btn vd-btn--no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m6 6 12 12"/><path d="m18 6-12 12"/></svg></span>
+                  <span class="vd-btn vd-btn--edit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg> Edit</span>
+                  <span class="vd-btn vd-btn--yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
                 </div>
-                <span class="queue-status queued">Draft</span>
               </div>
             </div>
 
-            <div class="board-footer">
-              <div><strong>12</strong><span>concepts ready</span></div>
-              <div><strong>3</strong><span>formats</span></div>
-              <div><strong>5</strong><span>platforms</span></div>
+            <div class="vd-dots" aria-hidden="true">
+              <span class="vd-dot active"></span><span class="vd-dot"></span><span class="vd-dot"></span>
             </div>
+            <p class="vd-note">Swipe through generated concepts — approve, edit, or skip.</p>
           </aside>
         </div>
 
@@ -942,6 +922,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>

@@ -145,6 +145,48 @@ const sio = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 staggerEls.forEach(el => sio.observe(el));
 
+// ---- Content Studio: Viral Studio swipe-card demo ----
+(function viralDemo() {
+  const card = document.getElementById('vdCard');
+  if (!card) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const concepts = [
+    { chip: '3 things', hook: "1. You're posting inconsistently", caption: "Are you struggling with your social media? Here are 3 signs it's time for an upgrade. Hint: Sync Socials can help!", meta: 'Facebook · YouTube', scene: 1 },
+    { chip: 'POV', hook: 'POV: your week is already scheduled', caption: 'Batch once, then relax — your content publishes itself while you build the business.', meta: 'Instagram · Facebook', scene: 2 },
+    { chip: 'Hook', hook: 'Stop running your socials in 8 tabs', caption: 'One dashboard, every platform. Schedule once and publish everywhere with Sync Socials.', meta: 'Instagram · YouTube', scene: 3 }
+  ];
+  const el = (name) => card.querySelector('[data-vd="' + name + '"]');
+  const dots = document.querySelectorAll('.vd-dot');
+  let i = 0, timer = null;
+
+  const advance = () => {
+    card.classList.add('out');
+    setTimeout(() => {
+      i = (i + 1) % concepts.length;
+      const c = concepts[i];
+      el('chip').textContent = c.chip;
+      el('hook').textContent = c.hook;
+      el('caption').textContent = c.caption;
+      el('meta').textContent = c.meta;
+      el('video').className = 'vd-video vd-scene-' + c.scene;
+      dots.forEach((d, di) => d.classList.toggle('active', di === i));
+      card.classList.remove('out');
+      card.classList.add('in');
+      setTimeout(() => card.classList.remove('in'), 520);
+    }, 560);
+  };
+
+  // Only cycle while the demo is on screen.
+  const vio = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting && !timer) timer = setInterval(advance, 5200);
+      else if (!e.isIntersecting && timer) { clearInterval(timer); timer = null; }
+    });
+  }, { threshold: 0.25 });
+  vio.observe(card);
+})();
+
 // ---- Content Studio: cycling prompt typing ----
 (function promptTyping() {
   const el = document.querySelector('.sp-typed');
