@@ -286,6 +286,125 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
 .founder-by span { color: var(--muted); font-size: 14px; }
 
 /* ---------- Features ---------- */
+.calendar-demo {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 390px);
+  gap: clamp(28px, 4vw, 48px);
+  align-items: center;
+  max-width: 960px;
+  overflow: hidden;
+  margin: 0 auto 18px;
+  padding: clamp(24px, 3vw, 34px);
+  border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent);
+  border-radius: 24px;
+  background:
+    radial-gradient(460px 280px at 100% 0%, rgba(79,190,122,.18), transparent 70%),
+    linear-gradient(135deg, rgba(255,255,255,.035), transparent 42%),
+    var(--ink-hero);
+  color: #fff;
+  box-shadow: var(--shadow-md);
+}
+.calendar-demo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,.07) 1px, transparent 0);
+  background-size: 24px 24px;
+  mask-image: linear-gradient(90deg, black, transparent 52%);
+  -webkit-mask-image: linear-gradient(90deg, black, transparent 52%);
+}
+.calendar-demo > * { position: relative; }
+.calendar-demo-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 999px;
+  color: #c9f2d8;
+  background: rgba(255,255,255,.07);
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.calendar-demo-label i,
+.calendar-demo-stage figcaption i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5fd089;
+  box-shadow: 0 0 0 3px rgba(95,208,137,.13);
+}
+.calendar-demo-copy h3 {
+  max-width: 360px;
+  margin-top: 16px;
+  font-size: clamp(25px, 2.8vw, 34px);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+.calendar-demo-copy > p {
+  max-width: 390px;
+  margin-top: 12px;
+  color: #b8c5bd;
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+.calendar-demo-points {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+.calendar-demo-points span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 5px 10px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 999px;
+  color: #d9e4dd;
+  background: rgba(255,255,255,.06);
+  font-size: 11.5px;
+  font-weight: 700;
+}
+.calendar-demo-stage {
+  width: 100%;
+  max-width: 390px;
+  min-width: 0;
+  justify-self: end;
+}
+.calendar-demo-window {
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 16px;
+  background: #f8f7f2;
+  box-shadow: 0 18px 42px rgba(0,0,0,.28), 0 0 0 5px rgba(255,255,255,.035);
+}
+.calendar-demo-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: #f6f5f0;
+}
+.calendar-demo-stage figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding-top: 10px;
+  color: #aebdb4;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+.calendar-demo-stage figcaption i { width: 6px; height: 6px; box-shadow: none; }
+
 .feature-showcase {
   display: grid;
   grid-template-columns: minmax(0, .92fr) minmax(360px, 1.08fr);
@@ -785,10 +904,20 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
+@media (max-width: 760px) {
+  .calendar-demo { grid-template-columns: 1fr; max-width: 520px; }
+  .calendar-demo-copy { text-align: center; }
+  .calendar-demo-label, .calendar-demo-points { justify-content: center; }
+  .calendar-demo-copy h3, .calendar-demo-copy > p { max-width: 420px; margin-left: auto; margin-right: auto; }
+  .calendar-demo-stage { max-width: 360px; justify-self: center; }
+}
 @media (max-width: 640px) {
   .section { padding: 70px 0; }
   .platform-grid, .quote-grid { grid-template-columns: 1fr; }
   .workflow-panel, .schedule-board { padding: 20px; border-radius: 18px; }
+  .calendar-demo { gap: 24px; padding: 22px 18px 18px; border-radius: 18px; }
+  .calendar-demo-stage { max-width: 320px; }
+  .calendar-demo-window { border-radius: 13px; }
   .workflow-steps { margin-top: 22px; }
   .workflow-step { grid-template-columns: 1fr; }
   .workflow-metrics, .board-footer { grid-template-columns: 1fr; }

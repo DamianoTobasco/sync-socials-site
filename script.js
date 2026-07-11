@@ -145,6 +145,14 @@ const sio = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 staggerEls.forEach(el => sio.observe(el));
 
+// ---- Product calendar demo ----
+// Keep the real app recording lightweight and respectful of motion preferences.
+const calendarDemoVideo = document.querySelector('.calendar-demo-video');
+if (calendarDemoVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  calendarDemoVideo.pause();
+  calendarDemoVideo.removeAttribute('autoplay');
+}
+
 // ---- Content Studio: Viral Studio swipe-card demo ----
 (function viralDemo() {
   const card = document.getElementById('vdCard');
