@@ -231,7 +231,7 @@ if (calendarDemoVideo && window.matchMedia('(prefers-reduced-motion: reduce)').m
 
   const concepts = [
     { chip: '3 things', hook: "1. You're posting inconsistently", caption: "Are you struggling with your social media? Here are 3 signs it's time for an upgrade. Hint: Sync Socials can help!", meta: 'Facebook · YouTube', scene: 1 },
-    { chip: 'POV', hook: 'POV: your week is already scheduled', caption: 'Batch once, then relax — your content publishes itself while you build the business.', meta: 'Instagram · Facebook', scene: 2 },
+    { chip: 'POV', hook: 'POV: your week is already scheduled', caption: 'Batch once, then relax - your content publishes itself while you build the business.', meta: 'Instagram · Facebook', scene: 2 },
     { chip: 'Hook', hook: 'Stop running your socials in 8 tabs', caption: 'One dashboard, every platform. Schedule once and publish everywhere with Sync Socials.', meta: 'Instagram · YouTube', scene: 3 }
   ];
   const el = (name) => card.querySelector('[data-vd="' + name + '"]');
