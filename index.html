@@ -26,12 +26,12 @@
   <meta name="twitter:image" content="https://sync-socials.com/assets/sync%20socials%20dashboard%20%28light%20mode%29.png" />
   <meta name="theme-color" content="#0c1410" />
 
-  <link rel="icon" type="image/png" href="assets/logo.png" />
-  <link rel="apple-touch-icon" href="assets/logo.png" />
+  <link rel="icon" type="image/png" href="assets/logo-256.png" />
+  <link rel="apple-touch-icon" href="assets/logo-256.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=9" />
+  <link rel="stylesheet" href="styles.css?v=11" />
 
   <!-- Structured data for search engines and AI assistants -->
   <script type="application/ld+json">
@@ -166,7 +166,7 @@
   <header class="site-header" id="top">
     <div class="container nav">
       <a class="brand" href="#top" aria-label="Sync Socials home">
-        <img class="brand-badge" src="assets/logo.png" alt="Sync Socials logo" width="32" height="32" />
+        <img class="brand-badge" src="assets/logo-256.png" alt="Sync Socials logo" width="32" height="32" />
         <span class="brand-name">Sync&nbsp;Socials</span>
       </a>
 
@@ -228,8 +228,14 @@
               <span class="wb-dot"></span><span class="wb-dot"></span><span class="wb-dot"></span>
               <span class="wb-url">app.sync-socials.com</span>
             </div>
-            <img class="window-shot window-shot--light" src="assets/sync socials dashboard (light mode).png" alt="Sync Socials dashboard - compose a post and publish it to Instagram, Facebook, and YouTube at once" width="3836" height="2152" />
-            <img class="window-shot window-shot--dark" src="assets/sync socials dashboard (dark mode).png" alt="Sync Socials dashboard - compose a post and publish it to Instagram, Facebook, and YouTube at once" width="3836" height="2152" />
+            <picture>
+              <source type="image/webp" srcset="assets/dashboard-light.webp" />
+              <img class="window-shot window-shot--light" src="assets/sync socials dashboard (light mode).png" alt="Sync Socials dashboard - compose a post and publish it to Instagram, Facebook, and YouTube at once" width="1920" height="1080" fetchpriority="high" decoding="async" />
+            </picture>
+            <picture>
+              <source type="image/webp" srcset="assets/dashboard-dark.webp" />
+              <img class="window-shot window-shot--dark" src="assets/sync socials dashboard (dark mode).png" alt="Sync Socials dashboard - compose a post and publish it to Instagram, Facebook, and YouTube at once" width="1920" height="1080" loading="lazy" decoding="async" />
+            </picture>
           </div>
         </div>
       </div>
@@ -268,7 +274,7 @@
           instead of <em>creating</em> it.”
         </blockquote>
         <div class="founder-by">
-          <img class="founder-avatar" src="assets/Damiano.jpg" alt="Damiano Tobasco" width="56" height="56" />
+          <img class="founder-avatar" src="assets/damiano-112.jpg" alt="Damiano Tobasco" width="56" height="56" loading="lazy" decoding="async" />
           <div>
             <strong>Damiano Tobasco</strong>
             <span>Founder, Sync Socials</span>
@@ -965,7 +971,7 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <a class="brand" href="#top">
-          <img class="brand-badge" src="assets/logo.png" alt="Sync Socials logo" width="28" height="28" />
+          <img class="brand-badge" src="assets/logo-256.png" alt="Sync Socials logo" width="28" height="28" />
           <span class="brand-name">Sync Socials</span>
         </a>
         <p>Schedule once, publish everywhere. Built by a creator, for creators.</p>

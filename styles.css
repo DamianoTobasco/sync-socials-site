@@ -1865,3 +1865,6 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
 .step-card strong { display: block; margin: 10px 0 6px; font-size: 16.5px; }
 .step-card p { color: var(--muted); font-size: 14.5px; line-height: 1.55; }
 @media (max-width: 760px) { .steps-grid { grid-template-columns: 1fr; } }
+
+/* Picture wrappers around themed hero shots participate as if absent */
+.hero-shot picture { display: contents; }
