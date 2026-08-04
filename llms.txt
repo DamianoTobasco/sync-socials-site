@@ -1,0 +1,28 @@
+# Sync Socials
+
+> Sync Socials is an AI powered social media scheduler and automation platform. Schedule once and publish everywhere: TikTok, Instagram, Facebook, YouTube, Discord, Slack and Telegram, with X (Twitter) coming soon. AI agents can run the entire content pipeline through MCP.
+
+Key facts:
+
+- One dashboard for planning, scheduling and publishing to every connected platform
+- Content Studio (beta) turns a website link or a short business brief into ready to post text, photo and video content built on proven viral formats
+- MCP and API access lets AI agents (Claude Code, OpenClaw, Codex, and any MCP compatible agent) upload media, draft posts, schedule campaigns and publish
+- Pricing: one Growth plan at $19.95 per month or $199.50 per year (2 months free), with a free 7 day trial and cancel anytime
+- 20 accounts per platform and unlimited scheduled posts, no fees per post
+- Posts publish natively through each platform's official API, so scheduled posts get the same reach and engagement as manual posts
+- Accounts connect through each platform's official OAuth login; Sync Socials never sees or stores passwords
+- Built and personally supported by founder Damiano Tobasco
+- Partner Program pays 30% recurring commission for life plus milestone prizes up to $20,000
+
+## Pages
+
+- [Home](https://sync-socials.com/): features, Content Studio, integrations, MCP for agents, pricing and FAQ
+- [Partner Program](https://sync-socials.com/referral.html): 30% recurring commission plus milestone prizes
+- [App](https://app.sync-socials.com/): log in or start a free 7 day trial
+- [Agent skill and docs](https://github.com/DamianoTobasco/sync-socials-agent): install the Sync Socials skill for MCP agents
+
+## Install for AI agents
+
+npx skills add DamianoTobasco/sync-socials-agent -g
+
+Requires a Sync Socials account and an API key generated from workspace settings.
