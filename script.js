@@ -156,8 +156,8 @@ const amount = document.querySelector('.pc-amount');
 const sub = document.querySelector('.pc-sub');
 const pricingCta = document.getElementById('pricingCta');
 function setPlan(plan) { // monthly | yearly
-  amount.textContent = amount.dataset[plan];
-  sub.textContent = sub.dataset[plan];
+  if (amount) amount.textContent = amount.dataset[plan];
+  if (sub) sub.textContent = sub.dataset[plan];
   if (pricingCta && pricingCta.dataset[plan]) {
     pricingCta.setAttribute('href', withRef(pricingCta.dataset[plan]));
   }

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Social Media Agent | Automate Posting with MCP | Sync Socials</title>
+  <meta name="description" content="Connect Claude Code, OpenClaw, Codex or any MCP agent to Sync Socials and let it create, schedule and publish posts to TikTok, Instagram, Facebook and YouTube." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <link rel="canonical" href="https://sync-socials.com/ai-social-media-agent.html" />
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sync Socials" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Your AI agent can run your social media | Sync Socials" />
+  <meta property="og:description" content="Sync Socials speaks MCP. Install one skill and your agent uploads media, drafts posts, schedules campaigns and publishes to TikTok, Instagram, Facebook and YouTube." />
+  <meta property="og:url" content="https://sync-socials.com/ai-social-media-agent.html" />
+  <meta property="og:image" content="https://sync-socials.com/assets/sync%20socials%20dashboard%20%28light%20mode%29.png" />
+  <meta property="og:image:width" content="3836" />
+  <meta property="og:image:height" content="2152" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@syncyoursocials" />
+  <meta name="twitter:title" content="Your AI agent can run your social media | Sync Socials" />
+  <meta name="twitter:description" content="Install one skill and your MCP agent uploads media, drafts posts, schedules campaigns and publishes across platforms." />
+  <meta name="twitter:image" content="https://sync-socials.com/assets/sync%20socials%20dashboard%20%28light%20mode%29.png" />
+  <meta name="theme-color" content="#0c1410" />
+
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=10" />
+
+  <!-- Structured data for search engines and AI assistants -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sync-socials.com/" },
+          { "@type": "ListItem", "position": 2, "name": "AI Social Media Agent", "item": "https://sync-socials.com/ai-social-media-agent.html" }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://sync-socials.com/ai-social-media-agent.html",
+        "url": "https://sync-socials.com/ai-social-media-agent.html",
+        "name": "AI Social Media Agent | Automate Posting with MCP | Sync Socials",
+        "isPartOf": { "@id": "https://sync-socials.com/#website" },
+        "about": { "@id": "https://sync-socials.com/#software" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is MCP and why does it matter for social media?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MCP, the Model Context Protocol, is an open standard that lets AI agents use external tools. Sync Socials exposes media upload, drafting, scheduling and publishing as MCP tools, so any compatible agent can run your social media accounts from a plain English prompt."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which AI agents work with Sync Socials?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Claude Code, OpenClaw, Codex and any agent that supports skills and MCP. If your agent can install a skill, it can run your Sync Socials workspace."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to know how to code?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. You run one install command, paste your Sync Socials API key, and from then on you just talk to your agent. Post this to TikTok and Instagram at 9am is a complete workflow."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it safe to let an AI agent post for me?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Access is scoped to an API key you generate and can revoke at any time. Your social accounts connect through each platform's official OAuth login, and Sync Socials never sees your passwords. You can also have the agent create drafts for your approval instead of publishing directly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What can the agent actually do?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Upload images and video, write and edit drafts, generate content concepts, schedule single posts or whole campaigns, publish to TikTok, Instagram, Facebook and YouTube, and inspect, reschedule or cancel anything in the queue."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does agent access cost extra?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. MCP and API access is included in the Growth plan at $19.95 a month, after a free 7 day trial."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="Sync Socials home">
+        <img class="brand-badge" src="assets/logo.png" alt="Sync Socials logo" width="32" height="32" />
+        <span class="brand-name">Sync&nbsp;Socials</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/#features">Features</a>
+        <a href="/#studio">Content Studio <span class="beta-tag beta-tag--nav">Beta</span></a>
+        <a href="/#integrations">Integrations</a>
+        <a href="/#mcp">MCP/API</a>
+        <a href="/#pricing">Pricing</a>
+        <a class="nav-referral" href="referral.html">Referral Program</a>
+        <a href="/#faq">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle nav-theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+        <a class="btn btn-ghost" href="https://app.sync-socials.com/login">Log in</a>
+        <a class="btn btn-primary" href="https://app.sync-socials.com/login">Try it free</a>
+      </div>
+
+      <button class="theme-toggle compact-theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" hidden>
+      <a href="/#features">Features</a>
+      <a href="/#studio">Content Studio</a>
+      <a href="/#integrations">Integrations</a>
+      <a href="/#mcp">MCP/API</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="referral.html">Referral Program</a>
+      <a href="/#faq">FAQ</a>
+      <a class="btn btn-ghost" href="https://app.sync-socials.com/login">Log in</a>
+      <a class="btn btn-primary" href="https://app.sync-socials.com/login">Try it free</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <a class="eyebrow" href="#install">
+          <span class="dot"></span> Works with Claude Code, OpenClaw, Codex and any MCP agent
+        </a>
+        <h1 class="hero-title">Your AI agent can<br /><span class="grad">run your social media.</span></h1>
+        <p class="hero-sub">
+          Sync Socials speaks MCP. Install one skill and your agent uploads media, writes drafts,
+          schedules campaigns and publishes to TikTok, Instagram, Facebook and YouTube from a prompt.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="https://app.sync-socials.com/login?next=%2Fcheckout%3FofferKey%3Dgrowth_monthly">Start a 7 day trial for $0</a>
+          <a class="btn btn-outline btn-lg" href="#install">See the install</a>
+        </div>
+        <p class="hero-note">One install command · Scoped API key you can revoke · No code required</p>
+      </div>
+    </section>
+
+    <!-- ===== How it works ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">How it works</p>
+          <h2>Three steps to autopilot.</h2>
+          <p class="lead">No SDKs, no webhooks, no glue code. If your agent supports skills and MCP,
+            it is ready.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-number">01</span>
+            <strong>Install the skill</strong>
+            <p>One command adds the Sync Socials skill to your agent. Works with Claude Code, OpenClaw, Codex and any MCP compatible agent.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-number">02</span>
+            <strong>Add your API key</strong>
+            <p>Generate a key from your workspace settings. It scopes exactly what the agent can touch, and you can revoke it anytime.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-number">03</span>
+            <strong>Just ask</strong>
+            <p>Post this Reel everywhere at 9am. Queue a week of content from my drafts folder. What is scheduled for Friday? Done.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Install ===== -->
+    <section class="ss-mcp" id="install" aria-labelledby="agent-install-headline">
+      <div class="ss-mcp__inner">
+        <div class="ss-how">
+          <div>
+            <span class="ss-eyebrow">
+              <span class="ss-eyebrow__dot"></span>
+              One install
+            </span>
+            <h2 id="agent-install-headline" class="ss-how__title">Your agent gets<br/>the keys.</h2>
+            <p class="ss-how__text">
+              Sync Socials ships as a skill for MCP compatible agents. Install it once and your agent gets a
+              secure link to your workspace, backed by your own API key, so it can act on your accounts
+              without you babysitting a dashboard.
+            </p>
+            <ul class="ss-how__list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Upload images and video from the prompt</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Draft, schedule, and publish across channels</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Inspect, reschedule, or cancel planned posts</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Scoped by your API key, revokable any time</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="ss-term">
+              <div class="ss-term__bar">
+                <div class="ss-term__dots"><span></span><span></span><span></span></div>
+                <span class="ss-term__label">install · sync-socials-agent</span>
+              </div>
+              <button class="ss-copy" type="button" data-copy="npx skills add DamianoTobasco/sync-socials-agent -g" aria-label="Copy install command">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span class="ss-copy__label">Copy</span>
+              </button>
+              <div class="ss-term__body">
+                <div class="ss-term__line">
+                  <span class="ss-term__prompt">$</span>
+                  <span class="ss-term__cmd">npx skills add DamianoTobasco/sync-socials-agent <span class="ss-term__flag">-g</span></span>
+                </div>
+                <span class="ss-term__comment"># Works with OpenClaw, Claude Code, Codex, and any agent that supports skills + MCP.</span>
+              </div>
+            </div>
+            <p class="ss-note">Requires a Sync Socials account and API key. Generate yours from your workspace settings. <a href="https://github.com/DamianoTobasco/sync-socials-agent" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">Full docs on GitHub</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Capabilities ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Capabilities</p>
+          <h2>Everything the dashboard does, your agent does.</h2>
+          <p class="lead">The full posting pipeline is exposed as MCP tools your agent can call.</p>
+        </div>
+        <div class="feature-grid" data-stagger>
+          <article class="feature-card">
+            <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 8 5-5 5 5"/><path d="M5 21h14"/></svg></span>
+            <h3>Media upload</h3>
+            <p>Drop assets straight from your agent: images, carousels, reels and long form video.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
+            <h3>Draft creation</h3>
+            <p>On brand captions, hooks and hashtags the agent can iterate on before anything goes live.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg></span>
+            <h3>Scheduling</h3>
+            <p>Queue single posts or entire campaigns. The agent respects your calendar and time zones.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <h3>Publish &amp; manage</h3>
+            <p>Go live across TikTok, Facebook, Instagram and YouTube, or edit and reschedule on the fly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Prompts ===== -->
+    <section class="section">
+      <div class="container narrow">
+        <div class="section-head">
+          <p class="kicker">Real prompts</p>
+          <h2>Talk to it like a social media manager.</h2>
+        </div>
+        <div class="cmp-prose">
+          <p>Once the skill is installed, your agent handles requests like these end to end:</p>
+          <ul>
+            <li>Post this Reel to TikTok, Instagram, Facebook and YouTube Shorts at 6pm.</li>
+            <li>Queue five posts from the drafts folder across this week at 9am.</li>
+            <li>Generate a month of content from sync-socials.com and schedule the best twelve.</li>
+            <li>What is scheduled for the rest of the week? Move Friday's post to Saturday morning.</li>
+            <li>Write three caption variants for this product photo and save them as drafts.</li>
+          </ul>
+          <p>The agent calls the same publishing pipeline the dashboard uses, so every post goes out natively
+            through each platform's official API. Same reach, same engagement, zero tabs open.</p>
+          <p>Prefer clicking? Everything works from the <a href="/#features">dashboard</a> too, and the
+            <a href="/#studio">Content Studio</a> generates the content either way. Comparing tools? See how we
+            stack up against <a href="buffer-alternative.html">Buffer</a> and
+            <a href="hootsuite-alternative.html">Hootsuite</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section faq" id="faq">
+      <div class="container narrow">
+        <div class="section-head">
+          <p class="kicker">FAQ</p>
+          <h2>Agent questions, answered.</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What is MCP and why does it matter for social media?<span class="chev"></span></summary>
+            <div class="faq-a"><p>MCP, the Model Context Protocol, is an open standard that lets AI agents
+              use external tools. Sync Socials exposes media upload, drafting, scheduling and publishing as
+              MCP tools, so any compatible agent can run your social media accounts from a plain English
+              prompt.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Which AI agents work with Sync Socials?<span class="chev"></span></summary>
+            <div class="faq-a"><p>Claude Code, OpenClaw, Codex and any agent that supports skills and MCP.
+              If your agent can install a skill, it can run your Sync Socials workspace.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Do I need to know how to code?<span class="chev"></span></summary>
+            <div class="faq-a"><p>No. You run one install command, paste your Sync Socials API key, and from
+              then on you just talk to your agent. Post this to TikTok and Instagram at 9am is a complete
+              workflow.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Is it safe to let an AI agent post for me?<span class="chev"></span></summary>
+            <div class="faq-a"><p>Access is scoped to an API key you generate and can revoke at any time.
+              Your social accounts connect through each platform's official OAuth login, and Sync Socials
+              never sees your passwords. You can also have the agent create drafts for your approval instead
+              of publishing directly.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>What can the agent actually do?<span class="chev"></span></summary>
+            <div class="faq-a"><p>Upload images and video, write and edit drafts, generate content concepts,
+              schedule single posts or whole campaigns, publish to TikTok, Instagram, Facebook and YouTube,
+              and inspect, reschedule or cancel anything in the queue.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Does agent access cost extra?<span class="chev"></span></summary>
+            <div class="faq-a"><p>No. MCP and API access is included in the Growth plan at $19.95 a month,
+              after a free 7 day trial.</p></div>
+          </details>
+        </div>
+        <p class="faq-foot">Still curious? <!--email_off--><a href="mailto:contactsyncsocials@gmail.com">Ask away</a><!--/email_off--></p>
+      </div>
+    </section>
+
+    <!-- ===== Final CTA ===== -->
+    <section class="section cta-band">
+      <div class="container cta-inner">
+        <h2>Stop posting. Start prompting.</h2>
+        <p>Install the skill, hand your agent the keys, and get back to building.</p>
+        <a class="btn btn-primary btn-lg" href="https://app.sync-socials.com/login?next=%2Fcheckout%3FofferKey%3Dgrowth_monthly">Start a 7 day trial for $0</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <img class="brand-badge" src="assets/logo.png" alt="Sync Socials logo" width="28" height="28" />
+          <span class="brand-name">Sync Socials</span>
+        </a>
+        <p>Schedule once, publish everywhere. Built by a creator, for creators.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="/#features">Features</a>
+        <a href="/#studio">Content Studio</a>
+        <a href="/#integrations">Integrations</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="buffer-alternative.html">Buffer alternative</a>
+        <a href="hootsuite-alternative.html">Hootsuite alternative</a>
+        <a href="ai-social-media-agent.html">For AI agents</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="https://app.sync-socials.com/login">Log in</a>
+        <a href="https://app.sync-socials.com/login">Try it free</a>
+        <a href="referral.html">Referral Program</a>
+        <a href="https://app.sync-socials.com/privacy">Privacy</a>
+        <a href="https://app.sync-socials.com/terms">Terms</a>
+        <!--email_off--><a href="mailto:contactsyncsocials@gmail.com">Contact</a><!--/email_off-->
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <a href="https://x.com/syncyoursocials" target="_blank" rel="noopener">X / Twitter</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year">2026</span> Sync Socials. All rights reserved.</span>
+      <div class="theme-toggle-wrap">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=6"></script>
+</body>
+</html>

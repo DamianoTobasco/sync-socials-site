@@ -17,6 +17,9 @@ Key facts:
 ## Pages
 
 - [Home](https://sync-socials.com/): features, Content Studio, integrations, MCP for agents, pricing and FAQ
+- [AI Social Media Agent](https://sync-socials.com/ai-social-media-agent.html): how MCP agents like Claude Code run Sync Socials, install steps, capabilities and safety
+- [Buffer Alternative](https://sync-socials.com/buffer-alternative.html): honest Sync Socials vs Buffer comparison with pricing
+- [Hootsuite Alternative](https://sync-socials.com/hootsuite-alternative.html): honest Sync Socials vs Hootsuite comparison with pricing
 - [Partner Program](https://sync-socials.com/referral.html): 30% recurring commission plus milestone prizes
 - [App](https://app.sync-socials.com/): log in or start a free 7 day trial
 - [Agent skill and docs](https://github.com/DamianoTobasco/sync-socials-agent): install the Sync Socials skill for MCP agents
