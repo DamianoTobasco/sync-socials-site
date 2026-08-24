@@ -12,7 +12,8 @@ Key facts:
 - Posts publish natively through each platform's official API, so scheduled posts get the same reach and engagement as manual posts
 - Accounts connect through each platform's official OAuth login; Sync Socials never sees or stores passwords
 - Built and personally supported by founder Damiano Tobasco
-- Partner Program pays 30% recurring commission for life plus milestone prizes up to $20,000
+- Partner Program pays 30% recurring commission on cleared net subscription revenue for as long as the referred customer remains subscribed
+- Qualified referrals can unlock cumulative one-time cash bonuses up to $4,000 after generating at least $199.50 in cleared subscription revenue; annual customers also complete a 30-day refund window
 
 ## Pages
 
@@ -20,7 +21,7 @@ Key facts:
 - [AI Social Media Agent](https://sync-socials.com/ai-social-media-agent.html): how MCP agents like Claude Code run Sync Socials, install steps, capabilities and safety
 - [Buffer Alternative](https://sync-socials.com/buffer-alternative.html): honest Sync Socials vs Buffer comparison with pricing
 - [Hootsuite Alternative](https://sync-socials.com/hootsuite-alternative.html): honest Sync Socials vs Hootsuite comparison with pricing
-- [Partner Program](https://sync-socials.com/referral.html): 30% recurring commission plus milestone prizes
+- [Partner Program](https://sync-socials.com/referral.html): 30% recurring commission plus cumulative cash bonuses up to $4,000
 - [App](https://app.sync-socials.com/): log in or start a free 7 day trial
 - [Agent skill and docs](https://github.com/DamianoTobasco/sync-socials-agent): install the Sync Socials skill for MCP agents
 
