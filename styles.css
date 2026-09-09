@@ -1868,3 +1868,7 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
 
 /* Picture wrappers around themed hero shots participate as if absent */
 .hero-shot picture { display: contents; }
+
+/* Availability that customers need to see before choosing a plan. */
+.availability-notice { margin-top: 24px; padding: 16px 20px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface-2); color: var(--text); font-size: 14px; line-height: 1.6; }
+.availability-notice a { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
