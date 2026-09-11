@@ -1,16 +1,24 @@
 # Sync Socials
 
-> Sync Socials is an AI powered social media scheduler and automation platform. Schedule once and publish everywhere: TikTok, Instagram, Facebook, YouTube, Discord, Slack and Telegram, with X (Twitter) coming soon. AI agents can run the entire content pipeline through MCP.
+> Sync Socials is social media planning, content creation, scheduling, and publishing software for creators, businesses, and agencies. Work in the dashboard or connect an AI agent through the hosted MCP/API.
+
+Availability checked September 11, 2026:
+
+- Live destinations: TikTok, YouTube, LinkedIn personal profiles, Telegram, Discord, and Slack.
+- Facebook Pages and linked Instagram professional accounts work for eligible existing connections. Meta has verified Sync Socials as a Tech Provider, but the permissions required for general new-customer access remain in App Review. Contact support before subscribing if Facebook or Instagram is essential.
+- X/Twitter, Pinterest, and LinkedIn company pages are not currently supported.
+- The ChatGPT directory integration was submitted on September 11, 2026 and is in review. It is not yet approved or publicly listed in ChatGPT.
 
 Key facts:
 
 - One dashboard for planning, scheduling and publishing to every connected platform
-- Content Studio (beta) turns a website link or a short business brief into ready to post text, photo and video content built on proven viral formats
-- MCP and API access lets AI agents (Claude Code, OpenClaw, Codex, and any MCP compatible agent) upload media, draft posts, schedule campaigns and publish
+- Viral Machine turns a website or business brief into campaign concepts, hooks, captions, and hashtags. After a concept is chosen, it can produce vertical videos from library clips or remix uploaded brand footage. Drafts can be saved without choosing a destination.
+- MCP and API access lets compatible AI agents read workspace and brand context, list connected accounts and media, import media, generate concepts, produce videos, create and edit drafts, schedule and publish selected posts, reschedule, cancel, and check delivery status.
+- Video production can continue asynchronously; retrieve the post to check completion and obtain a fresh signed playback URL.
 - Pricing: one Growth plan at $19.95 per month or $199.50 per year (2 months free), with a free 7 day trial and cancel anytime
 - 20 accounts per platform and unlimited scheduled posts, no fees per post
-- Posts publish natively through each platform's official API, so scheduled posts get the same reach and engagement as manual posts
-- Accounts connect through each platform's official OAuth login; Sync Socials never sees or stores passwords
+- Posts publish through supported platforms' APIs. Reach and engagement depend on the platform, content, audience, and timing; results are not guaranteed.
+- Social accounts use official OAuth where supported. Telegram uses a bot token; Discord and Slack use channel webhooks. Sync Socials does not ask for social-network passwords.
 - Built and personally supported by founder Damiano Tobasco
 - Partner Program pays 30% recurring commission on cleared net subscription revenue for as long as the referred customer remains subscribed
 - Qualified referrals can unlock cumulative one-time cash bonuses up to $4,000 after generating at least $199.50 in cleared subscription revenue; annual customers also complete a 30-day refund window
@@ -30,3 +38,13 @@ Key facts:
 npx skills add DamianoTobasco/sync-socials-agent -g
 
 Requires a Sync Socials account and an API key generated from workspace settings.
+
+Hosted MCP endpoint: https://app.sync-socials.com/api/mcp
+
+## ChatGPT account linking
+
+The submitted integration exposes 14 tools through OAuth. A workspace owner signs in to Sync Socials with their existing account and explicitly approves access to that workspace. Email sign-in authenticates the owner; the separate consent step authorizes ChatGPT. Access can be disconnected in Settings.
+
+An existing account with API entitlement is required. Some generation features need a workspace-configured AI provider and consume that provider's allowance. Scheduling and publishing require selected destinations and applicable platform privacy/disclosure choices.
+
+Directory approval, public availability, and conversational recommendations are decisions made by OpenAI. No placement or traffic is guaranteed.
