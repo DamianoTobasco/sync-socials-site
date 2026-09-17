@@ -1,4 +1,7 @@
 # sync-socials.com
+# Public marketing content is accessible to search engines, social preview
+# fetchers, and AI assistants. The wildcard also covers clients without a
+# dedicated crawler name. Account and API access is handled on the app host.
 
 User-agent: *
 Allow: /
@@ -50,6 +53,16 @@ User-agent: meta-externalagent
 Allow: /
 
 User-agent: CCBot
+Allow: /
+
+# Social link preview fetchers
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
 Allow: /
 
 Sitemap: https://sync-socials.com/sitemap.xml

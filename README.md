@@ -7,7 +7,7 @@ step, no dependencies. Hosted free on GitHub Pages, fronted by Cloudflare.
 index.html      → the whole page
 styles.css      → all styling (light + dark, brand: ivory + green)
 script.js       → mobile menu, billing toggle, FAQ, theme toggle, scroll reveal
-assets/         → favicon (add og.png here for social sharing previews)
+assets/         → logos, product media, and page-specific social preview PNGs + SVG sources
 CNAME           → tells GitHub Pages the custom domain is sync-socials.com
 .nojekyll       → disables Jekyll so files serve as-is
 ```
@@ -86,4 +86,12 @@ Everything is in plain `index.html`. Common edits:
 - **Platforms** — the `.platform-grid` block in `index.html`.
 - **Brand colors** — the `:root` (light) and `[data-theme="dark"]` blocks at the
   top of `styles.css`. They mirror the app's tokens (`--accent: #2f9d63`).
-- **Social preview image** — drop a 1200×630 `og.png` into `assets/`.
+- **Social previews** — edit the matching `assets/og-*.svg` source and export a
+  1200×630 PNG. Each page has its own `og:image` and `twitter:image`, dimensions,
+  MIME type and alt text. Keep PNGs below 1 MB; the current cards are 31–34 KB.
+  The homepage uses `og-home-v3`; the other five pages use their `v2` cards.
+  When replacing a published card, use a new versioned filename to help avoid
+  stale social caches, and update both image tags and the JSON-LD ImageObject.
+- **Search and agent discovery** — keep visible facts, JSON-LD and `llms.txt`
+  consistent. Update `sitemap.xml` dates only when the corresponding page changes.
+  See [SEO and discovery notes](docs/seo-discovery.md) for checks and publishing follow-up.
