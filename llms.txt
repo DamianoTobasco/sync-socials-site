@@ -27,6 +27,7 @@ Key facts:
 
 - [Home](https://sync-socials.com/): features, Content Studio, integrations, MCP for agents, pricing and FAQ
 - [AI Social Media Agent](https://sync-socials.com/ai-social-media-agent.html): setup for compatible clients such as Codex, Claude Code and OpenClaw; MCP capabilities, authentication, live destinations and ChatGPT approval status
+- [Claude connector preview](https://sync-socials.com/claude.html): current limited-preview availability, workspace-owner and API-access requirements, draft workflows, scheduling, media, and disconnection; public listing and companion plugin pending
 - [Buffer Alternative](https://sync-socials.com/buffer-alternative.html): honest Sync Socials vs Buffer comparison with pricing
 - [Hootsuite Alternative](https://sync-socials.com/hootsuite-alternative.html): honest Sync Socials vs Hootsuite comparison with pricing
 - [Partner Program](https://sync-socials.com/referral.html): 30% recurring commission plus cumulative cash bonuses up to $4,000
@@ -55,3 +56,11 @@ The submitted integration exposes 14 tools through OAuth. A workspace owner sign
 An existing account with API entitlement is required. Some generation features need a workspace-configured AI provider and consume that provider's allowance. Scheduling and publishing require selected destinations and applicable platform privacy/disclosure choices.
 
 Directory approval, public availability, and conversational recommendations are decisions made by OpenAI. No placement or traffic is guaranteed.
+
+## Claude hosted connector preview
+
+The Claude connector is in limited testing. Its public directory listing and companion plugin are pending; self-service public connection is not available yet. Invited testers receive secure setup instructions from Sync Socials support. A server URL alone is insufficient for the current preview. Application secrets must not appear in public configuration or conversations.
+
+The connection requires a Sync Socials workspace owner, API entitlement, and eligible billing status. It supports account and media browsing, text concepts, drafts, selected scheduling and publishing, and delivery checks. The Claude connection uses existing images and videos and does not generate images, footage, speech, or music through AI models. Text concept generation requires a configured workspace AI provider and uses its allowance.
+
+This hosted OAuth preview is separate from direct Claude Code/API-key setup. Disconnecting Claude in Sync Socials Settings stops that authorization's access but leaves existing scheduled posts and other agent connections intact. Public directory sign-in instructions will be added after the listing and public authentication are available. Listing does not guarantee recommendations or placement.

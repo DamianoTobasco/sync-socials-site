@@ -1873,3 +1873,17 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
 .availability-notice { margin-top: 24px; padding: 16px 20px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface-2); color: var(--text); font-size: 14px; line-height: 1.6; }
 .availability-notice a { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
 .cmp-prose a { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- Claude connector guide ---------- */
+.claude-guide .section-head h1 { font-size: clamp(32px, 6vw, 52px); text-wrap: balance; }
+.claude-guide .section-head .lead { margin-top: 20px; }
+.claude-guide .availability-notice { margin-top: 0; }
+.guide-content { padding-bottom: 80px; }
+.guide-toc { display: flex; flex-wrap: wrap; gap: 10px 20px; padding: 0 0 32px; margin-bottom: 36px; border-bottom: 1px solid var(--line); font-size: 14px; }
+.guide-toc a { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
+.guide-prose { gap: 40px; overflow-wrap: anywhere; }
+.guide-prose section { display: grid; gap: 16px; scroll-margin-top: 100px; }
+.guide-prose h2 { color: var(--text); font-size: clamp(24px, 4vw, 30px); line-height: 1.25; }
+.guide-prose h3 { font-size: 20px; line-height: 1.35; }
+.guide-prose ol { padding-left: 24px; display: grid; gap: 10px; }
+.guide-prose blockquote { padding: 18px 22px; border-left: 3px solid var(--accent); border-radius: 0 12px 12px 0; background: var(--surface-2); color: var(--text); }
