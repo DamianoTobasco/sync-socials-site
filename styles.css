@@ -1887,3 +1887,8 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
 .guide-prose h3 { font-size: 20px; line-height: 1.35; }
 .guide-prose ol { padding-left: 24px; display: grid; gap: 10px; }
 .guide-prose blockquote { padding: 18px 22px; border-left: 3px solid var(--accent); border-radius: 0 12px 12px 0; background: var(--surface-2); color: var(--text); }
+
+/* Trial terms stay adjacent to the offer, including on narrow screens. */
+.trial-disclosure { max-width: 580px; margin: 14px auto 0; font-size: 12px; line-height: 1.7; color: var(--muted); text-align: center; }
+.cta-band .trial-disclosure { max-width: 550px; font-size: 12px; margin-top: 16px; opacity: .85; }
+.section-cta .trial-disclosure { margin-top: 14px; }
