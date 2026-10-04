@@ -27,7 +27,7 @@ Key facts:
 
 - [Home](https://sync-socials.com/): features, Content Studio, integrations, MCP for agents, pricing and FAQ
 - [AI Social Media Agent](https://sync-socials.com/ai-social-media-agent.html): setup for compatible clients such as Codex, Claude Code and OpenClaw; MCP capabilities, authentication, live destinations and ChatGPT approval status
-- [Claude connector preview](https://sync-socials.com/claude.html): current limited-preview availability, workspace-owner and API-access requirements, draft workflows, scheduling, media, and disconnection; public listing and companion plugin pending
+- [Claude plugin and setup guide](https://sync-socials.com/claude.html): published plugin for Claude Chat and Cowork, custom connection setup while connector directory review is pending, workspace requirements, drafts, scheduling, existing media, and disconnection
 - [Buffer Alternative](https://sync-socials.com/buffer-alternative.html): honest Sync Socials vs Buffer comparison with pricing
 - [Hootsuite Alternative](https://sync-socials.com/hootsuite-alternative.html): honest Sync Socials vs Hootsuite comparison with pricing
 - [Partner Program](https://sync-socials.com/referral.html): 30% recurring commission plus cumulative cash bonuses up to $4,000
@@ -57,10 +57,12 @@ An existing account with API entitlement is required. Some generation features n
 
 Directory approval, public availability, and conversational recommendations are decisions made by OpenAI. No placement or traffic is guaranteed.
 
-## Claude hosted connector preview
+## Claude plugin and hosted connector
 
-The Claude connector is in limited testing. Its public directory listing and companion plugin are pending; self-service public connection is not available yet. Invited testers receive secure setup instructions from Sync Socials support. A server URL alone is insufficient for the current preview. Application secrets must not appear in public configuration or conversations.
+The Sync Socials plugin is published for Claude Chat and Cowork: https://claude.ai/customize/plugins/id/f091ce5c-7b5a-4d77-9f15-30495acd504a%40anthropic-plugin-directory. It bundles the remote connector and social-publishing workflow. Installing the plugin does not connect a workspace. The separate connector directory listing remains under review; direct directory account connection is not yet available.
+
+For now, add a custom connector in Claude with server URL https://app.sync-socials.com/api/mcp, public OAuth client ID e884049a-bc22-4239-9c82-8bdb7bf3a7b7, and a blank client secret. Use Advanced settings, or choose Sign in now and Use your own OAuth client if Claude shows those options. The client ID is a public identifier, not a password; this hosted flow does not require an application secret or API key. Sign in with the Sync Socials workspace owner and approve the workspace on the consent screen. Team and Enterprise Owners first add the connector for their organization. Existing connections can be retained. Contact contactsyncsocials@gmail.com for setup help.
 
 The connection requires a Sync Socials workspace owner, API entitlement, and eligible billing status. It supports account and media browsing, text concepts, drafts, selected scheduling and publishing, and delivery checks. The Claude connection uses existing images and videos and does not generate images, footage, speech, or music through AI models. Text concept generation requires a configured workspace AI provider and uses its allowance.
 
-This hosted OAuth preview is separate from direct Claude Code/API-key setup. Disconnecting Claude in Sync Socials Settings stops that authorization's access but leaves existing scheduled posts and other agent connections intact. Public directory sign-in instructions will be added after the listing and public authentication are available. Listing does not guarantee recommendations or placement.
+Direct Claude Code authentication is not supported by this plugin. The agent-neutral API-key setup is separate. Disconnecting Claude in Sync Socials Settings stops that authorization's access but leaves existing scheduled posts and other agent connections intact. Never put passwords, application secrets, API keys, or access tokens in public configuration or conversations. Listing does not guarantee recommendations or placement.
