@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Sora:wght@600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=13" />
+  <link rel="stylesheet" href="styles.css?v=14" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -130,10 +130,11 @@
           <h2>What you need</h2>
           <ul>
             <li>A Claude account with connector access. Organization settings can affect which connectors you can use.</li>
-            <li>A Sync Socials workspace with API access and eligible billing status. The Growth plan includes API access; check your workspace in <a href="https://app.sync-socials.com/app/settings">Settings</a>.</li>
+            <li>A Sync Socials workspace with API access and eligible billing status. The Growth plan includes API access; check your workspace in <a href="https://app.sync-socials.com/login?next=%2Fapp%2Fsettings">Settings</a>.</li>
             <li>The <strong>Owner</strong> role in that workspace to approve the connection.</li>
             <li>Connected destination accounts before scheduling or publishing. Untargeted drafts can be saved without them.</li>
           </ul>
+          <p>New to Sync Socials? <a href="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dgrowth_monthly">Create your workspace</a> before connecting Claude. The eligible 7-day trial requires a card, costs $0 today, then renews at $19.95/month unless canceled before the trial ends.</p>
           <p>Claude access and your Sync Socials subscription are separate. Connector requests, uploads, and production use your workspace allowances. Generating brand-specific concepts also needs an AI provider configured in Sync Socials and uses its allowance. A separate AI key is not needed just to save your caption, browse media, or edit a post.</p>
         </section>
 
@@ -185,11 +186,11 @@
           <p>See the <a href="https://app.sync-socials.com/privacy">Sync Socials Privacy Policy</a>. Claude's own settings, terms, and policies also apply.</p>
           <h3>Disconnect Claude</h3>
           <ol>
-            <li>Open <a href="https://app.sync-socials.com/app/settings#agents">Sync Socials Settings → Connected agents</a>.</li>
+            <li>Open <a href="https://app.sync-socials.com/login?next=%2Fapp%2Fsettings%23agents">Sync Socials Settings → Connected agents</a>.</li>
             <li>Find Claude and select <strong>Disconnect Claude</strong>.</li>
             <li>Remove Sync Socials from Claude's connector list if you no longer want it there.</li>
           </ol>
-          <p>Disconnecting stops further access through that authorization. Existing drafts and scheduled posts remain; cancel unwanted schedules separately. Your social accounts and separate ChatGPT connection are not disconnected. To reconnect, start a new connection from Claude and approve the intended workspace again.</p>
+          <p>Disconnecting stops further access through that authorization. Existing drafts and scheduled posts remain; cancel unwanted schedules separately. Your social accounts and separate <a href="chatgpt.html">ChatGPT connection</a> are not disconnected. To reconnect, start a new connection from Claude and approve the intended workspace again.</p>
         </section>
 
         <section id="help">
@@ -197,7 +198,7 @@
           <h3>The plugin is installed, but the connector is unavailable</h3>
           <p>The plugin is published; the separate connector directory listing is still under review. Follow the <a href="#connection">custom connection steps</a> above. Installing the plugin by itself does not connect your Sync Socials workspace.</p>
           <h3>Owner or API access is required</h3>
-          <p>Sign in with the workspace owner account. Check your billing status and API entitlement in <a href="https://app.sync-socials.com/app/settings">Settings</a>.</p>
+          <p>Sign in with the workspace owner account. Check your billing status and API entitlement in <a href="https://app.sync-socials.com/login?next=%2Fapp%2Fsettings">Settings</a>.</p>
           <h3>The connection is invalid, expired, or needs reconnecting</h3>
           <p>Start again from Claude. If the error asks you to disconnect a previous authorization, disconnect Claude under Connected agents first, then retry the sign-in flow.</p>
           <h3>No accounts or media appear</h3>
@@ -222,7 +223,8 @@
         <a class="brand" href="/"><img class="brand-badge" src="assets/logo-256.png" alt="Sync Socials logo" width="28" height="28" /><span class="brand-name">Sync Socials</span></a>
         <p>Plan, review, and publish from one workspace.</p>
       </div>
-      <div class="footer-col"><h4>Product</h4><a href="/#features">Features</a><a href="/#pricing">Pricing</a><a href="ai-social-media-agent.html">For AI agents</a><a href="claude.html" aria-current="page">Claude setup guide</a><a href="llms.txt">Product facts for AI assistants</a></div>
+      <div class="footer-col"><h4>Product</h4><a href="/#features">Features</a><a href="/#pricing">Pricing</a><a href="ai-social-media-agent.html">For AI agents</a>
+        <a href="chatgpt.html">ChatGPT setup guide</a><a href="claude.html" aria-current="page">Claude setup guide</a><a href="llms.txt">Product facts for AI assistants</a></div>
       <div class="footer-col"><h4>Account</h4><a href="https://app.sync-socials.com/login">Log in</a><a href="https://app.sync-socials.com/privacy">Privacy</a><a href="data-deletion.html">Data deletion</a><a href="https://app.sync-socials.com/terms">Terms</a></div>
       <div class="footer-col"><h4>Support</h4><a href="mailto:contactsyncsocials@gmail.com">Contact Sync Socials</a><a href="referral.html">Referral Program</a></div>
     </div>

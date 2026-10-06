@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Sora:wght@600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=13" />
+  <link rel="stylesheet" href="styles.css?v=14" />
 
   <!-- Structured data for search engines and AI assistants -->
   <script type="application/ld+json">
@@ -81,7 +81,7 @@
         "featureList": [
           "20 accounts per platform",
           "Unlimited scheduled posts",
-          "Publishing to TikTok, YouTube, LinkedIn personal profiles, Discord, Slack and Telegram",
+          "Publishing to Facebook Pages, linked Instagram professional accounts, TikTok, YouTube, LinkedIn personal profiles, Discord, Slack and Telegram",
           "MCP and API access for compatible AI agents",
           "AI content concepts, captions and video creation; provider charges may apply",
           "Drafts, calendar scheduling and publishing status",
@@ -122,7 +122,7 @@
             "name": "Can I use an AI agent with Sync Socials?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Compatible agents such as Codex, Claude Code and OpenClaw can use the hosted MCP/API to create content, manage drafts, schedule selected posts and check delivery status. You need a Sync Socials account with API access and a workspace API key. Read the agent setup guide ."
+              "text": "Yes. Connect the published ChatGPT app or Claude plugin, or use the hosted MCP/API with Codex, Claude Code, OpenClaw and compatible clients. A Sync Socials workspace with API access is required. ChatGPT and Claude Chat or Cowork use account authorization; API-key clients use a workspace API key. Read the ChatGPT, Claude, or API-key setup guide."
             }
           },
           {
@@ -257,7 +257,7 @@
   <main>
     <aside class="availability-notice container" aria-label="Platform availability">
       <strong>Facebook &amp; Instagram are live.</strong> Connect Facebook Pages and linked Instagram professional accounts.
-      <a href="https://app.sync-socials.com/app/connections">Connect your accounts</a> to start publishing.
+      <a href="https://app.sync-socials.com/login?next=%2Fapp%2Fconnections">Connect your accounts</a> to start publishing.
     </aside>
     <!-- ===== Hero ===== -->
     <section class="hero">
@@ -605,13 +605,34 @@
             Connect a compatible AI agent through MCP and run your content workflow from a prompt. Upload media, create drafts, schedule campaigns and publish to your connected, supported destinations.
             </p>
             <div class="ss-cta-row">
-              <a class="ss-btn ss-btn--primary" href="https://app.sync-socials.com/login" target="_blank" rel="noopener">
+              <a class="ss-btn ss-btn--primary" href="ai-social-media-agent.html#connections">
                 Connect your agent
                 <svg class="ss-btn__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </a>
               <a class="ss-btn ss-btn--ghost" href="https://github.com/DamianoTobasco/sync-socials-agent" target="_blank" rel="noopener">View docs</a>
             </div>
           </div>
+        </div>
+
+        <div class="steps-grid agent-connections" aria-label="Choose your AI connection">
+          <article class="step-card">
+            <span class="step-number">ChatGPT</span>
+            <strong>Connect the published app</strong>
+            <p>Sign in as your workspace owner and approve access. No workspace API key is needed.</p>
+            <a href="chatgpt.html">Set up ChatGPT →</a>
+          </article>
+          <article class="step-card">
+            <span class="step-number">Claude Chat &amp; Cowork</span>
+            <strong>Install the published plugin</strong>
+            <p>Use the custom connector setup while its separate connector directory listing is in review.</p>
+            <a href="claude.html">Set up Claude →</a>
+          </article>
+          <article class="step-card">
+            <span class="step-number">Codex, Claude Code &amp; OpenClaw</span>
+            <strong>Connect an API-key agent</strong>
+            <p>Install the agent skill and configure a workspace API key in a client that supports the hosted MCP server.</p>
+            <a href="ai-social-media-agent.html#install">API-key setup →</a>
+          </article>
         </div>
 
         <!-- DIAGRAM -->
@@ -752,9 +773,9 @@
               <span class="ss-eyebrow__dot"></span>
               How it works
             </span>
-            <h3 class="ss-how__title">One install. <br />Your agent gets the keys.</h3>
+            <h3 class="ss-how__title">Using an API-key agent? <br />Start with the skill.</h3>
             <p class="ss-how__text">
-              Sync Socials ships as a skill for MCP-compatible agents. Install it once and your agent gets a secure link to your workspace - backed by your own API key - so it can act on your accounts without you babysitting a dashboard.
+              For Codex, Claude Code, OpenClaw, and compatible API-key clients, install the Sync Socials skill and configure a workspace API key. Use the connection guides above for ChatGPT and Claude Chat or Cowork.
             </p>
             <ul class="ss-how__list">
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Upload images and video from the prompt</li>
@@ -981,7 +1002,7 @@
         <div class="faq-list">
           <details class="faq-item">
             <summary>Can I use an AI agent with Sync Socials?<span class="chev"></span></summary>
-            <div class="faq-a"><p>Yes. Compatible agents such as Codex, Claude Code and OpenClaw can use the hosted MCP/API to create content, manage drafts, schedule selected posts and check delivery status. You need a Sync Socials account with API access and a workspace API key. <a href="ai-social-media-agent.html">Read the agent setup guide</a>.</p></div>
+            <div class="faq-a"><p>Yes. Connect the published ChatGPT app or Claude plugin, or use the hosted MCP/API with Codex, Claude Code, OpenClaw and compatible clients. A Sync Socials workspace with API access is required. ChatGPT and Claude Chat or Cowork use account authorization; API-key clients use a workspace API key. <a href="chatgpt.html">ChatGPT setup</a>, <a href="claude.html">Claude setup</a>, and <a href="ai-social-media-agent.html#install">API-key setup</a>.</p></div>
           </details>
 
           <details class="faq-item">
@@ -1050,6 +1071,8 @@
         <a href="buffer-alternative.html">Buffer alternative</a>
         <a href="hootsuite-alternative.html">Hootsuite alternative</a>
         <a href="ai-social-media-agent.html">For AI agents</a>
+        <a href="claude.html">Claude setup guide</a>
+        <a href="chatgpt.html">ChatGPT setup guide</a>
         <a href="llms.txt">Product facts for AI assistants</a>
       </div>
       <div class="footer-col">

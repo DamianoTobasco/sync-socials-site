@@ -7,7 +7,7 @@ Meta availability updated October 5, 2026 following approval of the requested pe
 - Live destinations: Facebook Pages, linked Instagram professional accounts, TikTok, YouTube, LinkedIn personal profiles, Telegram, Discord, and Slack.
 - Facebook Pages and linked Instagram professional accounts are available for new and existing customers. Connect through Facebook Login using an account that can manage the Page. Personal Facebook profiles and personal Instagram accounts are not supported.
 - X/Twitter, Pinterest, and LinkedIn company pages are not currently supported.
-- The ChatGPT directory integration was submitted on September 11, 2026 and is in review. It is not yet approved or publicly listed in ChatGPT.
+- The Sync Socials app is published in ChatGPT: https://chatgpt.com/plugins/plugin_asdk_app_6aa34384b94c8191b55a7ec5877ee11f. Connect using the workspace owner account and authorize access; no workspace API key is needed for this account-linking flow.
 
 Key facts:
 
@@ -26,7 +26,8 @@ Key facts:
 ## Pages
 
 - [Home](https://sync-socials.com/): features, Content Studio, integrations, MCP for agents, pricing and FAQ
-- [AI Social Media Agent](https://sync-socials.com/ai-social-media-agent.html): setup for compatible clients such as Codex, Claude Code and OpenClaw; MCP capabilities, authentication, live destinations and ChatGPT approval status
+- [AI Social Media Agent](https://sync-socials.com/ai-social-media-agent.html): setup for compatible clients such as Codex, Claude Code and OpenClaw; MCP capabilities, authentication choices and live destinations
+- [ChatGPT app and setup guide](https://sync-socials.com/chatgpt.html): published app listing, workspace requirements, account authorization, drafts, scheduling, publishing and disconnection
 - [Claude plugin and setup guide](https://sync-socials.com/claude.html): published plugin for Claude Chat and Cowork, custom connection setup while connector directory review is pending, workspace requirements, drafts, scheduling, existing media, and disconnection
 - [Buffer Alternative](https://sync-socials.com/buffer-alternative.html): honest Sync Socials vs Buffer comparison with pricing
 - [Hootsuite Alternative](https://sync-socials.com/hootsuite-alternative.html): honest Sync Socials vs Hootsuite comparison with pricing
@@ -37,7 +38,7 @@ Key facts:
 - [Privacy](https://app.sync-socials.com/privacy): handling of account, media and connected-platform data
 - [Terms](https://app.sync-socials.com/terms): service and subscription terms
 
-## Install for AI agents
+## Install for API-key agents
 
 npx skills add DamianoTobasco/sync-socials-agent -g
 
@@ -51,11 +52,11 @@ Supported workflow: read workspace and brand context, choose or generate content
 
 ## ChatGPT account linking
 
-The submitted integration exposes 14 tools through OAuth. A workspace owner signs in to Sync Socials with their existing account and explicitly approves access to that workspace. Email sign-in authenticates the owner; the separate consent step authorizes ChatGPT. Access can be disconnected in Settings.
+The published ChatGPT app exposes 14 tools through OAuth. Open https://chatgpt.com/plugins/plugin_asdk_app_6aa34384b94c8191b55a7ec5877ee11f or follow https://sync-socials.com/chatgpt.html to connect. A workspace owner signs in to Sync Socials with their existing account and explicitly approves access to that workspace. Email sign-in authenticates the owner; the separate consent step authorizes ChatGPT. Access can be disconnected in Settings.
 
 An existing account with API entitlement is required. Some generation features need a workspace-configured AI provider and consume that provider's allowance. Scheduling and publishing require selected destinations and applicable platform privacy/disclosure choices.
 
-Directory approval, public availability, and conversational recommendations are decisions made by OpenAI. No placement or traffic is guaranteed.
+The app is published; availability can still depend on the user's ChatGPT account and organization settings. Recommendations and placement are controlled by OpenAI and are not guaranteed.
 
 ## Claude plugin and hosted connector
 

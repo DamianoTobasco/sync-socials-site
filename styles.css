@@ -1892,3 +1892,7 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
 .trial-disclosure { max-width: 580px; margin: 14px auto 0; font-size: 12px; line-height: 1.7; color: var(--muted); text-align: center; }
 .cta-band .trial-disclosure { max-width: 550px; font-size: 12px; margin-top: 16px; opacity: .85; }
 .section-cta .trial-disclosure { margin-top: 14px; }
+
+/* Connection choices share the existing card design across agent entry points. */
+.agent-connections { margin-bottom: 40px; }
+.agent-connections a { display: inline-block; margin-top: 16px; color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }

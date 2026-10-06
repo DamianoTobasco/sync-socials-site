@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://sync-socials.com/referral.html</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -38,6 +38,12 @@
   </url>
   <url>
     <loc>https://sync-socials.com/data-deletion.html</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://sync-socials.com/chatgpt.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

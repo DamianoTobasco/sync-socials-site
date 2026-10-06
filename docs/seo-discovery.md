@@ -26,7 +26,9 @@ described below; the public report reads the deployed site.
 - Meta approved the requested permissions on October 5, 2026. Facebook Pages
   and linked Instagram professional accounts are available for new and existing
   customers; visible notices, FAQs, JSON-LD and `llms.txt` reflect that scope.
-  The ChatGPT directory listing remains pending approval.
+  The ChatGPT app is published; its direct listing and setup guide are linked
+  from the homepage and agent guide. Claude plugin setup remains separate from
+  its connector directory review.
 - The Buffer comparison now acknowledges its MCP/API and paid-plan scheduling.
   The Hootsuite comparison uses the current Standard plan name and describes
   monthly/annual billing accurately. Both link to dated primary sources.
