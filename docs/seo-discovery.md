@@ -23,9 +23,10 @@ described below; the public report reads the deployed site.
   visible product content. No invented ratings or review schema were added.
 - Agent documentation identifies the hosted MCP endpoint, required account/API
   access, supported workflows, asynchronous generation and provider costs.
-- Facebook/Instagram general customer access and the ChatGPT directory listing
-  remain pending approval. Update the visible notices, FAQs, JSON-LD and
-  `llms.txt` together when their status is confirmed to change.
+- Meta approved the requested permissions on October 5, 2026. Facebook Pages
+  and linked Instagram professional accounts are available for new and existing
+  customers; visible notices, FAQs, JSON-LD and `llms.txt` reflect that scope.
+  The ChatGPT directory listing remains pending approval.
 - The Buffer comparison now acknowledges its MCP/API and paid-plan scheduling.
   The Hootsuite comparison uses the current Standard plan name and describes
   monthly/annual billing accurately. Both link to dated primary sources.

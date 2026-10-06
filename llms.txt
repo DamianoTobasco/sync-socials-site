@@ -2,10 +2,10 @@
 
 > Sync Socials is social media planning, content creation, scheduling, and publishing software for creators, businesses, and agencies. Work in the dashboard or connect an AI agent through the hosted MCP/API.
 
-Product facts updated September 17, 2026. Integration approval status was last confirmed September 11, 2026 and is still listed as pending:
+Meta availability updated October 5, 2026 following approval of the requested permissions. Other integration statuses are listed separately below:
 
-- Live destinations: TikTok, YouTube, LinkedIn personal profiles, Telegram, Discord, and Slack.
-- Facebook Pages and linked Instagram professional accounts work for eligible existing connections. Meta has verified Sync Socials as a Tech Provider, but the permissions required for general new-customer access remain in App Review. Contact support before subscribing if Facebook or Instagram is essential.
+- Live destinations: Facebook Pages, linked Instagram professional accounts, TikTok, YouTube, LinkedIn personal profiles, Telegram, Discord, and Slack.
+- Facebook Pages and linked Instagram professional accounts are available for new and existing customers. Connect through Facebook Login using an account that can manage the Page. Personal Facebook profiles and personal Instagram accounts are not supported.
 - X/Twitter, Pinterest, and LinkedIn company pages are not currently supported.
 - The ChatGPT directory integration was submitted on September 11, 2026 and is in review. It is not yet approved or publicly listed in ChatGPT.
 
