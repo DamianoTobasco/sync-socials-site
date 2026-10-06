@@ -77,6 +77,32 @@ That's it — `sync-socials.com` is live, free hosting, and your SaaS at
 
 ---
 
+## Support widget and Cloudflare headers
+
+`support-widget.js` embeds the app's `/support/widget` route. The marketing site's
+production `Content-Security-Policy` is set in Cloudflare, outside this repository.
+Its existing policy must include:
+
+```text
+frame-src 'self' https://app.sync-socials.com;
+```
+
+Applied on October 6, 2026 in the existing Cloudflare `Security response headers`
+rule. Add this directive to the existing policy for the marketing hosts. Preserve every
+other directive and security header, including `frame-ancestors 'none'` and
+`X-Frame-Options: DENY`, which protect the marketing page itself. Do not add a
+second CSP header: multiple policies are all enforced and cannot loosen one
+another. Without `frame-src`, `default-src 'self'` blocks the support iframe.
+
+The app separately permits only its own and the two marketing origins in the
+widget's `frame-ancestors`; other app routes retain their framing protection.
+After publishing or changing Cloudflare rules, check the live response headers
+and open Ask Sync on desktop and mobile. Confirm the iframe loads without a CSP
+error, opens at the right size, and can send a support message. A successful
+GitHub Pages deployment alone does not verify the external header configuration.
+
+---
+
 ## Editing content
 
 Everything is in plain `index.html`. Common edits:
