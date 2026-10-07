@@ -105,7 +105,10 @@
       try { const r = await fetch(endpoint + '/config', { credentials: 'omit', cache: 'no-store' }); analyticsEnabled = r.ok && (await r.json()).enabled === true; } catch { analyticsEnabled = false; }
     }
     if (analyticsEnabled) {
-      const button = document.createElement('button'); button.type = 'button'; button.textContent = 'Analytics privacy'; button.setAttribute('aria-label', 'Change site analytics consent'); button.style.cssText = 'position:fixed;z-index:9998;left:16px;bottom:16px;padding:7px 12px;border:1px solid #74967e;border-radius:18px;background:#14221a;color:#f4f3ed;font:12px system-ui;cursor:pointer'; button.addEventListener('click', settings); document.body.append(button);
+      // A page can offer its own link (for example in a footer) instead of the floating button.
+      const pageLink = document.querySelector('[data-analytics-privacy-link]');
+      if (pageLink) { pageLink.hidden = false; pageLink.addEventListener('click', settings); }
+      else { const button = document.createElement('button'); button.type = 'button'; button.textContent = 'Analytics privacy'; button.setAttribute('aria-label', 'Change site analytics consent'); button.style.cssText = 'position:fixed;z-index:9998;left:16px;bottom:16px;padding:7px 12px;border:1px solid #74967e;border-radius:18px;background:#14221a;color:#f4f3ed;font:12px system-ui;cursor:pointer'; button.addEventListener('click', settings); document.body.append(button); }
       const analyticsChoice = read(consentKey);
       if (analyticsChoice === 'granted') void record(); else if (analyticsChoice || protectedPath()) clear();
     }
