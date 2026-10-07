@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Data Deletion Instructions | Sync Socials</title>
-  <meta name="description" content="Learn how to disconnect social accounts and request deletion of your Sync Socials data, including Facebook and Instagram data. Contact support for help." />
+  <meta name="description" content="Learn how to disconnect social accounts and request deletion of your Sync Socials data, including YouTube, Facebook and Instagram data. Contact support for help." />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Sync Socials" />
@@ -36,7 +36,7 @@
         "@id": "https://sync-socials.com/data-deletion.html#webpage",
         "url": "https://sync-socials.com/data-deletion.html",
         "name": "Data Deletion Instructions | Sync Socials",
-        "description": "Learn how to disconnect social accounts and request deletion of your Sync Socials data, including Facebook and Instagram data. Contact support for help.",
+        "description": "Learn how to disconnect social accounts and request deletion of your Sync Socials data, including YouTube, Facebook and Instagram data. Contact support for help.",
         "inLanguage": "en-US",
         "isPartOf": {
           "@id": "https://sync-socials.com/#website"
@@ -91,13 +91,20 @@
       </div>
       <div class="cmp-prose">
         <section>
-          <h2>Disconnect Facebook, Instagram, or another social account</h2>
+          <h2>Disconnect Facebook, Instagram, or another non-YouTube account</h2>
           <p>Sign in to <a href="https://app.sync-socials.com/login?next=%2Fapp%2Fconnections">Connections</a>, find the account, and select <strong>Disconnect</strong>. This stops Sync Socials from publishing through that connection. Disconnecting does not by itself delete all data already stored in your workspace.</p>
         </section>
         <section>
+          <h2>Disconnect YouTube and remove saved channel data</h2>
+          <p>In <a href="https://app.sync-socials.com/login?next=%2Fapp%2Fconnections">Connections</a>, choose the YouTube channel and review the disconnect confirmation. Sync Socials removes that connection's saved channel identity, credentials, and associated performance data from the active workspace, and starts the Google revocation process. The revocation request is sent once the shared authorization can be identified and checked for newer connections. Other channels sharing the same Google authorization may also be disconnected and need reconnection.</p>
+          <p>If the authorization cannot yet be identified or Google revocation cannot be confirmed, Sync Socials retries and shows a status notice. A separate revocation record temporarily retains the encrypted credential needed for those retries. If a newer authorization is found, automatic revocation stops, its retained credential is cleared, and the newer connection is preserved. You can review or remove access yourself in <a href="https://security.google.com/settings/security/permissions">Google security settings</a>; removal there can also affect that newer connection. Your original drafts, source media, and already-published videos remain unless you separately choose to delete them. A disconnected scheduled destination is not transferred to another YouTube channel.</p>
+          <p>To remove videos already published on YouTube, use YouTube's own controls. Disconnecting Sync Socials does not delete those videos. Prior copies in backups and operational logs have separate retention; contact us about the scope and status of a deletion request.</p>
+          <p>Sync Socials uses YouTube API Services. See the <a href="https://app.sync-socials.com/privacy#google-youtube">Google and YouTube privacy disclosure</a>, <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, and <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.</p>
+        </section>
+        <section>
           <h2>Request deletion of your data</h2>
-          <p>Email <a href="mailto:contactsyncsocials@gmail.com?subject=Sync%20Socials%20data%20deletion%20request">contactsyncsocials@gmail.com</a> from the email address associated with your Sync Socials account. Include your workspace name and whether you want to delete data for a specific Facebook Page or Instagram account, other workspace data, or your entire Sync Socials account.</p>
-          <p>For a connected social account, include its Page name or username so we can identify the connection. Do not send passwords, access tokens, or payment-card details. If you cannot access your account email, contact the same address for help verifying ownership.</p>
+          <p>Email <a href="mailto:contactsyncsocials@gmail.com?subject=Sync%20Socials%20data%20deletion%20request">contactsyncsocials@gmail.com</a> from the email address associated with your Sync Socials account. Include your workspace name and whether you want to delete data for a specific YouTube channel, Facebook Page, Instagram account, other workspace data, or your entire Sync Socials account.</p>
+          <p>For a connected social account, include its channel or Page name or username so we can identify the connection. Do not send passwords, access tokens, or payment-card details. If you cannot access your account email, contact the same address for help verifying ownership.</p>
         </section>
         <section>
           <h2>Published content and retained records</h2>
