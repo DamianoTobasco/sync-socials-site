@@ -33,6 +33,13 @@
       var width = open ? Math.min(420, window.innerWidth - margin * 2) : 184;
       var bottom = margin + keyboardOffset;
       var privacy = document.querySelector('[aria-label="Site analytics privacy"]');
+      // On a phone, stacking the closed bubble above the privacy panel pushes
+      // it over the page's own form, so hide it until a choice closes the panel.
+      if (privacy && !open && window.innerWidth < 500) {
+        frame.style.display = 'none';
+        return;
+      }
+      frame.style.display = 'block';
       if (privacy) {
         var rect = privacy.getBoundingClientRect();
         if (rect.width && rect.right > window.innerWidth - width - margin && rect.top < window.innerHeight - bottom) {
