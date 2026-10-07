@@ -45,25 +45,15 @@ function loadMetaPixel() {
 }
 
 function initMetaMeasurement() {
-  const consent = readBrowserCookie(META_CONSENT_COOKIE);
-  if (consent === 'granted') {
+  if (readBrowserCookie(META_CONSENT_COOKIE) === 'granted') {
     loadMetaPixel();
     return;
   }
-  if (consent === 'denied') return;
-
-  const banner = document.createElement('aside');
-  banner.className = 'meta-consent';
-  banner.setAttribute('aria-label', 'Analytics cookie choice');
-  banner.innerHTML = '<p>Sync Socials uses optional advertising cookies to measure signups and improve its ads. <a href="https://app.sync-socials.com/privacy">Learn more</a></p>' +
-    '<div><button type="button" data-meta-consent="denied">Decline</button><button type="button" class="meta-consent__accept" data-meta-consent="granted">Allow</button></div>';
-  document.body.appendChild(banner);
-  banner.querySelectorAll('[data-meta-consent]').forEach(button => button.addEventListener('click', () => {
-    const choice = button.getAttribute('data-meta-consent');
-    setSharedMetaCookie(META_CONSENT_COOKIE, choice);
-    banner.remove();
-    if (choice === 'granted') loadMetaPixel();
-  }));
+  // growth.js asks for this choice in its single optional-cookie panel and
+  // announces the decision, so this page never shows a second pop-up.
+  window.addEventListener('syncsocials:ads-consent', event => {
+    if (event.detail === 'granted') loadMetaPixel();
+  });
 }
 
 initMetaMeasurement();
