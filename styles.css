@@ -1861,6 +1861,7 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
 
 /* ---- Motion guards ---- */
 @media (prefers-reduced-motion: reduce) {
+  .ss-reveal { opacity: 1; transform: none; }
   .stagger > * { opacity: 1 !important; transform: none !important; transition: none !important; }
   .nav-links a::after { transition: none; }
 }

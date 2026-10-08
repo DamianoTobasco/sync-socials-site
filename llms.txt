@@ -2,11 +2,12 @@
 
 > Sync Socials is social media planning, content creation, scheduling, and publishing software for creators, businesses, and agencies. Work in the dashboard or connect an AI agent through the hosted MCP/API.
 
-Meta availability updated October 5, 2026 following approval of the requested permissions. Other integration statuses are listed separately below:
+Integration availability updated October 8, 2026: X posting is live on active paid Growth after the trial. Meta availability was confirmed October 5, 2026 following approval of the requested permissions.
 
-- Live destinations: Facebook Pages, linked Instagram professional accounts, TikTok, YouTube, LinkedIn personal profiles, Telegram, Discord, and Slack.
+- Live destinations: Facebook Pages, linked Instagram professional accounts, TikTok, YouTube, LinkedIn personal profiles, Telegram, Discord, Slack, and X/Twitter.
 - Facebook Pages and linked Instagram professional accounts are available for new and existing customers. Connect through Facebook Login using an account that can manage the Page. Personal Facebook profiles and personal Instagram accounts are not supported.
-- X/Twitter, Pinterest, and LinkedIn company pages are not currently supported.
+- X/Twitter requires an active paid Growth subscription after the trial and an X account connected through OAuth in Sync Socials Connections. Agent authorization does not connect the X account. If cached tool metadata or installed instructions still exclude X, refresh the client tools or instructions and check the live workspace capabilities and allowance. This backend availability does not imply a newly approved marketplace release.
+- Pinterest and LinkedIn company pages are not currently supported.
 - The Sync Socials app is published in ChatGPT: https://chatgpt.com/plugins/plugin_asdk_app_6aa34384b94c8191b55a7ec5877ee11f. Connect using the workspace owner account and authorize access; no workspace API key is needed for this account-linking flow.
 
 Key facts:
@@ -16,7 +17,9 @@ Key facts:
 - MCP and API access lets compatible AI agents read workspace and brand context, list connected accounts and media, import media, generate concepts, produce videos, create and edit drafts, schedule and publish selected posts, reschedule, cancel, and check delivery status.
 - Video production can continue asynchronously; retrieve the post to check completion and obtain a fresh signed playback URL.
 - Pricing: one Growth plan at $19.95 per month or $199.50 per year (2 months free), with a free 7 day trial and cancel anytime
-- 20 accounts per platform and unlimited scheduled posts, no fees per post
+- 20 accounts per platform and unlimited scheduling, with no per-post fees. X publishing has a separate included allowance; limits apply when delivery starts.
+- X allowance: up to 50 publish attempts per workspace per UTC calendar month, including up to 3 link-post attempts, and 10 per UTC day. Each X account is limited to 30 attempts per month and 3 per day. Failed attempts count; reconnection does not reset usage. Media can exhaust the included allowance before the post cap. Check current workspace X usage before publishing.
+- X supports plain text, up to 4 images, or one video (up to 140 seconds and 50 MB), with a standard 280 weighted-character caption. No threads or animated GIFs. X connection attempts are limited to 5 per workspace per UTC month.
 - Posts publish through supported platforms' APIs. Reach and engagement depend on the platform, content, audience, and timing; results are not guaranteed.
 - Social accounts use official OAuth where supported. Telegram uses a bot token; Discord and Slack use channel webhooks. Sync Socials does not ask for social-network passwords.
 - Built and personally supported by founder Damiano Tobasco
@@ -60,7 +63,7 @@ The app is published; availability can still depend on the user's ChatGPT accoun
 
 ## Claude plugin and hosted connector
 
-The Sync Socials plugin is published for Claude Chat and Cowork: https://claude.ai/customize/plugins/id/f091ce5c-7b5a-4d77-9f15-30495acd504a%40anthropic-plugin-directory. It bundles the remote connector and social-publishing workflow. Installing the plugin does not connect a workspace. The separate connector directory listing remains under review; direct directory account connection is not yet available.
+The Sync Socials plugin is published for Claude Chat and Cowork: https://claude.ai/customize/plugins/id/f091ce5c-7b5a-4d77-9f15-30495acd504a%40anthropic-plugin-directory. It bundles the remote connector and social-publishing workflow. Installing the plugin does not connect a workspace. X is live in the Sync Socials dashboard for active paid Growth, but the published Claude plugin’s bundled X instructions are awaiting an update. Use the dashboard for X until that update is available. The separate connector directory listing remains under review; direct directory account connection is not yet available.
 
 For now, add a custom connector in Claude with server URL https://app.sync-socials.com/api/mcp, public OAuth client ID e884049a-bc22-4239-9c82-8bdb7bf3a7b7, and a blank client secret. Use Advanced settings, or choose Sign in now and Use your own OAuth client if Claude shows those options. The client ID is a public identifier, not a password; this hosted flow does not require an application secret or API key. Sign in with the Sync Socials workspace owner and approve the workspace on the consent screen. Team and Enterprise Owners first add the connector for their organization. Existing connections can be retained. Contact contactsyncsocials@gmail.com for setup help.
 

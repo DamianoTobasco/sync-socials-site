@@ -36,6 +36,24 @@ described below; the public report reads the deployed site.
   preserved, with explicit social-preview agents documented in `robots.txt`.
 - Headings retain word separation when mobile CSS hides their line breaks.
 
+## X availability update — October 8, 2026
+
+X is live on active paid Growth subscriptions after the trial. The homepage,
+comparison pages, ChatGPT and Claude guides, agent guide, and `llms.txt` now
+reflect that availability. The X allowance is shared across the workspace:
+up to 50 publish attempts per UTC month, including 3 with links, and 10 per day;
+each account has limits of 30 per month and 3 per day. OAuth connection is
+required. Visible pricing and scheduling copy distinguishes unlimited scheduling
+from the X publishing allowance, and structured FAQ answers use the same facts.
+
+Validation covered all eight HTML pages and JSON-LD blocks, 26 matching FAQ
+answers, 315 local references, and 145 fragment links. All six changed HTML
+pages passed desktop and mobile layout checks with no horizontal overflow.
+The homepage diagram includes X with a paid Growth label; its cards remain
+visible with both normal and reduced motion. The published Claude plugin’s X
+instructions still await an update, so its guide directs X publishing to the
+dashboard in the meantime. No new marketplace approval is implied.
+
 ## Verification
 
 - Six pages passed checks for required/duplicate metadata, title/description

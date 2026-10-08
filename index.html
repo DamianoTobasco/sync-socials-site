@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Sora:wght@600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=16" />
+  <link rel="stylesheet" href="styles.css?v=17" />
 
   <!-- Structured data for search engines and AI assistants -->
   <script type="application/ld+json">
@@ -77,11 +77,12 @@
         "url": "https://app.sync-socials.com/",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
-        "description": "AI content creation, social media scheduling and publishing through a dashboard or hosted MCP/API. Live destinations include TikTok, YouTube, LinkedIn personal profiles, Discord, Slack and Telegram. Facebook Pages and linked Instagram professional accounts are also live.",
+        "description": "AI content creation, social media scheduling and publishing through a dashboard or hosted MCP/API. Live destinations include TikTok, YouTube, LinkedIn personal profiles, Discord, Slack and Telegram. Facebook Pages and linked Instagram professional accounts are also live. X/Twitter is included on active paid Growth after the trial, with publishing limits.",
         "featureList": [
           "20 accounts per platform",
-          "Unlimited scheduled posts",
+          "Unlimited scheduling; X publishing limits apply",
           "Publishing to Facebook Pages, linked Instagram professional accounts, TikTok, YouTube, LinkedIn personal profiles, Discord, Slack and Telegram",
+          "X/Twitter publishing on active paid Growth: up to 50 workspace attempts per UTC month, including 3 link-post attempts",
           "MCP and API access for compatible AI agents",
           "AI content concepts, captions and video creation; provider charges may apply",
           "Drafts, calendar scheduling and publishing status",
@@ -122,7 +123,7 @@
             "name": "Can I use an AI agent with Sync Socials?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Connect the published ChatGPT app or Claude plugin, or use the hosted MCP/API with Codex, Claude Code, OpenClaw and compatible clients. A Sync Socials workspace with API access is required. ChatGPT and Claude Chat or Cowork use account authorization; API-key clients use a workspace API key. Read the ChatGPT, Claude, or API-key setup guide."
+              "text": "Yes. Connect the published ChatGPT app or Claude plugin, or use the hosted MCP/API with Codex, Claude Code, OpenClaw and compatible clients. A Sync Socials workspace with API access is required. ChatGPT and Claude Chat or Cowork use account authorization; API-key clients use a workspace API key. ChatGPT setup, Claude setup, and API-key setup."
             }
           },
           {
@@ -138,7 +139,7 @@
             "name": "What platforms are supported?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "TikTok, YouTube, LinkedIn personal profiles, Discord, Slack and Telegram are live. Facebook Pages and linked Instagram professional accounts are available for new and existing customers. X/Twitter, Pinterest and LinkedIn company pages are not currently supported."
+              "text": "TikTok, YouTube, LinkedIn personal profiles, Discord, Slack and Telegram are live. Facebook Pages and linked Instagram professional accounts are available for new and existing customers. X/Twitter is live on active paid Growth subscriptions after the trial, with usage limits. Connect X through OAuth in Connections. Pinterest and LinkedIn company pages are not currently supported."
             }
           },
           {
@@ -146,7 +147,15 @@
             "name": "How many posts can I schedule each month?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Unlimited. Schedule as many posts as you like across up to 20 accounts per platform - no per-post fees, ever."
+              "text": "Scheduling is unlimited across up to 20 accounts per platform, with no per-post fees. X publishing has a separate allowance on active paid Growth: up to 50 attempts per workspace per UTC calendar month, including up to 3 link-post attempts. Daily and per-account limits also apply."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the X posting limits?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "X requires an active paid Growth subscription after the trial and an X account connected through OAuth. Each workspace gets up to 50 publish attempts per UTC calendar month, including up to 3 with links, and up to 10 per UTC day. Each X account gets up to 30 attempts per month and 3 per day. Failed attempts count, reconnecting does not reset usage, and media can use the included allowance before the post limit is reached. Check your remaining allowance in Connections, Create, or Billing."
             }
           },
           {
@@ -256,7 +265,7 @@
 
   <main>
     <aside class="availability-notice container" aria-label="Platform availability">
-      <strong>Facebook &amp; Instagram are live.</strong> Connect Facebook Pages and linked Instagram professional accounts.
+      <strong>Facebook, Instagram &amp; X are live.</strong> Connect Facebook Pages and linked Instagram professional accounts. X is included on active paid Growth after the trial, with <a href="/#x-limits">posting limits</a>.
       <a href="https://app.sync-socials.com/login?next=%2Fapp%2Fconnections">Connect your accounts</a> to start publishing.
     </aside>
     <!-- ===== Hero ===== -->
@@ -264,7 +273,7 @@
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="container hero-inner">
         <a class="eyebrow" href="#integrations">
-          <span class="dot"></span> Now live on TikTok, YouTube, LinkedIn &amp; more
+          <span class="dot"></span> Now live on X, TikTok, YouTube, LinkedIn &amp; more
         </a>
         <h1 class="hero-title">Run your socials on <br /><span class="grad">autopilot with AI agents.</span></h1>
         <p class="hero-sub">
@@ -306,7 +315,7 @@
           <span>Slack</span><span class="sep">•</span>
           <span>Telegram</span><span class="sep">•</span>
           <span>TikTok</span><span class="sep">•</span>
-          <span>X / Twitter <em>soon</em></span><span class="sep">•</span>
+          <span>X / Twitter</span><span class="sep">•</span>
           <span>Instagram</span><span class="sep">•</span>
           <span>Facebook</span><span class="sep">•</span>
           <span>YouTube</span><span class="sep">•</span>
@@ -314,7 +323,7 @@
           <span>Slack</span><span class="sep">•</span>
           <span>Telegram</span><span class="sep">•</span>
           <span>TikTok</span><span class="sep">•</span>
-          <span>X / Twitter <em>soon</em></span><span class="sep">•</span>
+          <span>X / Twitter</span><span class="sep">•</span>
         </div>
       </div>
     </section>
@@ -533,7 +542,7 @@
           </div>
           <div class="platform">
             <span class="pf-ic x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231ZM17.083 19.77h1.833L7.084 4.126H5.117Z"/></svg></span>
-            <strong>X / Twitter</strong><span class="pf-status soon">Soon</span>
+            <strong>X / Twitter</strong><span class="pf-status live">Live</span>
           </div>
           <div class="platform">
             <span class="pf-ic li" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5H3V21h3.5V8.5ZM4.75 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM21 13.8c0-3.7-2-5.6-4.6-5.6-2.1 0-3 1.2-3.5 2V8.5H9.5V21H13v-7c0-1.8.8-2.8 2.3-2.8 1.4 0 2.2 1 2.2 2.8v7H21v-7.2Z"/></svg></span>
@@ -544,6 +553,7 @@
             <strong>More to come</strong><span class="pf-status">In progress</span>
           </div>
         </div>
+        <p class="pricing-foot">X is included on active paid Growth after the trial. Connect through OAuth and share up to 50 publish attempts per workspace each month. <a href="#x-limits">See X limits</a>.</p>
       </div>
     </section>
 
@@ -684,6 +694,16 @@
 
             <div class="ss-col ss-col--right">
               <span class="ss-col__label">Published to</span>
+
+              <div class="ss-node ss-reveal">
+                <div class="ss-node__icon" style="color:var(--ss-ink);" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231ZM17.083 19.77h1.833L7.084 4.126H5.117Z"/></svg>
+                </div>
+                <div class="ss-node__text">
+                  <span class="ss-node__title">X / Twitter</span>
+                  <span class="ss-node__sub">Paid Growth · included limits</span>
+                </div>
+              </div>
 
               <div class="ss-node ss-reveal">
                 <div class="ss-node__icon" style="color:var(--ss-ink);">
@@ -943,7 +963,8 @@
              href="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dgrowth_monthly">Get started free</a>
           <ul class="pc-feats">
             <li>20 accounts per platform</li>
-            <li>Unlimited scheduled posts</li>
+            <li>Unlimited scheduling; <a href="#x-limits">X publishing limits apply</a></li>
+            <li>X on paid Growth: up to 50 attempts per workspace each month</li>
             <li>Publish to supported social and community channels</li>
             <li>MCP/API access for agents and integrations</li>
             <li>Custom dashboards &amp; analytics</li>
@@ -976,12 +997,15 @@
           </details>
           <details class="faq-item">
             <summary>What platforms are supported?<span class="chev"></span></summary>
-            <div class="faq-a"><p>TikTok, YouTube, LinkedIn personal profiles, Discord, Slack and Telegram are live. Facebook Pages and linked Instagram professional accounts are available for new and existing customers. X/Twitter, Pinterest and LinkedIn company pages are not currently supported.</p></div>
+            <div class="faq-a"><p>TikTok, YouTube, LinkedIn personal profiles, Discord, Slack and Telegram are live. Facebook Pages and linked Instagram professional accounts are available for new and existing customers. X/Twitter is live on active paid Growth subscriptions after the trial, with usage limits. Connect X through OAuth in Connections. Pinterest and LinkedIn company pages are not currently supported.</p></div>
           </details>
           <details class="faq-item">
             <summary>How many posts can I schedule each month?<span class="chev"></span></summary>
-            <div class="faq-a"><p>Unlimited. Schedule as many posts as you like across up to 20 accounts per
-              platform - no per-post fees, ever.</p></div>
+            <div class="faq-a"><p>Scheduling is unlimited across up to 20 accounts per platform, with no per-post fees. X publishing has a separate allowance on active paid Growth: up to 50 attempts per workspace per UTC calendar month, including up to 3 link-post attempts. Daily and per-account limits also apply.</p></div>
+          </details>
+          <details class="faq-item" id="x-limits">
+            <summary>What are the X posting limits?<span class="chev"></span></summary>
+            <div class="faq-a"><p>X requires an active paid Growth subscription after the trial and an X account connected through OAuth. Each workspace gets up to 50 publish attempts per UTC calendar month, including up to 3 with links, and up to 10 per UTC day. Each X account gets up to 30 attempts per month and 3 per day. Failed attempts count, reconnecting does not reset usage, and media can use the included allowance before the post limit is reached. Check your remaining allowance in Connections, Create, or Billing.</p></div>
           </details>
           <details class="faq-item">
             <summary>Will my posts get less reach by scheduling them?<span class="chev"></span></summary>
