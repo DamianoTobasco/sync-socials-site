@@ -1620,6 +1620,69 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
 
 .section-cta { text-align: center; margin-top: 32px; }
 
+/* ---- Content Studio: how it works beside the swipe demo ---- */
+.studio-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 380px);
+  gap: clamp(32px, 6vw, 72px);
+  align-items: center;
+  max-width: 980px;
+  margin: 8px auto 0;
+}
+.studio-steps { position: relative; display: grid; gap: 26px; margin: 0; padding: 0; list-style: none; }
+.studio-steps::before {
+  content: ""; position: absolute; left: 19px; top: 22px; bottom: 22px; width: 1px;
+  background: linear-gradient(180deg, rgba(95,208,137,.55), rgba(95,208,137,.08));
+}
+.studio-step { position: relative; display: flex; align-items: flex-start; gap: 16px; }
+.studio-step-icon {
+  display: grid; place-items: center; flex: none;
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid rgba(95,208,137,.4);
+  background: #13241b;
+  color: #7fd6a2;
+  box-shadow: 0 0 0 5px rgba(9,20,14,.55);
+}
+.studio-step-icon svg { width: 18px; height: 18px; }
+.studio-step strong { display: block; margin: 2px 0 4px; color: #fff; font-size: 17px; letter-spacing: -.2px; }
+.studio-step span:not(.studio-step-icon) { display: block; max-width: 420px; color: #b4c3b9; font-size: 14.5px; line-height: 1.55; }
+
+.vd-ready {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 14px; border-radius: 999px;
+  border: 1px solid rgba(95,208,137,.35);
+  background: rgba(79,190,122,.14);
+  color: #aef0c8; font-size: 13px; font-weight: 600;
+}
+.vd-ready svg { width: 15px; height: 15px; }
+
+.studio-facts {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: clamp(36px, 5vw, 52px) 0 0; padding: 0; list-style: none;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+.studio-facts li { padding: 22px 20px 4px; border-left: 1px solid rgba(255,255,255,.08); }
+.studio-facts li:first-child { border-left: 0; padding-left: 4px; }
+.studio-facts svg { width: 20px; height: 20px; color: #7fd6a2; }
+.studio-facts strong { display: block; margin: 12px 0 4px; color: #fff; font-size: 15px; }
+.studio-facts span { display: block; color: #9fb2a6; font-size: 13.5px; line-height: 1.5; }
+
+@media (max-width: 900px) {
+  .studio-flow { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  /* Lead with the demo on narrow screens, then explain it. */
+  .studio-flow .viral-demo { order: -1; }
+  .studio-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .studio-facts li:nth-child(odd) { border-left: 0; padding-left: 4px; }
+  .studio-facts li:nth-child(n+3) { border-top: 1px solid rgba(255,255,255,.08); }
+}
+@media (max-width: 520px) {
+  .studio-steps { gap: 22px; }
+  .studio-step strong { font-size: 16px; }
+  .studio-facts { grid-template-columns: minmax(0, 1fr); }
+  .studio-facts li { padding: 18px 4px 2px; border-left: 0; }
+  .studio-facts li + li { border-top: 1px solid rgba(255,255,255,.08); }
+}
+
 /* ---- Content Studio: AI prompt bar ---- */
 .studio-prompt {
   display: flex; align-items: center; gap: 12px;
