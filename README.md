@@ -94,6 +94,17 @@ other directive and security header, including `frame-ancestors 'none'` and
 second CSP header: multiple policies are all enforced and cannot loosen one
 another. Without `frame-src`, `default-src 'self'` blocks the support iframe.
 
+`growth.js` also calls the app's `/api/growth` endpoints (config and visits), so
+the same policy's `connect-src` must include `https://app.sync-socials.com`:
+
+```text
+connect-src 'self' https://www.facebook.com https://connect.facebook.net https://cloudflareinsights.com https://app.sync-socials.com;
+```
+
+As of October 7, 2026 the live header lacks it, so the browser blocks those
+requests: no analytics choice is offered on the marketing site and no campaign
+source is recorded there. Edit the same rule rather than adding a second header.
+
 The app separately permits only its own and the two marketing origins in the
 widget's `frame-ancestors`; other app routes retain their framing protection.
 After publishing or changing Cloudflare rules, check the live response headers
