@@ -4,7 +4,7 @@
 
 Integration availability updated October 8, 2026: X posting is live on active paid Growth after the trial. Meta availability was confirmed October 5, 2026 following approval of the requested permissions.
 
-- Live destinations: Facebook Pages, linked Instagram professional accounts, TikTok, YouTube, LinkedIn personal profiles, Telegram, Discord, Slack, and X/Twitter.
+- Live destinations: Facebook Pages, linked Instagram professional accounts, Threads, TikTok, YouTube, LinkedIn personal profiles, Bluesky, Telegram, Discord, Slack, and X/Twitter. Threads connects through Meta sign-in (text up to 500 characters, up to 10 images, or video). Bluesky connects with an app password (text up to 300 characters, up to 4 images; no video yet).
 - Facebook Pages and linked Instagram professional accounts are available for new and existing customers. Connect through Facebook Login using an account that can manage the Page. Personal Facebook profiles and personal Instagram accounts are not supported.
 - X/Twitter requires an active paid Growth subscription after the trial and an X account connected through OAuth in Sync Socials Connections. Agent authorization does not connect the X account. If cached tool metadata or installed instructions still exclude X, refresh the client tools or instructions and check the live workspace capabilities and allowance. This backend availability does not imply a newly approved marketplace release.
 - Pinterest and LinkedIn company pages are not currently supported.
@@ -16,7 +16,7 @@ Key facts:
 - Viral Machine turns a website or business brief into campaign concepts, hooks, captions, and hashtags. After a concept is chosen, it can produce vertical videos from library clips or remix uploaded brand footage. Drafts can be saved without choosing a destination.
 - MCP and API access lets compatible AI agents read workspace and brand context, list connected accounts and media, import media, generate concepts, produce videos, create and edit drafts, schedule and publish selected posts, reschedule, cancel, and check delivery status.
 - Video production can continue asynchronously; retrieve the post to check completion and obtain a fresh signed playback URL.
-- Pricing: one Growth plan at $19.95 per month or $199.50 per year (2 months free), with a free 7 day trial and cancel anytime
+- Pricing: a Free plan (no card; one account per platform excluding X, unlimited drafts, 3 scheduled or published posts), Growth at $19.95 per month or $199.50 per year (2 months free) with a 7 day free trial, and Agency at $39.99 per month or $399 per year adding team invitations, 50 accounts per platform and three API keys. Cancel anytime.
 - 20 accounts per platform and unlimited scheduling, with no per-post fees. X publishing has a separate included allowance; limits apply when delivery starts.
 - X allowance: up to 50 publish attempts per workspace per UTC calendar month, including up to 3 link-post attempts, and 10 per UTC day. Each X account is limited to 30 attempts per month and 3 per day. Failed attempts count; reconnection does not reset usage. Media can exhaust the included allowance before the post cap. Check current workspace X usage before publishing.
 - X supports plain text, up to 4 images, or one video (up to 140 seconds and 50 MB), with a standard 280 weighted-character caption. No threads or animated GIFs. X connection attempts are limited to 5 per workspace per UTC month.
@@ -37,6 +37,7 @@ Key facts:
 - [Partner Program](https://sync-socials.com/referral.html): 30% recurring commission plus cumulative cash bonuses up to $4,000
 - [App](https://app.sync-socials.com/): log in or start a free 7 day trial
 - [Agent skill and docs](https://github.com/DamianoTobasco/sync-socials-agent): install the Sync Socials skill for MCP agents
+- [Help center](https://sync-socials.com/help/): setup guides for every platform, the composer and scheduling, media requirements, troubleshooting failed posts, Content Studio and AI keys, agents, pricing, trial and cancellation
 - [Data deletion](https://sync-socials.com/data-deletion.html): disconnect social accounts and request deletion of workspace data
 - [Privacy](https://app.sync-socials.com/privacy): handling of account, media and connected-platform data
 - [Terms](https://app.sync-socials.com/terms): service and subscription terms

@@ -115,7 +115,22 @@
     const pending = [];
     if (analyticsEnabled && !read(consentKey) && !protectedPath()) pending.push('analytics');
     if (adsDeclared && !read(adsKey)) pending.push('ads');
-    open(pending);
+    // Hold the first prompt until the visitor has started reading (a real
+    // scroll) or a few seconds have passed, so the first paint is never a stack
+    // of overlays competing with the page's own headline and button.
+    openWhenSettled(pending);
+  }
+  function openWhenSettled(rows) {
+    if (rows.length === 0) return;
+    let done = false, timer = 0;
+    const onScroll = () => { if ((window.scrollY || document.documentElement.scrollTop || 0) > 120) go(); };
+    function go() {
+      if (done) return; done = true;
+      clearTimeout(timer); window.removeEventListener('scroll', onScroll);
+      open(rows);
+    }
+    timer = setTimeout(go, 3000);
+    window.addEventListener('scroll', onScroll, { passive: true });
   }
   void init();
 })();

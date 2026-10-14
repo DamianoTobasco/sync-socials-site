@@ -76,6 +76,19 @@
     document.body.appendChild(frame);
     position();
   }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount, { once: true });
-  else mount();
+  // Mount after the visitor has started reading (first scroll) or a few
+  // seconds, so the bubble is not part of the first paint beside the page's
+  // own call to action and the optional-cookie prompt.
+  function mountWhenSettled() {
+    var done = false;
+    var timer = setTimeout(go, 2500);
+    function go() {
+      if (done) return; done = true;
+      clearTimeout(timer); window.removeEventListener('scroll', go);
+      mount();
+    }
+    window.addEventListener('scroll', go, { passive: true });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mountWhenSettled, { once: true });
+  else mountWhenSettled();
 })();
