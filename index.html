@@ -104,6 +104,30 @@
             "priceCurrency": "USD",
             "description": "Free 7 day trial, then $199.50 per year. Two months free compared to monthly.",
             "url": "https://app.sync-socials.com/login?mode=signup&next=%2Fcheckout%3FofferKey%3Dgrowth_yearly"
+          },
+          {
+            "@type": "Offer",
+            "name": "Free",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "One account per platform and 3 scheduled or published posts, with unlimited drafts. No card required.",
+            "url": "https://app.sync-socials.com/login?mode=signup"
+          },
+          {
+            "@type": "Offer",
+            "name": "Agency Monthly",
+            "price": "49",
+            "priceCurrency": "USD",
+            "description": "Free 7 day trial, then $49 per month. Team invitations, 50 accounts per platform and three API keys.",
+            "url": "https://app.sync-socials.com/login?mode=signup&next=%2Fcheckout%3FofferKey%3Dagency_monthly"
+          },
+          {
+            "@type": "Offer",
+            "name": "Agency Yearly",
+            "price": "490",
+            "priceCurrency": "USD",
+            "description": "Free 7 day trial, then $490 per year. Two months free compared to monthly.",
+            "url": "https://app.sync-socials.com/login?mode=signup&next=%2Fcheckout%3FofferKey%3Dagency_yearly"
           }
         ],
         "publisher": {
@@ -139,7 +163,15 @@
             "name": "What platforms are supported?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "TikTok, YouTube, LinkedIn personal profiles, Discord, Slack and Telegram are live. Facebook Pages and linked Instagram professional accounts are available for new and existing customers. X/Twitter is live on active paid Growth subscriptions after the trial, with usage limits. Connect X through OAuth in Connections. Pinterest and LinkedIn company pages are not currently supported."
+              "text": "TikTok, YouTube, LinkedIn personal profiles, Threads, Bluesky, Discord, Slack and Telegram are live. Facebook Pages and linked Instagram professional accounts are available for new and existing customers. X/Twitter is live on active paid plans after the trial, with usage limits. Connect X through OAuth in Connections. Pinterest and LinkedIn company pages are not currently supported."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a free plan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The Free plan needs no card: connect one account per platform (X excluded), keep unlimited drafts and media, and schedule or publish your first 3 posts. When you need more, Growth starts with a 7-day free trial at $0 today and then $19.95 per month or $199.50 per year; Agency adds team invitations, 50 accounts per platform and three API keys at $49 per month or $490 per year."
             }
           },
           {
@@ -147,7 +179,7 @@
             "name": "How many posts can I schedule each month?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Scheduling is unlimited across up to 20 accounts per platform, with no per-post fees. X publishing has a separate allowance on active paid Growth: up to 50 attempts per workspace per UTC calendar month, including up to 3 link-post attempts. Daily and per-account limits also apply."
+              "text": "Free accounts can schedule or publish 3 posts to get started. Growth and Agency include unlimited scheduling with no per-post fees, across up to 20 accounts per platform on Growth and 50 on Agency. X publishing has a separate allowance on active paid plans: up to 50 attempts per workspace per UTC calendar month, including up to 3 link-post attempts. Daily and per-account limits also apply."
             }
           },
           {
@@ -264,16 +296,12 @@
   </header>
 
   <main>
-    <aside class="availability-notice container" aria-label="Platform availability">
-      <strong>Facebook, Instagram &amp; X are live.</strong> Connect Facebook Pages and linked Instagram professional accounts. X is included on active paid Growth after the trial, with <a href="/#x-limits">posting limits</a>.
-      <a href="https://app.sync-socials.com/login?next=%2Fapp%2Fconnections">Connect your accounts</a> to start publishing.
-    </aside>
     <!-- ===== Hero ===== -->
     <section class="hero">
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="container hero-inner">
         <a class="eyebrow" href="#integrations">
-          <span class="dot"></span> Now live on X, TikTok, YouTube, LinkedIn &amp; more
+          <span class="dot"></span> Now live on Threads, Bluesky, X, TikTok, YouTube &amp; more
         </a>
         <h1 class="hero-title">Run your socials on <br /><span class="grad">autopilot with AI agents.</span></h1>
         <p class="hero-sub">
@@ -283,7 +311,7 @@
         <div class="hero-cta">
           <a class="btn btn-primary btn-lg" href="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dgrowth_monthly">Get started free</a>
         </div>
-        <p class="hero-note trial-disclosure">No card to start. Your 7-day free trial begins when you schedule or publish: $0 today, then $19.95/month. Cancel before it ends to avoid a charge.</p>
+        <p class="hero-note trial-disclosure">No card to start. Your first 3 posts are free. The 7-day Growth trial begins when you start it: $0 today, then $19.95/month. Cancel before it ends to avoid a charge.</p>
 
         <div class="hero-shot">
           <div class="window">
@@ -498,7 +526,7 @@
 
         <div class="section-cta">
           <a class="btn btn-primary btn-lg" href="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dgrowth_monthly">Get started free</a>
-          <p class="trial-disclosure">No card to start. Your 7-day free trial begins when you schedule or publish: $0 today, then $19.95/month. Cancel before it ends to avoid a charge.</p>
+          <p class="trial-disclosure">No card to start. Your first 3 posts are free. The 7-day Growth trial begins when you start it: $0 today, then $19.95/month. Cancel before it ends to avoid a charge.</p>
         </div>
       </div>
     </section>
@@ -547,6 +575,14 @@
           <div class="platform">
             <span class="pf-ic li" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5H3V21h3.5V8.5ZM4.75 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM21 13.8c0-3.7-2-5.6-4.6-5.6-2.1 0-3 1.2-3.5 2V8.5H9.5V21H13v-7c0-1.8.8-2.8 2.3-2.8 1.4 0 2.2 1 2.2 2.8v7H21v-7.2Z"/></svg></span>
             <strong>LinkedIn</strong><span class="pf-status live">Personal profiles</span>
+          </div>
+          <div class="platform">
+            <span class="pf-ic th" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"/></svg></span>
+            <strong>Threads</strong><span class="pf-status live">Live</span>
+          </div>
+          <div class="platform">
+            <span class="pf-ic bs" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/></svg></span>
+            <strong>Bluesky</strong><span class="pf-status live">Live</span>
           </div>
           <div class="platform more">
             <span class="pf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg></span>
@@ -940,7 +976,7 @@
         <div class="section-head">
           <p class="kicker">Pricing</p>
           <h2>Reach more, with less.</h2>
-          <p class="lead">Fairly priced, with real human support. One plan, everything included.</p>
+          <p class="lead">Start free, upgrade when you need more. Real human support on every plan.</p>
         </div>
 
         <div class="billing-toggle" role="group" aria-label="Billing period">
@@ -948,29 +984,68 @@
           <button class="bt-opt" data-plan="yearly">Yearly <span class="save">2 months free</span></button>
         </div>
 
-        <div class="price-card">
-          <div class="pc-badge">Most popular</div>
-          <h3 class="pc-name">Growth</h3>
-          <p class="pc-desc">Best for growing creators &amp; small teams.</p>
-          <div class="pc-price">
-            <span class="pc-amount" data-monthly="$19.95" data-yearly="$16.63">$19.95</span>
-            <span class="pc-period">/ month</span>
+        <div class="price-grid" data-stagger>
+          <div class="price-card price-card--plain">
+            <h3 class="pc-name">Free</h3>
+            <p class="pc-desc">Try the whole workflow. No card.</p>
+            <div class="pc-price">
+              <span class="pc-amount">$0</span>
+              <span class="pc-period">to start</span>
+            </div>
+            <p class="pc-sub">Connect one account per platform and schedule or publish your first 3 posts free. Drafts and media are unlimited.</p>
+            <a class="btn btn-ghost btn-lg btn-block pricing-cta" href="https://app.sync-socials.com/login?mode=signup">Create free account</a>
+            <ul class="pc-feats">
+              <li>1 account per platform (X not included)</li>
+              <li>3 scheduled or published posts</li>
+              <li>Unlimited drafts and media library</li>
+              <li>Calendar and delivery tracking</li>
+            </ul>
           </div>
-          <p class="pc-sub" data-monthly="No card to start. Your 7-day free trial begins when you schedule or publish: $0 today, then $19.95/month. Cancel before it ends to avoid a charge." data-yearly="No card to start. Your 7-day free trial begins when you schedule or publish: $0 today, then $199.50/year. Cancel before it ends to avoid a charge.">No card to start. Your 7-day free trial begins when you schedule or publish: $0 today, then $19.95/month. Cancel before it ends to avoid a charge.</p>
-          <a class="btn btn-primary btn-lg btn-block" id="pricingCta"
-             data-monthly="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dgrowth_monthly"
-             data-yearly="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dgrowth_yearly"
-             href="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dgrowth_monthly">Get started free</a>
-          <ul class="pc-feats">
-            <li>20 accounts per platform</li>
-            <li>Unlimited scheduling; <a href="#x-limits">X publishing limits apply</a></li>
-            <li>X on paid Growth: up to 50 attempts per workspace each month</li>
-            <li>Publish to supported social and community channels</li>
-            <li>MCP/API access for agents and integrations</li>
-            <li>Custom dashboards &amp; analytics</li>
-            <li>Auto-queue &amp; per-platform customization</li>
-            <li>Real human support from the founder</li>
-          </ul>
+
+          <div class="price-card price-card--featured">
+            <div class="pc-badge">Most popular</div>
+            <h3 class="pc-name">Growth</h3>
+            <p class="pc-desc">Best for growing creators &amp; solo operators.</p>
+            <div class="pc-price">
+              <span class="pc-amount" data-monthly="$19.95" data-yearly="$16.63">$19.95</span>
+              <span class="pc-period">/ month</span>
+            </div>
+            <p class="pc-sub" data-monthly="7-day free trial: $0 today, then $19.95/month. Cancel before it ends to avoid a charge." data-yearly="7-day free trial: $0 today, then $199.50/year. Cancel before it ends to avoid a charge.">7-day free trial: $0 today, then $19.95/month. Cancel before it ends to avoid a charge.</p>
+            <a class="btn btn-primary btn-lg btn-block pricing-cta" id="pricingCta"
+               data-monthly="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dgrowth_monthly"
+               data-yearly="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dgrowth_yearly"
+               href="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dgrowth_monthly">Start free trial</a>
+            <ul class="pc-feats">
+              <li>Unlimited scheduling; <a href="#x-limits">X publishing limits apply</a></li>
+              <li>20 accounts per platform</li>
+              <li>X publishing allowance after the trial</li>
+              <li>Publish to every supported channel</li>
+              <li>MCP/API access for agents and integrations</li>
+              <li>Analytics for Facebook, Instagram and YouTube</li>
+              <li>Real human support from the founder</li>
+            </ul>
+          </div>
+
+          <div class="price-card price-card--plain">
+            <h3 class="pc-name">Agency</h3>
+            <p class="pc-desc">For teams and agencies running several brands.</p>
+            <div class="pc-price">
+              <span class="pc-amount" data-monthly="$49" data-yearly="$40.83">$49</span>
+              <span class="pc-period">/ month</span>
+            </div>
+            <p class="pc-sub" data-monthly="7-day free trial: $0 today, then $49/month. Cancel before it ends to avoid a charge." data-yearly="7-day free trial: $0 today, then $490/year. Cancel before it ends to avoid a charge.">7-day free trial: $0 today, then $49/month. Cancel before it ends to avoid a charge.</p>
+            <a class="btn btn-ghost btn-lg btn-block pricing-cta"
+               data-monthly="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dagency_monthly"
+               data-yearly="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dagency_yearly"
+               href="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dagency_monthly">Start Agency trial</a>
+            <ul class="pc-feats">
+              <li>Everything in Growth</li>
+              <li>Invite up to 4 team members</li>
+              <li>50 accounts per platform</li>
+              <li>Three API keys for agents and tools</li>
+              <li>Priority founder support</li>
+            </ul>
+          </div>
         </div>
         <p class="pricing-foot">Need something bigger? <!--email_off--><a href="mailto:contactsyncsocials@gmail.com">Email Sync Socials</a><!--/email_off--> - happy to help.</p>
       </div>
@@ -997,11 +1072,15 @@
           </details>
           <details class="faq-item">
             <summary>What platforms are supported?<span class="chev"></span></summary>
-            <div class="faq-a"><p>TikTok, YouTube, LinkedIn personal profiles, Discord, Slack and Telegram are live. Facebook Pages and linked Instagram professional accounts are available for new and existing customers. X/Twitter is live on active paid Growth subscriptions after the trial, with usage limits. Connect X through OAuth in Connections. Pinterest and LinkedIn company pages are not currently supported.</p></div>
+            <div class="faq-a"><p>TikTok, YouTube, LinkedIn personal profiles, Threads, Bluesky, Discord, Slack and Telegram are live. Facebook Pages and linked Instagram professional accounts are available for new and existing customers. X/Twitter is live on active paid plans after the trial, with usage limits. Connect X through OAuth in Connections. Pinterest and LinkedIn company pages are not currently supported.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Is there a free plan?<span class="chev"></span></summary>
+            <div class="faq-a"><p>Yes. The Free plan needs no card: connect one account per platform (X excluded), keep unlimited drafts and media, and schedule or publish your first 3 posts. When you need more, Growth starts with a 7-day free trial at $0 today and then $19.95 per month or $199.50 per year; Agency adds team invitations, 50 accounts per platform and three API keys at $49 per month or $490 per year.</p></div>
           </details>
           <details class="faq-item">
             <summary>How many posts can I schedule each month?<span class="chev"></span></summary>
-            <div class="faq-a"><p>Scheduling is unlimited across up to 20 accounts per platform, with no per-post fees. X publishing has a separate allowance on active paid Growth: up to 50 attempts per workspace per UTC calendar month, including up to 3 link-post attempts. Daily and per-account limits also apply.</p></div>
+            <div class="faq-a"><p>Free accounts can schedule or publish 3 posts to get started. Growth and Agency include unlimited scheduling with no per-post fees, across up to 20 accounts per platform on Growth and 50 on Agency. X publishing has a separate allowance on active paid plans: up to 50 attempts per workspace per UTC calendar month, including up to 3 link-post attempts. Daily and per-account limits also apply.</p></div>
           </details>
           <details class="faq-item" id="x-limits">
             <summary>What are the X posting limits?<span class="chev"></span></summary>
@@ -1033,7 +1112,7 @@
         <h2>Stop posting. Start creating.</h2>
         <p>Schedule once and publish everywhere - for the price of a couple coffees a month.</p>
         <a class="btn btn-primary btn-lg" href="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dgrowth_monthly">Try it for free</a>
-        <p class="trial-disclosure">No card to start. Your 7-day free trial begins when you schedule or publish: $0 today, then $19.95/month. Cancel before it ends to avoid a charge.</p>
+        <p class="trial-disclosure">No card to start. Your first 3 posts are free. The 7-day Growth trial begins when you start it: $0 today, then $19.95/month. Cancel before it ends to avoid a charge.</p>
       </div>
     </section>
   </main>
@@ -1070,7 +1149,7 @@
         <a href="https://app.sync-socials.com/privacy">Privacy</a>
         <a href="data-deletion.html">Data deletion</a>
         <a href="https://app.sync-socials.com/terms">Terms</a>
-        <!--email_off--><a href="mailto:contactsyncsocials@gmail.com">Contact</a><!--/email_off-->
+        <!--email_off--><a href="help/">Help center</a><a href="mailto:contactsyncsocials@gmail.com">Contact</a><!--/email_off-->
       </div>
       <div class="footer-col">
         <h4>Follow</h4>
@@ -1085,8 +1164,8 @@
     </div>
   </footer>
 
-  <script src="script.js?v=7"></script>
-<script src="growth.js?v=3" data-ads="meta" data-endpoint="https://app.sync-socials.com/api/growth" defer></script>
-<script src="support-widget.js?v=2" defer></script>
+  <script src="script.js?v=9"></script>
+<script src="growth.js?v=4" data-ads="meta" data-endpoint="https://app.sync-socials.com/api/growth" defer></script>
+<script src="support-widget.js?v=3" defer></script>
 </body>
 </html>

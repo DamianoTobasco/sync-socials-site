@@ -142,15 +142,15 @@ function applyReferralToLinks() {
 
 // ---- Pricing billing toggle (also swaps the Stripe checkout link) ----
 const opts = document.querySelectorAll('.bt-opt');
-const amount = document.querySelector('.pc-amount');
-const sub = document.querySelector('.pc-sub');
-const pricingCta = document.getElementById('pricingCta');
+// Every amount, note and checkout link that carries both cadences follows the toggle.
+const planSwappers = document.querySelectorAll('[data-monthly][data-yearly]');
 function setPlan(plan) { // monthly | yearly
-  if (amount) amount.textContent = amount.dataset[plan];
-  if (sub) sub.textContent = sub.dataset[plan];
-  if (pricingCta && pricingCta.dataset[plan]) {
-    pricingCta.setAttribute('href', withRef(pricingCta.dataset[plan]));
-  }
+  planSwappers.forEach((el) => {
+    const value = el.dataset[plan];
+    if (!value) return;
+    if (el.tagName === 'A') el.setAttribute('href', withRef(value));
+    else el.textContent = value;
+  });
 }
 opts.forEach(opt => opt.addEventListener('click', () => {
   opts.forEach(o => o.classList.remove('active'));
@@ -189,21 +189,33 @@ themeButtons.forEach((button) => {
 });
 
 // ---- Reveal on scroll ----
-const revealEls = document.querySelectorAll('.section, .hero-shot, .price-card');
+// Only small pieces (the hero shot and price cards) fade in. Whole sections
+// stay visible so a fast scroll never lands on a blank page.
+const canObserve = 'IntersectionObserver' in window;
+const revealEls = document.querySelectorAll('.hero-shot, .price-card');
 revealEls.forEach(el => el.classList.add('reveal'));
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-}, { threshold: 0.12 });
-revealEls.forEach(el => io.observe(el));
+if (canObserve) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+} else {
+  revealEls.forEach(el => el.classList.add('in'));
+}
 
 // ---- Staggered child reveals ----
-// Class is added by JS so content stays visible if JS never runs.
+// Class is added by JS so content stays visible if JS never runs. The grid
+// starts animating as soon as its first pixels enter the viewport.
 const staggerEls = document.querySelectorAll('[data-stagger]');
 staggerEls.forEach(el => el.classList.add('stagger'));
-const sio = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); sio.unobserve(e.target); } });
-}, { threshold: 0.15 });
-staggerEls.forEach(el => sio.observe(el));
+if (canObserve) {
+  const sio = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); sio.unobserve(e.target); } });
+  }, { threshold: 0.02, rootMargin: '0px 0px 40px 0px' });
+  staggerEls.forEach(el => sio.observe(el));
+} else {
+  staggerEls.forEach(el => el.classList.add('in'));
+}
 
 // ---- Product calendar demo ----
 // Keep the real app recording lightweight and respectful of motion preferences.
