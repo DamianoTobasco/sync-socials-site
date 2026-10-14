@@ -707,7 +707,7 @@ page(
 <p>After the third post, scheduling or publishing saves the post as a draft and offers the trial. API access and the Content Studio need a paid plan.</p>
 """),
         ("trial", "The 7-day trial", f"""
-<p>When you're ready for unlimited posting, start the trial from the banner or from <a href="{BILLING}">Billing</a>. Stripe takes a card, charges $0 today, and the subscription renews when the trial ends unless you cancel first: <strong>$19.95 per month</strong> or <strong>$199.50 per year</strong> on Growth, <strong>$49 per month</strong> or <strong>$490 per year</strong> on Agency. X publishing isn't included during the trial.</p>
+<p>When you're ready for unlimited posting, start the trial from the banner or from <a href="{BILLING}">Billing</a>. Stripe takes a card, charges $0 today, and the subscription renews when the trial ends unless you cancel first: <strong>$19.95 per month</strong> or <strong>$199.50 per year</strong> on Growth, <strong>$39.99 per month</strong> or <strong>$399 per year</strong> on Agency. X publishing isn't included during the trial.</p>
 <p>The trial is for your first paid plan only; Stripe confirms eligibility and the first payment date on the checkout page.</p>
 """),
         ("plan", "Growth and Agency", """
