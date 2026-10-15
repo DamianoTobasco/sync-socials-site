@@ -1946,14 +1946,37 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
 .help-card span { color: var(--muted); font-size: 14px; line-height: 1.5; }
 
 /* ---------- Pricing tiers ---------- */
-.price-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: start; max-width: 1120px; margin: 0 auto; }
-.price-grid .price-card { max-width: none; margin: 0; }
+/* Three equal-height cards. With subgrid, each card's six rows (name, blurb,
+   price, trial note, button, features) share tracks, so prices, buttons and
+   feature lists line up across plans. Without subgrid the cards are plain
+   flex columns of equal height. */
+.price-grid {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 20px; row-gap: 0; align-items: stretch;
+  max-width: 1120px; margin: 0 auto;
+}
+.price-grid .price-card { max-width: none; margin: 0; display: flex; flex-direction: column; padding: 32px 28px; }
+@supports (grid-template-rows: subgrid) {
+  .price-grid .price-card { display: grid; grid-row: span 6; grid-template-rows: subgrid; row-gap: 0; }
+}
+.price-grid .pc-price { flex-wrap: wrap; row-gap: 0; }
+.price-grid .pricing-cta { align-self: start; }
+.price-grid .pc-feats { align-content: start; }
 .price-card--plain { animation: none; border: 1.5px solid var(--line); background: var(--surface); box-shadow: var(--shadow-sm); }
 .price-card--plain .pc-amount { font-size: 44px; }
-.price-grid .price-card--featured { transform: translateY(-8px); }
-@media (max-width: 980px) {
-  .price-grid { grid-template-columns: 1fr; max-width: 460px; }
-  .price-grid .price-card--featured { transform: none; }
+@media (max-width: 1100px) {
+  .price-grid { column-gap: 14px; }
+  .price-grid .price-card { padding: 28px 22px; }
+  .price-grid .pc-amount { font-size: 42px; }
+  .price-grid .price-card--plain .pc-amount { font-size: 38px; }
+  .price-grid .pc-feats li { font-size: 14px; }
+}
+@media (max-width: 900px) {
+  .price-grid { grid-template-columns: 1fr; max-width: 460px; row-gap: 28px; }
+  .price-grid .price-card { display: flex; grid-row: auto; padding: 30px 24px; }
+  .price-grid .pc-amount { font-size: 48px; }
+  .price-grid .price-card--plain .pc-amount { font-size: 42px; }
+  .price-grid .pc-feats li { font-size: 15px; }
 }
 
 .pf-ic.th { color: var(--text); }
