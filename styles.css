@@ -184,6 +184,12 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
 .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); animation: pulse 2s infinite; }
 @keyframes pulse { 50% { box-shadow: 0 0 0 7px transparent; } }
 .hero-title { font-size: clamp(40px, 7vw, 76px); font-weight: 800; }
+/* Homepage headline: exactly two lines on phones. Its longer line
+   ("autopilot with AI agents.") is 12.3em wide in Sora 800, so size the font
+   to the space between the 24px gutters with about 5% to spare. */
+@media (max-width: 640px) {
+  .hero-title--fit { font-size: calc((100vw - 48px) / 12.9); white-space: nowrap; }
+}
 .hero-sub { max-width: 600px; margin: 22px auto 0; color: var(--muted); font-size: clamp(16px, 2.4vw, 20px); }
 .hero-cta { display: flex; gap: 14px; margin-top: 32px; flex-wrap: wrap; justify-content: center; }
 .hero-note { margin-top: 16px; font-size: 13.5px; color: var(--muted); }
