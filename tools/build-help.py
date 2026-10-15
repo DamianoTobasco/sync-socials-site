@@ -13,7 +13,7 @@ import sys
 SITE = "https://sync-socials.com"
 APP = "https://app.sync-socials.com"
 LASTMOD = "2026-10-14"
-STYLES_VERSION = 16
+STYLES_VERSION = 19
 SCRIPT_VERSION = 9
 GROWTH_VERSION = 4
 WIDGET_VERSION = 3
