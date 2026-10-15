@@ -602,6 +602,14 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
 .reveal.in { opacity: 1; transform: none; }
 
 /* ---------- Responsive ---------- */
+/* Six nav links plus the actions need about 1090px; between the phone
+   breakpoint and the 1140px container, fold the links into the menu button
+   and keep the actions in the bar so nothing runs off the screen. */
+@media (min-width: 901px) and (max-width: 1139px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; margin-left: 0; }
+  .mobile-menu .btn { display: none; }
+}
 @media (max-width: 900px) {
   .nav-links, .nav-actions { display: none; }
   .compact-theme-toggle { display: inline-flex; margin-left: auto; }

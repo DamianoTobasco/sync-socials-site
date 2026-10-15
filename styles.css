@@ -112,13 +112,13 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
   transition: border-color .2s ease, background .2s ease;
 }
 .site-header.scrolled { border-bottom-color: var(--line); }
-.nav { display: flex; align-items: center; gap: 24px; height: 68px; }
+.nav { display: flex; align-items: center; gap: 20px; height: 68px; }
 .brand { display: inline-flex; align-items: center; gap: 9px; font-family: var(--display); font-weight: 800; font-size: 18px; }
 .brand-mark { color: var(--accent); display: inline-flex; }
 .brand-badge { display: block; border-radius: 8px; object-fit: cover; box-shadow: 0 1px 3px rgba(0,0,0,.25); }
 .brand-badge.sm { border-radius: 5px; }
 .brand-name { letter-spacing: -0.02em; }
-.nav-links { display: flex; align-items: center; gap: 26px; margin-left: 12px; }
+.nav-links { display: flex; align-items: center; gap: 18px; margin-left: 4px; }
 .nav-links a { position: relative; color: var(--muted); font-weight: 500; font-size: 15px; white-space: nowrap; transition: color .15s; }
 .nav-links a::after {
   content: ""; position: absolute; left: 0; right: 100%; bottom: -5px; height: 1.5px;
@@ -894,6 +894,16 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
 .reveal.in { opacity: 1; transform: none; }
 
 /* ---------- Responsive ---------- */
+/* A nav with six or more links (home, comparison pages) needs about 1080px,
+   so below the 1140px container it would run off the screen. Between the
+   phone breakpoint and 1140px, fold its section links into the menu button
+   and keep the theme toggle, Log in and Try it free in the bar. Shorter navs
+   fit and keep their links. Without :has() the full row shows as before. */
+@media (min-width: 901px) and (max-width: 1139px) {
+  .nav:has(.nav-links > :nth-child(6)) .nav-links { display: none; }
+  .nav:has(.nav-links > :nth-child(6)) .nav-toggle { display: flex; margin-left: 0; }
+  .site-header:has(.nav-links > :nth-child(6)) .mobile-menu .btn { display: none; }
+}
 @media (max-width: 900px) {
   .nav-links, .nav-actions { display: none; }
   .compact-theme-toggle { display: inline-flex; margin-left: auto; }
