@@ -3,7 +3,7 @@
 
 Run with the site directory as the only argument. Output goes to <site>/help/.
 Every page shares the site's header, footer, fonts, scripts and theme. Facts
-were checked against the app code on October 14, 2026.
+were checked against the app code on October 16, 2026.
 """
 import html
 import json
@@ -12,7 +12,7 @@ import sys
 
 SITE = "https://sync-socials.com"
 APP = "https://app.sync-socials.com"
-LASTMOD = "2026-10-14"
+LASTMOD = "2026-10-16"
 STYLES_VERSION = 19
 SCRIPT_VERSION = 9
 GROWTH_VERSION = 4
@@ -215,7 +215,7 @@ page(
     lead="Three steps take most people under ten minutes. Nothing is charged until you schedule or publish your first post.",
     sections=[
         ("account", "Create your free account", f"""
-<p>Go to <a href="{SIGNUP}">app.sync-socials.com</a> and sign up with Google or an email address and password. Email signups receive a confirmation link; open it to land in your workspace. You start on the Free plan: no card, one account per platform, unlimited drafts, and 3 free posts.</p>
+<p>Go to <a href="{SIGNUP}">app.sync-socials.com</a> and sign up with Google or an email address and password. Email signups receive a confirmation link; open it to land in your workspace. You start free with no card: one account per platform and unlimited drafts. Scheduling and publishing start the 7-day free trial.</p>
 <p>Every account gets its own workspace. Connected social accounts, drafts, media, and billing belong to the workspace, not to your personal login.</p>
 """),
         ("timezone", "Confirm your timezone", f"""
@@ -238,7 +238,7 @@ page(
 <p>Need a different caption per channel, tags, or a custom video thumbnail? Choose <strong>Show all options</strong> inside the composer.</p>
 """),
         ("schedule", "Schedule or publish", f"""
-<p>Pick a date and time, then <strong>Schedule</strong>, or choose <strong>Publish now</strong>. Your first 3 posts are free. After that, Sync Socials asks you to start the 7-day free trial through Stripe: $0 today, then $19.95 per month unless you cancel before it ends. From then on, scheduling is unlimited.</p>
+<p>Pick a date and time, then <strong>Schedule</strong>, or choose <strong>Publish now</strong>. The first time you do, Sync Socials saves the post as a draft and asks you to start the 7-day free trial through Stripe: $0 today, then $19.95 per month unless you cancel before it ends. From then on, scheduling is unlimited.</p>
 <p>Scheduled posts appear on the <a href="{CALENDAR}">Calendar</a>, where you can drag them to a better slot. Delivery results for every destination show up on <strong>Posted</strong>.</p>
 """),
     ],
@@ -699,15 +699,15 @@ page(
     group="Account and billing",
     kicker="Billing",
     title="Pricing, the free trial, and cancelling",
-    description="The Free plan, when the 7-day trial starts, what Growth and Agency cost, how to cancel, and what happens to your workspace afterwards.",
-    lead="Start free, upgrade when you need unlimited posting or a team, and cancel from the billing portal whenever you like.",
+    description="Exploring free, when the 7-day trial starts, what Growth and Agency cost, how to cancel, and what happens to your workspace afterwards.",
+    lead="Explore free, start the trial when you are ready to publish, and cancel from the billing portal whenever you like.",
     sections=[
-        ("free", "The Free plan", """
-<p>Every new account starts on the Free plan with no card: connect one account per platform (X excluded), upload media, keep unlimited drafts, and <strong>schedule or publish your first 3 posts</strong>. A post counts once it leaves Drafts, whether or not delivery succeeds; the Home page banner shows how many you have left.</p>
-<p>After the third post, scheduling or publishing saves the post as a draft and offers the trial. API access and the Content Studio need a paid plan.</p>
+        ("free", "Exploring free", """
+<p>Every new account starts free with no card: connect one account per platform (X excluded), upload media, and keep unlimited drafts.</p>
+<p>Scheduling or publishing a post saves it as a draft and offers the 7-day trial. API access and the Content Studio need a paid plan or the trial.</p>
 """),
         ("trial", "The 7-day trial", f"""
-<p>When you're ready for unlimited posting, start the trial from the banner or from <a href="{BILLING}">Billing</a>. Stripe takes a card, charges $0 today, and the subscription renews when the trial ends unless you cancel first: <strong>$19.95 per month</strong> or <strong>$199.50 per year</strong> on Growth, <strong>$39.99 per month</strong> or <strong>$399 per year</strong> on Agency. X publishing isn't included during the trial.</p>
+<p>When you're ready to schedule and publish, start the trial from the banner or from <a href="{BILLING}">Billing</a>. Stripe takes a card, charges $0 today, and the subscription renews when the trial ends unless you cancel first: <strong>$19.95 per month</strong> or <strong>$199.50 per year</strong> on Growth, <strong>$39.99 per month</strong> or <strong>$399 per year</strong> on Agency. X publishing isn't included during the trial.</p>
 <p>The trial is for your first paid plan only; Stripe confirms eligibility and the first payment date on the checkout page.</p>
 """),
         ("plan", "Growth and Agency", """
