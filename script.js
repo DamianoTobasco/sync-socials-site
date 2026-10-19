@@ -225,46 +225,338 @@ if (calendarDemoVideo && window.matchMedia('(prefers-reduced-motion: reduce)').m
   calendarDemoVideo.removeAttribute('autoplay');
 }
 
-// ---- Content Studio: Viral Studio swipe-card demo ----
-(function viralDemo() {
-  const card = document.getElementById('vdCard');
-  if (!card) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+// ---- Content Studio: swipe deck of example video ideas ----
+// Drag a card (or use the buttons / arrow keys) to approve or skip; Edit
+// retypes the hook and "re-renders" the clip. When nobody is touching it,
+// the deck demos itself while on screen.
+(function studioDeck() {
+  const demo = document.querySelector('.viral-demo');
+  const deck = document.getElementById('vdDeck');
+  const template = deck && deck.querySelector('.vd-card');
+  if (!demo || !template) return;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  const concepts = [
-    { chip: '3 things', hook: "1. You're posting inconsistently", caption: "Are you struggling with your social media? Here are 3 signs it's time for an upgrade. Hint: Sync Socials can help!", meta: 'Facebook · YouTube', scene: 1 },
-    { chip: 'POV', hook: 'POV: your week is already scheduled', caption: 'Batch once, then relax - your content publishes itself while you build the business.', meta: 'Instagram · Facebook', scene: 2 },
-    { chip: 'Hook', hook: 'Stop running your socials in 8 tabs', caption: 'One dashboard, every platform. Schedule once and publish everywhere with Sync Socials.', meta: 'Instagram · YouTube', scene: 3 }
+  const ideas = [
+    { clip: 'saas', brand: 'Sync Socials', initial: 'S', color: '#2f9d63', platforms: 'Instagram · TikTok · YouTube', chip: 'POV',
+      hook: 'POV: next week’s posts are already scheduled', alt: 'POV: you batched a week of posts before lunch',
+      caption: 'Batch your content once, then get back to running the business.', sound: 'Easy Sunday · chill house',
+      why: ['Sells the outcome (free time), not the feature.', 'A calm, aspirational POV is easy to save and share.', 'The hook lands in the first second, before the scroll.'] },
+    { clip: 'coffee', brand: 'Ember & Oat Café', initial: 'E', color: '#b8743f', platforms: 'Instagram · TikTok', chip: 'Relatable',
+      hook: 'me after the first sip of our maple oat latte', alt: 'the 7am regulars when the maple latte is back',
+      caption: 'Some mornings need a little extra. The maple oat latte is back for fall ☕', sound: 'Slow morning · lo-fi',
+      why: ['Morning-ritual moments are instantly relatable.', 'Names the drink in the hook, so it sticks.', 'A seasonal return gives regulars a reason to stop by.'] },
+    { clip: 'burger', brand: 'Smash Alley Burgers', initial: 'S', color: '#d0482f', platforms: 'TikTok · Instagram', chip: 'Taste test',
+      hook: 'the burger people drive 40 minutes for', alt: 'rating our double smash as a first-timer',
+      caption: 'Double smash, house pickles, toasted brioche. Worth the drive? Tell us below 👇', sound: 'Saturday night · funk',
+      why: ['Social proof in the hook: people drive for it.', 'The first bite is the payoff, so viewers stay for it.', 'Ends on a question to pull in comments.'] },
+    { clip: 'salon', brand: 'Lume Hair Studio', initial: 'L', color: '#8f63c9', platforms: 'Instagram · Facebook', chip: 'Reaction',
+      hook: 'when your stylist says “trust me” and it actually works', alt: 'seeing my fall color in daylight for the first time',
+      caption: 'Fall refresh season is here. Book a free color consult, link in bio.', sound: 'Big reveal · pop',
+      why: ['A real reaction stops the scroll.', '“Trust me” is a moment every salon client knows.', 'One clear next step: a free consult.'] },
+    { clip: 'run', brand: 'Tempo Run Club', initial: 'T', color: '#2f7de1', platforms: 'TikTok · YouTube Shorts', chip: 'Humor',
+      hook: 'me after “just one more lap”', alt: 'week one of couch to 5K be like',
+      caption: 'Everyone starts somewhere. Eight weeks, three runs a week, zero judgment.', sound: 'Out of breath · drill',
+      why: ['Self-aware humor makes fitness feel approachable.', 'Speaks to beginners, the people most likely to join.', 'Short and loopable, so it gets rewatched.'] },
+    { clip: 'kitchen', brand: 'Weeknight Kitchen', initial: 'W', color: '#d99a16', platforms: 'Instagram · Facebook · TikTok', chip: 'How-to',
+      hook: 'a 15-minute dinner that tastes like takeout', alt: 'one pan, three steps, zero takeout guilt',
+      caption: 'Tonight’s box: garlic butter pasta. One pan, three steps, done before delivery would arrive.', sound: 'Kitchen groove · jazz',
+      why: ['The hook promises a clear payoff.', 'Recipes are the posts people save for later.', 'Shows the product in use, not a pack shot.'] }
   ];
-  const el = (name) => card.querySelector('[data-vd="' + name + '"]');
-  const dots = document.querySelectorAll('.vd-dot');
-  let i = 0, timer = null;
+  const slots = ['Tue 9:00 AM', 'Tue 6:30 PM', 'Wed 12:15 PM', 'Thu 8:00 AM', 'Fri 5:45 PM', 'Sat 10:30 AM'];
+  const asset = (clip, ext) => 'assets/studio/studio-' + clip + '.' + ext;
+  const part = (root, name) => root.querySelector('[data-vd="' + name + '"]');
 
-  const advance = () => {
-    card.classList.add('out');
-    setTimeout(() => {
-      i = (i + 1) % concepts.length;
-      const c = concepts[i];
-      el('chip').textContent = c.chip;
-      el('hook').textContent = c.hook;
-      el('caption').textContent = c.caption;
-      el('meta').textContent = c.meta;
-      el('video').className = 'vd-video vd-scene-' + c.scene;
-      dots.forEach((d, di) => d.classList.toggle('active', di === i));
-      card.classList.remove('out');
-      card.classList.add('in');
-      setTimeout(() => card.classList.remove('in'), 520);
-    }, 560);
+  const cards = ideas.map((idea, i) => {
+    const card = template.cloneNode(true);
+    const video = part(card, 'video');
+    video.muted = true;
+    // Only the first poster loads with the page; the rest wait until the deck is near.
+    if (i) video.removeAttribute('poster');
+    video.dataset.poster = asset(idea.clip, 'jpg');
+    video.dataset.src = asset(idea.clip, 'mp4');
+    const avatar = part(card, 'avatar');
+    avatar.textContent = idea.initial;
+    avatar.style.setProperty('--av', idea.color);
+    ['brand', 'platforms', 'chip', 'hook', 'caption', 'sound'].forEach((k) => { part(card, k).textContent = idea[k]; });
+    part(card, 'why').replaceChildren(...idea.why.map((w) => {
+      const li = document.createElement('li');
+      li.textContent = w;
+      return li;
+    }));
+    return card;
+  });
+  deck.replaceChildren(...cards);
+  demo.classList.add('is-live');
+
+  const btn = (act) => demo.querySelector('[data-act="' + act + '"]');
+  const tray = demo.querySelector('.vd-tray');
+  const thumbs = demo.querySelector('.vd-thumbs');
+  const announce = (text) => { part(demo, 'announce').textContent = text; };
+  let top = 0, approved = 0, editing = false, inView = false, raf = 0, auto = 0, lastUser = -Infinity, autoStep = 0;
+  let drag = null;
+
+  const layout = () => {
+    cards.forEach((card, i) => {
+      const d = (i - top + cards.length) % cards.length;
+      card.style.setProperty('--d', d);
+      card.classList.toggle('is-top', d === 0);
+      card.classList.toggle('is-far', d > 2);
+      card.inert = d !== 0;
+    });
   };
 
-  // Only cycle while the demo is on screen.
-  const vio = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting && !timer) timer = setInterval(advance, 5200);
-      else if (!e.isIntersecting && timer) { clearInterval(timer); timer = null; }
+  const videoOf = (card) => part(card, 'video');
+  const load = (card) => {
+    const v = videoOf(card);
+    if (!v.getAttribute('src')) { v.preload = 'auto'; v.src = v.dataset.src; }
+  };
+  const playTop = (restart) => {
+    cards.forEach((card, i) => {
+      const v = videoOf(card);
+      if (i === top && inView && !reduce) {
+        load(card);
+        if (restart) { try { v.currentTime = 0; } catch (err) { /* not loaded yet */ } }
+        const p = v.play();
+        if (p && p.catch) p.catch(() => {});
+      } else if (!v.paused) {
+        v.pause();
+      }
     });
-  }, { threshold: 0.25 });
-  vio.observe(card);
+    if (inView && !reduce) load(cards[(top + 1) % cards.length]);
+  };
+  const progress = () => {
+    const card = cards[top];
+    const v = videoOf(card);
+    if (v.duration) part(card, 'progress').style.transform = 'scaleX(' + (v.currentTime / v.duration) + ')';
+    raf = inView ? requestAnimationFrame(progress) : 0;
+  };
+
+  const closeWhy = (card) => {
+    card.classList.remove('show-why');
+    card.querySelector('.vd-why-btn').setAttribute('aria-expanded', 'false');
+  };
+  const press = (act) => {
+    const b = btn(act);
+    b.classList.add('is-pressed');
+    setTimeout(() => b.classList.remove('is-pressed'), 260);
+  };
+
+  const schedule = (idea) => {
+    const slot = slots[approved % slots.length];
+    approved++;
+    const thumb = document.createElement('span');
+    thumb.className = 'vd-thumb';
+    const img = document.createElement('img');
+    img.src = asset(idea.clip, 'jpg');
+    img.alt = '';
+    thumb.appendChild(img);
+    thumbs.prepend(thumb);
+    while (thumbs.children.length > 4) thumbs.lastElementChild.remove();
+    part(tray, 'trayTitle').textContent = approved + (approved === 1 ? ' video scheduled' : ' videos scheduled');
+    part(tray, 'traySub').textContent = slot + ' · ' + idea.brand;
+    tray.classList.remove('is-bump');
+    void tray.offsetWidth;
+    tray.classList.add('is-bump');
+    return slot;
+  };
+
+  const swipe = (dir, dy) => {
+    if (editing) return;
+    const card = cards[top];
+    const idea = ideas[top];
+    const sign = dir === 'approve' ? 1 : -1;
+    closeWhy(card);
+    card.classList.remove('is-nudging');
+    card.style.setProperty('--yes', sign > 0 ? 1 : 0);
+    card.style.setProperty('--no', sign < 0 ? 1 : 0);
+    card.classList.add('is-leaving');
+    card.style.transform = 'translate(' + (sign * deck.offsetWidth * 1.4) + 'px,' + ((dy || 0) * 0.3 + 40) + 'px) rotate(' + (sign * 24) + 'deg)';
+    deck.classList.remove('is-dragging');
+    deck.style.setProperty('--lift', 0);
+    if (dir === 'approve') announce('Approved. ' + idea.brand + ' video scheduled for ' + schedule(idea) + '.');
+    else announce('Skipped the ' + idea.brand + ' idea.');
+
+    top = (top + 1) % cards.length;
+    layout();
+    playTop(true);
+
+    setTimeout(() => {
+      card.classList.add('no-anim');
+      card.classList.remove('is-leaving', 'is-editing', 'is-rendering', 'is-updated');
+      card.style.transform = '';
+      card.style.removeProperty('--yes');
+      card.style.removeProperty('--no');
+      part(card, 'hook').textContent = idea.hook;
+      delete card.dataset.alt;
+      part(card, 'progress').style.transform = '';
+      void card.offsetWidth;
+      card.classList.remove('no-anim');
+    }, reduce ? 0 : 520);
+  };
+
+  const edit = () => {
+    if (editing) return;
+    editing = true;
+    const card = cards[top];
+    const idea = ideas[top];
+    const hook = part(card, 'hook');
+    const next = card.dataset.alt ? idea.hook : idea.alt;
+    closeWhy(card);
+    if (card.dataset.alt) delete card.dataset.alt; else card.dataset.alt = '1';
+    card.classList.add('is-editing');
+
+    const finish = () => {
+      card.classList.remove('is-editing');
+      card.classList.add('is-rendering');
+      const v = videoOf(card);
+      try { v.currentTime = 0; } catch (err) { /* not loaded yet */ }
+      setTimeout(() => {
+        card.classList.remove('is-rendering');
+        card.classList.add('is-updated');
+        announce('Hook updated: ' + next);
+        editing = false;
+        setTimeout(() => card.classList.remove('is-updated'), 1500);
+      }, reduce ? 0 : 900);
+    };
+    if (reduce) { hook.textContent = next; finish(); return; }
+
+    let text = hook.textContent;
+    const erase = () => {
+      text = text.slice(0, -2);
+      hook.textContent = text;
+      if (text) setTimeout(erase, 16);
+      else setTimeout(type, 180);
+    };
+    let n = 0;
+    const type = () => {
+      n++;
+      hook.textContent = next.slice(0, n);
+      if (n < next.length) setTimeout(type, 28 + Math.random() * 28);
+      else setTimeout(finish, 320);
+    };
+    setTimeout(erase, 250);
+  };
+
+  const act = (name) => {
+    if (name === 'edit') edit();
+    else swipe(name);
+  };
+
+  // ---- Pointer drag on the top card ----
+  deck.addEventListener('pointerdown', (e) => {
+    const card = cards[top];
+    if (editing || e.button > 0 || !card.contains(e.target) || e.target.closest('button')) return;
+    drag = { x: e.clientX, y: e.clientY, dx: 0, dy: 0, t: performance.now(), id: e.pointerId };
+    card.classList.remove('is-nudging');
+    try { card.setPointerCapture(e.pointerId); } catch (err) { /* synthetic pointer */ }
+    deck.classList.add('is-dragging');
+    lastUser = performance.now();
+  });
+  deck.addEventListener('pointermove', (e) => {
+    if (!drag || e.pointerId !== drag.id) return;
+    const card = cards[top];
+    drag.dx = e.clientX - drag.x;
+    drag.dy = e.clientY - drag.y;
+    card.style.transform = 'translate(' + drag.dx + 'px,' + (drag.dy * 0.25) + 'px) rotate(' + (drag.dx * 0.06) + 'deg)';
+    card.style.setProperty('--yes', Math.max(0, Math.min(1, drag.dx / 90)));
+    card.style.setProperty('--no', Math.max(0, Math.min(1, -drag.dx / 90)));
+    deck.style.setProperty('--lift', Math.min(1, Math.abs(drag.dx) / 160));
+  });
+  const endDrag = (e) => {
+    if (!drag || e.pointerId !== drag.id) return;
+    const { dx, dy, t } = drag;
+    const speed = Math.abs(dx) / Math.max(1, performance.now() - t);
+    drag = null;
+    lastUser = performance.now();
+    if (Math.abs(dx) > 100 || (Math.abs(dx) > 40 && speed > 0.6)) {
+      press(dx > 0 ? 'approve' : 'skip');
+      swipe(dx > 0 ? 'approve' : 'skip', dy);
+      return;
+    }
+    const card = cards[top];
+    deck.classList.remove('is-dragging');
+    deck.style.setProperty('--lift', 0);
+    card.style.transform = '';
+    card.style.removeProperty('--yes');
+    card.style.removeProperty('--no');
+  };
+  deck.addEventListener('pointerup', endDrag);
+  deck.addEventListener('pointercancel', endDrag);
+
+  // ---- Buttons, keys and the "why" panel ----
+  demo.querySelectorAll('[data-act]').forEach((b) => {
+    b.addEventListener('click', () => {
+      lastUser = performance.now();
+      act(b.dataset.act);
+    });
+  });
+  deck.addEventListener('keydown', (e) => {
+    const keys = { ArrowRight: 'approve', ArrowLeft: 'skip', e: 'edit', E: 'edit' };
+    if (!keys[e.key] || e.target !== deck) return;
+    e.preventDefault();
+    lastUser = performance.now();
+    press(keys[e.key]);
+    act(keys[e.key]);
+  });
+  deck.addEventListener('click', (e) => {
+    const toggle = e.target.closest('.vd-why-btn, .vd-why-close');
+    if (!toggle) return;
+    lastUser = performance.now();
+    const card = cards[top];
+    const open = !card.classList.contains('show-why');
+    card.classList.toggle('show-why', open);
+    card.querySelector('.vd-why-btn').setAttribute('aria-expanded', String(open));
+  });
+
+  // ---- Self-running demo while idle and on screen ----
+  const script = ['approve', 'approve', 'skip', 'edit', 'approve', 'skip'];
+  const runAuto = (delay) => {
+    clearTimeout(auto);
+    auto = setTimeout(() => {
+      if (!inView) return;
+      const card = cards[top];
+      if (editing || drag || card.classList.contains('show-why') || performance.now() - lastUser < 9000) {
+        runAuto(1500);
+        return;
+      }
+      const step = script[autoStep++ % script.length];
+      press(step);
+      if (step === 'edit') {
+        edit();
+        runAuto(5200);
+        return;
+      }
+      const sign = step === 'approve' ? 1 : -1;
+      card.classList.add('is-nudging');
+      card.style.transform = 'translateX(' + (sign * 26) + 'px) rotate(' + (sign * 4) + 'deg)';
+      card.style.setProperty(sign > 0 ? '--yes' : '--no', 0.7);
+      setTimeout(() => swipe(step), 280);
+      runAuto(4200);
+    }, delay);
+  };
+
+  layout();
+  const warm = () => cards.forEach((card) => { const v = videoOf(card); if (!v.poster) v.poster = v.dataset.poster; });
+  if ('IntersectionObserver' in window) {
+    const near = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) { warm(); near.disconnect(); }
+    }, { rootMargin: '800px 0px' });
+    near.observe(deck);
+    new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        inView = e.isIntersecting;
+        playTop(false);
+        if (inView && !reduce) {
+          if (!raf) raf = requestAnimationFrame(progress);
+          runAuto(3200);
+        } else {
+          clearTimeout(auto);
+        }
+      });
+    }, { threshold: 0.35 }).observe(deck);
+  } else {
+    warm();
+  }
 })();
 
 // ---- Content Studio: cycling prompt typing ----

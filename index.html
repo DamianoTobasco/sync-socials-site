@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Sora:wght@600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20" />
+  <link rel="stylesheet" href="styles.css?v=21" />
 
   <!-- Structured data for search engines and AI assistants -->
   <script type="application/ld+json">
@@ -446,7 +446,7 @@
         <div class="studio-prompt" aria-hidden="true">
           <div class="sp-field">
             <svg class="sp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-            <span class="sp-typed" data-phrases='["sync-socials.com","a cozy coffee shop in Brooklyn","an indie fitness app","your-website.com"]'>sync-socials.com</span>
+            <span class="sp-typed" data-phrases='["sync-socials.com","a cozy coffee shop in Brooklyn","a smash burger joint in Austin","a neighborhood hair studio","your-website.com"]'>sync-socials.com</span>
             <span class="sp-caret"></span>
           </div>
           <span class="sp-generate">
@@ -475,42 +475,58 @@
             </li>
           </ol>
 
-          <aside class="viral-demo" aria-label="Preview of the Viral Studio review interface">
-            <div class="vd-stack">
-              <div class="vd-card vd-card--ghost" aria-hidden="true"></div>
-              <div class="vd-card" id="vdCard">
-                <div class="vd-top">
-                  <span class="vd-chip" data-vd="chip">3 things</span>
-                  <span class="vd-why">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01"/><path d="M12 11v5"/></svg>
-                    Why this content?
-                  </span>
+          <aside class="viral-demo" aria-label="Interactive example: reviewing video ideas">
+            <div class="vd-deck" id="vdDeck" tabindex="0" aria-label="Example video ideas. Press the right arrow to approve, the left arrow to skip, or E to edit the hook.">
+              <article class="vd-card is-top" style="--d:0">
+                <div class="vd-media"><video data-vd="video" muted playsinline loop preload="none" poster="assets/studio/studio-saas.jpg" aria-hidden="true"></video></div>
+                <div class="vd-progress" aria-hidden="true"><i data-vd="progress"></i></div>
+                <div class="vd-head">
+                  <span class="vd-avatar" data-vd="avatar" style="--av:#2f9d63" aria-hidden="true">S</span>
+                  <span class="vd-id"><strong data-vd="brand">Sync Socials</strong><small data-vd="platforms">Instagram · TikTok · YouTube</small></span>
+                  <span class="vd-chip" data-vd="chip">POV</span>
                 </div>
-
-                <div class="vd-video vd-scene-1" data-vd="video">
-                  <div class="vd-video-btns" aria-hidden="true">
-                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m22 9-6 6"/><path d="m16 9 6 6"/></svg></span>
-                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg></span>
+                <p class="vd-hook"><span data-vd="hook">POV: next week’s posts are already scheduled</span></p>
+                <span class="vd-stamp vd-stamp--yes" aria-hidden="true">Approve</span>
+                <span class="vd-stamp vd-stamp--no" aria-hidden="true">Skip</span>
+                <span class="vd-render" aria-hidden="true"></span>
+                <span class="vd-toast" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Video re-rendered</span>
+                <div class="vd-foot">
+                  <p class="vd-caption" data-vd="caption">Batch your content once, then get back to running the business.</p>
+                  <div class="vd-foot-row">
+                    <span class="vd-sound"><span class="vd-eq" aria-hidden="true"><i></i><i></i><i></i></span><span data-vd="sound">Easy Sunday · chill house</span></span>
+                    <button class="vd-why-btn" type="button" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></svg>Why this idea?</button>
                   </div>
-                  <p class="vd-hook" data-vd="hook">1. You're posting inconsistently</p>
                 </div>
-
-                <p class="vd-caption" data-vd="caption">Are you struggling with your social media? Here are 3 signs it's time for an upgrade. Hint: Sync Socials can help!</p>
-                <div class="vd-meta" data-vd="meta">Facebook · YouTube</div>
-
-                <div class="vd-actions" aria-hidden="true">
-                  <span class="vd-btn vd-btn--no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m6 6 12 12"/><path d="m18 6-12 12"/></svg></span>
-                  <span class="vd-btn vd-btn--edit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg> Edit</span>
-                  <span class="vd-btn vd-btn--yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <div class="vd-why">
+                  <div class="vd-why-head"><strong>Why this idea</strong><button class="vd-why-close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12"/><path d="m18 6-12 12"/></svg></button></div>
+                  <ul data-vd="why">
+                    <li>Sells the outcome (free time), not the feature.</li>
+                    <li>A calm, aspirational POV is easy to save and share.</li>
+                    <li>The hook lands in the first second, before the scroll.</li>
+                  </ul>
                 </div>
-              </div>
+              </article>
             </div>
 
-            <div class="vd-dots" aria-hidden="true">
-              <span class="vd-dot active"></span><span class="vd-dot"></span><span class="vd-dot"></span>
+            <div class="vd-controls">
+              <button class="vd-ctl vd-ctl--skip" type="button" data-act="skip">
+                <span class="vd-ctl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12"/><path d="m18 6-12 12"/></svg></span>Skip
+              </button>
+              <button class="vd-ctl vd-ctl--edit" type="button" data-act="edit">
+                <span class="vd-ctl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>Edit hook
+              </button>
+              <button class="vd-ctl vd-ctl--approve" type="button" data-act="approve">
+                <span class="vd-ctl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Approve
+              </button>
             </div>
-            <p class="vd-ready"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>Approved · Scheduled for Tue 9:00 AM</p>
-            <p class="vd-note">Swipe through each idea: approve, edit, or skip.</p>
+
+            <div class="vd-tray">
+              <span class="vd-tray-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg></span>
+              <p class="vd-tray-text"><strong data-vd="trayTitle">Ready to post</strong><span data-vd="traySub">Approve an idea to schedule it</span></p>
+              <span class="vd-thumbs" aria-hidden="true"></span>
+            </div>
+            <p class="vd-note">Example ideas. Drag a card or use the buttons.</p>
+            <p class="vd-sr" aria-live="polite" data-vd="announce"></p>
           </aside>
         </div>
 
@@ -1160,7 +1176,7 @@
     </div>
   </footer>
 
-  <script src="script.js?v=9"></script>
+  <script src="script.js?v=10"></script>
 <script src="growth.js?v=4" data-ads="meta" data-endpoint="https://app.sync-socials.com/api/growth" defer></script>
 <script src="support-widget.js?v=3" defer></script>
 </body>
