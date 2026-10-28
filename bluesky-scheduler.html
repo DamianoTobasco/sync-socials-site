@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bluesky Scheduler | Schedule Bluesky Posts</title>
+  <meta name="description" content="Schedule Bluesky posts with an app password. Text up to 300 characters and up to 4 images. Video is not supported yet." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sync Socials" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Bluesky Scheduler | Schedule Bluesky Posts" />
+  <meta property="og:description" content="Schedule Bluesky posts with an app password. Text up to 300 characters and up to 4 images. Video is not supported yet." />
+  <meta property="og:url" content="https://sync-socials.com/bluesky-scheduler.html" />
+  <meta property="og:image" content="https://sync-socials.com/assets/og-home-v3.png" />
+  <meta property="og:image:secure_url" content="https://sync-socials.com/assets/og-home-v3.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Sync Socials: schedule once, publish everywhere." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@syncyoursocials" />
+  <meta name="twitter:title" content="Bluesky Scheduler | Schedule Bluesky Posts" />
+  <meta name="twitter:description" content="Schedule Bluesky posts with an app password. Text up to 300 characters and up to 4 images. Video is not supported yet." />
+  <meta name="twitter:image" content="https://sync-socials.com/assets/og-home-v3.png" />
+  <meta name="twitter:image:alt" content="Sync Socials: schedule once, publish everywhere." />
+  <link rel="canonical" href="https://sync-socials.com/bluesky-scheduler.html" />
+  <meta name="theme-color" content="#0c1410" />
+  <link rel="icon" type="image/png" href="assets/logo-256.png" />
+  <link rel="apple-touch-icon" href="assets/logo-256.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Sora:wght@600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://sync-socials.com/bluesky-scheduler.html",
+        "url": "https://sync-socials.com/bluesky-scheduler.html",
+        "name": "Bluesky Scheduler | Schedule Bluesky Posts",
+        "description": "Schedule Bluesky posts with an app password. Text up to 300 characters and up to 4 images. Video is not supported yet.",
+        "inLanguage": "en-US",
+        "isPartOf": { "@id": "https://sync-socials.com/#website" },
+        "about": { "@id": "https://sync-socials.com/#software" },
+        "publisher": { "@id": "https://sync-socials.com/#organization" },
+        "primaryImageOfPage": { "@id": "https://sync-socials.com/bluesky-scheduler.html#primaryimage" }
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://sync-socials.com/bluesky-scheduler.html#primaryimage",
+        "url": "https://sync-socials.com/assets/og-home-v3.png",
+        "contentUrl": "https://sync-socials.com/assets/og-home-v3.png",
+        "width": 1200,
+        "height": 630,
+        "caption": "Sync Socials: schedule once, publish everywhere."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sync-socials.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Bluesky scheduler", "item": "https://sync-socials.com/bluesky-scheduler.html" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://sync-socials.com/bluesky-scheduler.html#faq",
+        "isPartOf": { "@id": "https://sync-socials.com/bluesky-scheduler.html" },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I connect Bluesky without my main password?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In the Bluesky app, open Settings, then Privacy and security, then App passwords, and add one named Sync Socials. In Connections, paste that app password and your handle, such as you.bsky.social. Never use your main Bluesky password. To disconnect, remove the account in Connections or revoke the app password in Bluesky."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What can I schedule to Bluesky?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Text posts up to 300 characters and photo posts with up to 4 images. Links and hashtags are sent as Bluesky links and tags. Images are compressed for Bluesky's 1 MB limit. Video is not supported yet."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I schedule a Bluesky thread?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The help center documents a single text or photo post. It does not document scheduling a chain of replies. This page does not claim thread scheduling."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can ChatGPT or Claude schedule Bluesky posts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The ChatGPT app and the Claude plugin list Bluesky as a live destination that connects with an app password. Connect Bluesky in Connections first. A free workspace can save drafts. Scheduling starts the 7-day trial. The MCP server guide does not list Bluesky as an API-key destination. Do not paste the app password into a chat."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if a Bluesky image is too large?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sync Socials compresses images for Bluesky's 1 MB limit. A very large image may still need to be resized before upload. The media library accepts JPEG, PNG, WebP, and GIF up to 25 MB per image."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does it cost to schedule Bluesky posts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bluesky uses the same plans as the rest of Sync Socials. Exploring is free and needs no card: one account per platform, except X, and unlimited drafts. Scheduling starts a 7-day trial at $0 today, then Growth is $19.95 per month or $199.50 per year unless you cancel first. Agency is $39.99 per month or $399 per year. There is no per-post fee."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="seo-guide">
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="Sync Socials home">
+        <img class="brand-badge" src="assets/logo-256.png" alt="Sync Socials logo" width="32" height="32" />
+        <span class="brand-name">Sync&nbsp;Socials</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/#features">Features</a>
+        <a href="/#integrations">Integrations</a>
+        <a href="ai-social-media-agent.html">For AI agents</a>
+        <a href="/#pricing">Pricing</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle nav-theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+        <a class="btn btn-ghost" href="https://app.sync-socials.com/login">Log in</a>
+        <a class="btn btn-primary" href="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dgrowth_monthly">Start free</a>
+      </div>
+      <button class="theme-toggle compact-theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" hidden>
+      <a href="/#features">Features</a>
+      <a href="/#integrations">Integrations</a>
+      <a href="ai-social-media-agent.html">For AI agents</a>
+      <a href="/#pricing">Pricing</a>
+      <a class="btn btn-ghost" href="https://app.sync-socials.com/login">Log in</a>
+      <a class="btn btn-primary" href="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dgrowth_monthly">Start free</a>
+    </div>
+  </header>
+
+  <main class="claude-guide">
+    <section class="section">
+      <div class="container narrow">
+        <div class="section-head">
+          <p class="kicker">Bluesky scheduler</p>
+          <h1>Schedule Bluesky posts with an app password</h1>
+          <p class="lead">Create an app password in Bluesky, connect your handle, and queue text or photo posts. Sync Socials does not ask for your main Bluesky password. Video is not supported yet.</p>
+          <div class="guide-actions">
+            <a class="btn btn-primary" href="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dgrowth_monthly">Start free</a>
+            <a class="btn btn-outline" href="help/connect-threads-bluesky.html">Bluesky setup guide</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container narrow guide-content">
+      <nav class="guide-toc" aria-label="On this page">
+        <a href="#schedule">Schedule a Bluesky post</a>
+        <a href="#formats">Text, images, and limits</a>
+        <a href="#ai">Draft and schedule with AI</a>
+        <a href="#plans">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <article class="cmp-prose guide-prose">
+        <section id="schedule">
+          <h2>How to schedule Bluesky posts</h2>
+          <p>Bluesky takes an app password. The steps below are from <a href="help/connect-threads-bluesky.html">Connect Threads and Bluesky</a> and the <a href="help/schedule-and-publish.html">scheduling guide</a>. Sync Socials holds the post until the time you set, then a background worker publishes it.</p>
+          <ol>
+            <li>In the Bluesky app, open <strong>Settings → Privacy and security → App passwords</strong> and add one named Sync Socials. Copy the password it shows. It looks like <code>xxxx-xxxx-xxxx-xxxx</code>.</li>
+            <li>In <a href="https://app.sync-socials.com/login?next=%2Fapp%2Fconnections">Connections</a>, open the Bluesky card, paste the app password, and enter your handle, like <code>you.bsky.social</code>.</li>
+            <li>In the composer, write the post and select the Bluesky account. <strong>Show all options</strong> can set a different caption for that destination. Blank fields fall back to the shared caption.</li>
+            <li>Enter a date and time, or use the suggested slots. Times use the workspace timezone shown beside the field. <strong>Schedule</strong> queues the post. <strong>Publish now</strong> sends it immediately. <strong>Save draft</strong> keeps it with no time.</li>
+          </ol>
+          <!-- VERIFY: help/schedule-and-publish.html mentions suggested slots but does not say how they are chosen. This page does not call them best times to post. -->
+          <!-- VERIFY: help does not state a maximum number of days ahead a Bluesky post can be scheduled. This page does not claim a scheduling horizon. -->
+          <p>Scheduled posts show on the <a href="https://app.sync-socials.com/login?next=%2Fapp%2Fcalendar">Calendar</a>. Drag one to reschedule it, or edit it until it starts publishing. See <a href="help/timezones.html">timezones and scheduled times</a>.</p>
+          <p>Never use your main Bluesky password. To disconnect, remove the account in Connections or revoke the app password in Bluesky. A free workspace can connect one account per platform. Growth includes up to 20 per platform, and Agency up to 50.</p>
+        </section>
+
+        <section id="formats">
+          <h2>Bluesky text, images, and limits</h2>
+          <ul>
+            <li><strong>Text.</strong> Up to 300 characters.</li>
+            <li><strong>Photos.</strong> Up to 4 images. Links and hashtags are sent as Bluesky links and tags.</li>
+            <li><strong>Image size.</strong> Images are compressed for Bluesky's 1 MB limit automatically. A very large image may still need to be resized before upload.</li>
+            <li><strong>Video.</strong> Not supported yet.</li>
+            <li><strong>Uploads.</strong> The media library accepts JPEG, PNG, WebP, and GIF up to 25 MB per image, and up to 10 files per upload. Bluesky still applies its own 4-image and 1 MB limits when the post is sent.</li>
+          </ul>
+          <!-- VERIFY: help does not document scheduling a Bluesky reply chain or alt text. Video is explicitly unsupported. This page does not claim reply threads or alt text. -->
+          <p>The help center documents a single text or photo post. It does not document scheduling a chain of replies, and it does not document alt text. This page does not claim either one. Tags in the composer are appended as hashtags where the platform supports them. On Bluesky, links and hashtags are sent as proper links and tags.</p>
+          <p>The billing guide lists analytics for Facebook, Instagram, and YouTube. It does not list Bluesky analytics. Posted still records whether the destination was delivered, failed, or still processing. See <a href="help/media-requirements.html">media requirements</a> and <a href="help/why-did-my-post-fail.html">why a post fails</a>.</p>
+        </section>
+
+        <section id="ai">
+          <h2>Draft and schedule Bluesky with an assistant</h2>
+          <p>The <a href="chatgpt.html">ChatGPT app</a> and the <a href="claude.html">Claude plugin</a> list Bluesky as a live destination that connects with an app password. Connect Bluesky in Connections before you ask an assistant to schedule it. Connecting the assistant does not connect Bluesky, and you should not paste the app password into a chat.</p>
+          <!-- VERIFY: social-media-mcp-server.html says Bluesky is absent from the public agent README platform table, so that page does not claim Bluesky works through the API-key MCP server. This page repeats that limit. -->
+          <p>The <a href="social-media-mcp-server.html">MCP server guide</a> does not list Bluesky as an API-key destination. Confirm the account in your workspace before you rely on an API-key agent to post there. ChatGPT and Claude Chat or Cowork use account authorization and do not need an API key. See the <a href="ai-social-media-agent.html">agent overview</a>.</p>
+          <p>A free workspace can save drafts. Scheduling and publishing start the 7-day trial. Keep captions within 300 characters. Claude uses existing images and does not generate them. Do not ask an assistant to attach a video for Bluesky. Video is not supported yet.</p>
+          <blockquote>Save this caption as an untargeted Sync Socials draft: “A small update that makes the everyday easier.” Name it “Bluesky draft.” Do not schedule or publish it.</blockquote>
+          <blockquote>Schedule my approved “Bluesky draft” to the Bluesky account I selected on October 15, 2026, at 2:30 p.m. America/New_York. Keep the caption within 300 characters and the images unchanged. Do not add video. Show me the saved schedule.</blockquote>
+          <p>Text concepts need a workspace AI provider and use that provider's allowance. Content Studio can save hooks, captions, and hashtags as drafts. Nothing is scheduled until you approve it. See <a href="help/content-studio-and-ai-keys.html">Content Studio and your own AI key</a>.</p>
+        </section>
+
+        <section id="plans">
+          <h2>Pricing</h2>
+          <p>Bluesky scheduling uses the same plans as the rest of Sync Socials. There is no per-post fee. See <a href="/#pricing">homepage pricing</a> and <a href="help/billing-trial-and-cancellation.html">billing, the trial, and cancellation</a>.</p>
+          <h3>Free account, no card</h3>
+          <p>Connect one account per platform (X excluded). Unlimited drafts and a media library. Scheduling and publishing are not included yet.</p>
+          <h3>7-day trial, then Growth</h3>
+          <p>Scheduling and publishing. The trial needs a card and costs $0 today, then $19.95/month or $199.50/year unless you cancel first. Unlimited scheduling, no per-post fees, up to 20 accounts per platform. Includes the calendar and delivery tracking.</p>
+          <h3>Agency</h3>
+          <p>$39.99/month or $399/year. Adds team invitations, 50 accounts per platform, and three API keys.</p>
+          <p>If Agency is not offered on your Billing page yet, the billing guide says it is still rolling out. Email <a href="mailto:contactsyncsocials@gmail.com">contactsyncsocials@gmail.com</a> and support can set it up. Cancel before the trial ends to avoid a charge.</p>
+        </section>
+
+        <section id="faq">
+          <h2>FAQ</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>How do I connect Bluesky without my main password?<span class="chev"></span></summary>
+              <div class="faq-a"><p>In the Bluesky app, open Settings, then Privacy and security, then App passwords, and add one named Sync Socials. In Connections, paste that app password and your handle, such as you.bsky.social. Never use your main Bluesky password. To disconnect, remove the account in Connections or revoke the app password in Bluesky.</p></div>
+            </details>
+            <details class="faq-item">
+              <summary>What can I schedule to Bluesky?<span class="chev"></span></summary>
+              <div class="faq-a"><p>Text posts up to 300 characters and photo posts with up to 4 images. Links and hashtags are sent as Bluesky links and tags. Images are compressed for Bluesky's 1 MB limit. Video is not supported yet.</p></div>
+            </details>
+            <details class="faq-item">
+              <summary>Can I schedule a Bluesky thread?<span class="chev"></span></summary>
+              <div class="faq-a"><p>The help center documents a single text or photo post. It does not document scheduling a chain of replies. This page does not claim thread scheduling.</p></div>
+            </details>
+            <details class="faq-item">
+              <summary>Can ChatGPT or Claude schedule Bluesky posts?<span class="chev"></span></summary>
+              <div class="faq-a"><p>The ChatGPT app and the Claude plugin list Bluesky as a live destination that connects with an app password. Connect Bluesky in Connections first. A free workspace can save drafts. Scheduling starts the 7-day trial. The MCP server guide does not list Bluesky as an API-key destination. Do not paste the app password into a chat.</p></div>
+            </details>
+            <details class="faq-item">
+              <summary>What if a Bluesky image is too large?<span class="chev"></span></summary>
+              <div class="faq-a"><p>Sync Socials compresses images for Bluesky's 1 MB limit. A very large image may still need to be resized before upload. The media library accepts JPEG, PNG, WebP, and GIF up to 25 MB per image.</p></div>
+            </details>
+            <details class="faq-item">
+              <summary>How much does it cost to schedule Bluesky posts?<span class="chev"></span></summary>
+              <div class="faq-a"><p>Bluesky uses the same plans as the rest of Sync Socials. Exploring is free and needs no card: one account per platform, except X, and unlimited drafts. Scheduling starts a 7-day trial at $0 today, then Growth is $19.95 per month or $199.50 per year unless you cancel first. Agency is $39.99 per month or $399 per year. There is no per-post fee.</p></div>
+            </details>
+          </div>
+        </section>
+
+        <section id="related">
+          <h2>Related guides</h2>
+          <ul class="help-related">
+            <li><a href="help/connect-threads-bluesky.html">Connect Threads and Bluesky</a></li>
+            <li><a href="help/schedule-and-publish.html">Create, schedule, and publish a post</a></li>
+            <li><a href="help/media-requirements.html">Media requirements by platform</a></li>
+            <li><a href="chatgpt.html">ChatGPT setup guide</a></li>
+            <li><a href="claude.html">Claude setup guide</a></li>
+            <li><a href="social-media-mcp-server.html">Social media MCP server</a></li>
+            <li><a href="ai-social-media-agent.html">For AI agents</a></li>
+            <li><a href="buffer-alternative.html">Buffer alternative</a></li>
+            <li><a href="hootsuite-alternative.html">Hootsuite alternative</a></li>
+            <li><a href="tiktok-scheduler.html">TikTok scheduler</a></li>
+            <li><a href="instagram-scheduler.html">Instagram scheduler</a></li>
+            <li><a href="threads-scheduler.html">Threads scheduler</a></li>
+          </ul>
+        </section>
+      </article>
+    </div>
+
+    <section class="section cta-band">
+      <div class="container cta-inner">
+        <h2>Schedule a Bluesky post</h2>
+        <p>Connect Bluesky with an app password and save drafts for free. The 7-day Growth trial starts when you are ready to schedule or publish.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dgrowth_monthly">Start free</a>
+          <a class="btn btn-outline btn-lg" href="help/connect-threads-bluesky.html">Read the Bluesky guide</a>
+        </div>
+        <p class="trial-disclosure">No card to start. Explore and draft for free; the 7-day Growth trial begins when you’re ready to schedule or publish: $0 today, then $19.95/month. Cancel before it ends to avoid a charge.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/"><img class="brand-badge" src="assets/logo-256.png" alt="Sync Socials logo" width="28" height="28" /><span class="brand-name">Sync Socials</span></a>
+        <p>Plan, review, and publish from one workspace.</p>
+      </div>
+      <div class="footer-col"><h4>Product</h4><a href="/#features">Features</a><a href="/#pricing">Pricing</a><a href="tiktok-scheduler.html">TikTok scheduler</a><a href="instagram-scheduler.html">Instagram scheduler</a><a href="threads-scheduler.html">Threads scheduler</a><a href="bluesky-scheduler.html" aria-current="page">Bluesky scheduler</a><a href="ai-social-media-agent.html">For AI agents</a><a href="chatgpt.html">ChatGPT setup guide</a><a href="claude.html">Claude setup guide</a><a href="social-media-mcp-server.html">MCP server guide</a><a href="buffer-alternative.html">Buffer alternative</a><a href="hootsuite-alternative.html">Hootsuite alternative</a><a href="llms.txt">Product facts for AI assistants</a></div>
+      <div class="footer-col"><h4>Account</h4><a href="https://app.sync-socials.com/login">Log in</a><a href="https://app.sync-socials.com/privacy">Privacy</a><a href="data-deletion.html">Data deletion</a><a href="https://app.sync-socials.com/terms">Terms</a></div>
+      <div class="footer-col"><h4>Support</h4><a href="help/">Help center</a><a href="mailto:contactsyncsocials@gmail.com">Contact Sync Socials</a><a href="referral.html">Referral Program</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year">2026</span> Sync Socials. All rights reserved.</span><div class="theme-toggle-wrap"><button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">🌙</button></div></div>
+  </footer>
+  <script src="script.js?v=9"></script>
+<script src="growth.js?v=4" data-ads="meta" data-endpoint="https://app.sync-socials.com/api/growth" defer></script>
+<script src="support-widget.js?v=3" defer></script>
+</body>
+</html>

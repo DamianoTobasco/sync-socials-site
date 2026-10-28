@@ -53,6 +53,30 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://sync-socials.com/tiktok-scheduler.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sync-socials.com/instagram-scheduler.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sync-socials.com/threads-scheduler.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sync-socials.com/bluesky-scheduler.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://sync-socials.com/help/ai-agents-and-mcp.html</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
