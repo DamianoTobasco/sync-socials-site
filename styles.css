@@ -2106,13 +2106,14 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
 .guide-toc { display: flex; flex-wrap: wrap; gap: 10px 20px; padding: 0 0 32px; margin-bottom: 36px; border-bottom: 1px solid var(--line); font-size: 14px; }
 .guide-toc a { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
 .guide-prose { gap: 40px; overflow-wrap: anywhere; }
-.guide-prose section { display: grid; gap: 16px; scroll-margin-top: 100px; min-width: 0; }
+.guide-prose section { display: grid; gap: 16px; scroll-margin-top: 100px; }
 .guide-prose h2 { color: var(--text); font-size: clamp(24px, 4vw, 30px); line-height: 1.25; }
 .guide-prose h3 { font-size: 20px; line-height: 1.35; }
 .guide-prose ol { padding-left: 24px; display: grid; gap: 10px; }
 .guide-prose blockquote { padding: 18px 22px; border-left: 3px solid var(--accent); border-radius: 0 12px 12px 0; background: var(--surface-2); color: var(--text); }
-.guide-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 28px; }
-.guide-prose pre {
+.seo-guide .guide-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 28px; }
+.seo-guide .guide-prose section { min-width: 0; }
+.seo-guide .guide-prose pre {
   margin: 0;
   padding: 18px 22px;
   border-left: 3px solid var(--accent);
@@ -2128,21 +2129,21 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
   white-space: pre;
   max-width: 100%;
 }
-.guide-prose :not(pre) > code {
+.seo-guide .guide-prose :not(pre) > code {
   font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.92em;
 }
-.guide-prose .cmp-table-wrap { max-width: 100%; }
-.guide-prose .cmp-table { min-width: 560px; }
-.guide-prose .cmp-table th,
-.guide-prose .cmp-table td,
-.guide-prose .cmp-table code {
+.seo-guide .guide-prose .cmp-table-wrap { max-width: 100%; }
+.seo-guide .guide-prose .cmp-table { min-width: 560px; }
+.seo-guide .guide-prose .cmp-table th,
+.seo-guide .guide-prose .cmp-table td,
+.seo-guide .guide-prose .cmp-table code {
   overflow-wrap: normal;
   word-break: normal;
 }
-.guide-prose .cmp-table tbody th { width: 34%; }
-.guide-prose .cmp-table tbody td { width: auto; }
-.guide-prose .faq-list { margin-top: 4px; }
+.seo-guide .guide-prose .cmp-table tbody th { width: 34%; }
+.seo-guide .guide-prose .cmp-table tbody td { width: auto; }
+.seo-guide .guide-prose .faq-list { margin-top: 4px; }
 
 /* Trial terms stay adjacent to the offer, including on narrow screens. */
 .trial-disclosure { max-width: 580px; margin: 14px auto 0; font-size: 12px; line-height: 1.7; color: var(--muted); text-align: center; }
