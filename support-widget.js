@@ -12,9 +12,17 @@
       if (['localhost', '127.0.0.1', '[::1]'].includes(requested.hostname) && ['http:', 'https:'].includes(requested.protocol)) appOrigin = requested.origin;
     } catch (_) { /* Keep the production origin for an invalid override. */ }
   }
+  // Set when someone hides the bubble in the app; Settings > Appearance clears it.
+  var HIDDEN_KEY = 'ss-support-hidden-v1';
+  var unmount = null;
+
+  function hidden() {
+    try { return localStorage.getItem(HIDDEN_KEY) === '1'; } catch (_) { return false; }
+  }
 
   function mount() {
-    if (document.getElementById('sync-support-frame')) return;
+    if (hidden() || document.getElementById('sync-support-frame')) return;
+    var listeners = new AbortController();
     var frame = document.createElement('iframe');
     frame.id = 'sync-support-frame';
     frame.title = 'Ask Sync — AI support';
@@ -67,15 +75,35 @@
         frame.title = open ? 'Ask Sync — AI support conversation' : 'Ask Sync — open AI support';
         position();
       }
-    });
+      // Only the app offers hiding, since only it has Settings to undo it.
+      if (event.data.type === 'sync-support:hide' && appOrigin === location.origin) {
+        try { localStorage.setItem(HIDDEN_KEY, '1'); } catch (_) { /* Hide for this page view only. */ }
+        unmount();
+        window.dispatchEvent(new Event('sync-support:visibility'));
+      }
+    }, { signal: listeners.signal });
     frame.addEventListener('load', context);
-    window.addEventListener('resize', schedulePosition, { passive: true });
-    window.addEventListener('popstate', context);
-    if (window.visualViewport) window.visualViewport.addEventListener('resize', schedulePosition, { passive: true });
-    new MutationObserver(schedulePosition).observe(document.body, { childList: true });
+    window.addEventListener('resize', schedulePosition, { passive: true, signal: listeners.signal });
+    window.addEventListener('popstate', context, { signal: listeners.signal });
+    if (window.visualViewport) window.visualViewport.addEventListener('resize', schedulePosition, { passive: true, signal: listeners.signal });
+    var observer = new MutationObserver(schedulePosition);
+    observer.observe(document.body, { childList: true });
     document.body.appendChild(frame);
     position();
+    unmount = function () {
+      listeners.abort();
+      observer.disconnect();
+      frame.remove();
+      unmount = null;
+    };
   }
+  // Settings turns the bubble back on (or off) without a reload, in any tab.
+  function syncVisibility() {
+    if (!hidden()) mount();
+    else if (unmount) unmount();
+  }
+  window.addEventListener('sync-support:visibility', syncVisibility);
+  window.addEventListener('storage', function (event) { if (event.key === HIDDEN_KEY) syncVisibility(); });
   // Mount after the visitor has started reading (first scroll) or a few
   // seconds, so the bubble is not part of the first paint beside the page's
   // own call to action and the optional-cookie prompt.
