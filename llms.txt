@@ -33,6 +33,10 @@ Key facts:
 - [Schedule social media posts with ChatGPT](https://sync-socials.com/chatgpt.html): published app, account authorization, drafts, scheduling, publishing, supported destinations and disconnection
 - [Schedule social media posts with Claude](https://sync-socials.com/claude.html): published plugin for Claude Chat and Cowork, custom connection setup while connector directory review is pending, drafts, scheduling, existing media, and disconnection
 - [Social media MCP server](https://sync-socials.com/social-media-mcp-server.html): hosted MCP endpoint, Streamable HTTP, API-key setup for Codex, Claude Code and OpenClaw, documented tools and destinations
+- [TikTok scheduler](https://sync-socials.com/tiktok-scheduler.html): schedule TikTok videos and photo posts with Direct Post, including visibility, interaction settings, and music confirmation
+- [Instagram scheduler](https://sync-socials.com/instagram-scheduler.html): schedule Instagram photo posts and Reels from a professional account linked to a Facebook Page
+- [Threads scheduler](https://sync-socials.com/threads-scheduler.html): schedule Threads posts where the workspace has Threads access; text up to 500 characters, up to 10 images, or video
+- [Bluesky scheduler](https://sync-socials.com/bluesky-scheduler.html): schedule Bluesky text and photo posts with an app password; up to 300 characters and 4 images; video is not supported yet
 - [Buffer Alternative](https://sync-socials.com/buffer-alternative.html): honest Sync Socials vs Buffer comparison with pricing
 - [Hootsuite Alternative](https://sync-socials.com/hootsuite-alternative.html): honest Sync Socials vs Hootsuite comparison with pricing
 - [Partner Program](https://sync-socials.com/referral.html): 30% recurring commission plus cumulative cash bonuses up to $4,000
