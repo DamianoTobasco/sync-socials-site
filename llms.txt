@@ -30,8 +30,9 @@ Key facts:
 
 - [Home](https://sync-socials.com/): features, Content Studio, integrations, MCP for agents, pricing and FAQ
 - [AI Social Media Agent](https://sync-socials.com/ai-social-media-agent.html): setup for compatible clients such as Codex, Claude Code and OpenClaw; MCP capabilities, authentication choices and live destinations
-- [ChatGPT app and setup guide](https://sync-socials.com/chatgpt.html): published app listing, workspace requirements, account authorization, drafts, scheduling, publishing and disconnection
-- [Claude plugin and setup guide](https://sync-socials.com/claude.html): published plugin for Claude Chat and Cowork, custom connection setup while connector directory review is pending, workspace requirements, drafts, scheduling, existing media, and disconnection
+- [Schedule social media posts with ChatGPT](https://sync-socials.com/chatgpt.html): published app, account authorization, drafts, scheduling, publishing, supported destinations and disconnection
+- [Schedule social media posts with Claude](https://sync-socials.com/claude.html): published plugin for Claude Chat and Cowork, custom connection setup while connector directory review is pending, drafts, scheduling, existing media, and disconnection
+- [Social media MCP server](https://sync-socials.com/social-media-mcp-server.html): hosted MCP endpoint, Streamable HTTP, API-key setup for Codex, Claude Code and OpenClaw, documented tools and destinations
 - [Buffer Alternative](https://sync-socials.com/buffer-alternative.html): honest Sync Socials vs Buffer comparison with pricing
 - [Hootsuite Alternative](https://sync-socials.com/hootsuite-alternative.html): honest Sync Socials vs Hootsuite comparison with pricing
 - [Partner Program](https://sync-socials.com/referral.html): 30% recurring commission plus cumulative cash bonuses up to $4,000
@@ -49,6 +50,8 @@ npx skills add DamianoTobasco/sync-socials-agent -g
 Requires a Sync Socials account with API access and an API key generated from workspace settings. Store the key in the agent environment, never in public content.
 
 Hosted MCP endpoint: https://app.sync-socials.com/api/mcp
+
+Setup guide: https://sync-socials.com/social-media-mcp-server.html
 
 Compatible clients must support the hosted MCP/API and its authentication. A skill provides instructions; the client's own connection and tool support still determine what it can do. Discovering or citing the public website in ChatGPT, Grok or another assistant is separate from connecting an account and operating its publishing tools.
 
