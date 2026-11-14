@@ -34,6 +34,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Sora:wght@600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=19" />
+  <link rel="stylesheet" href="sky.css?v=1" />
 
   <!-- Structured data for search engines and AI assistants -->
   <script type="application/ld+json">
@@ -139,7 +140,7 @@
   }
   </script>
 </head>
-<body>
+<body class="has-sky-hero">
   <!-- ===== Header ===== -->
   <header class="site-header" id="top">
     <div class="container nav">
@@ -184,8 +185,7 @@
 
   <main>
     <!-- ===== Hero ===== -->
-    <section class="hero">
-      <div class="hero-glow" aria-hidden="true"></div>
+    <section class="hero hero--sky">
       <div class="container hero-inner">
         <a class="eyebrow" href="#compare">
           <span class="dot"></span> Sync Socials vs Hootsuite, compared honestly
@@ -365,7 +365,7 @@
 
     <!-- ===== Final CTA ===== -->
     <section class="section cta-band">
-      <div class="container cta-inner">
+      <div class="container cta-inner" data-sky="night">
         <h2>Enterprise results. Creator pricing.</h2>
         <p>Try Sync Socials free for 7 days and keep the other $80 a month.</p>
         <a class="btn btn-primary btn-lg" href="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dgrowth_monthly">Get started free</a>
@@ -422,6 +422,7 @@
   </footer>
 
   <script src="script.js?v=9"></script>
+  <script src="sky.js?v=1" defer></script>
 <script src="growth.js?v=4" data-ads="meta" data-endpoint="https://app.sync-socials.com/api/growth" defer></script>
 <script src="support-widget.js?v=3" defer></script>
 </body>
