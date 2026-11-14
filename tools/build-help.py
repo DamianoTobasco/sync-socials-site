@@ -16,6 +16,7 @@ LASTMOD = "2026-10-16"
 STYLES_VERSION = 19
 SCRIPT_VERSION = 9
 GROWTH_VERSION = 4
+SKY_VERSION = 1
 WIDGET_VERSION = 3
 
 LOGIN = f"{APP}/login"
@@ -100,6 +101,7 @@ def head(slug, title, description, kicker=None, breadcrumb=None):
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Sora:wght@600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css?v={STYLES_VERSION}" />
+  <link rel="stylesheet" href="/sky.css?v={SKY_VERSION}" />
   <script type="application/ld+json">
   {json.dumps(graph, indent=2)}
   </script>
@@ -151,6 +153,7 @@ FOOTER = f"""  <footer class="site-footer">
     <div class="container footer-bottom"><span>© <span id="year">2026</span> Sync Socials. All rights reserved.</span><div class="theme-toggle-wrap"><button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">🌙</button></div></div>
   </footer>
   <script src="/script.js?v={SCRIPT_VERSION}"></script>
+  <script src="/sky.js?v={SKY_VERSION}" defer></script>
 <script src="/growth.js?v={GROWTH_VERSION}" data-ads="meta" data-endpoint="{APP}/api/growth" defer></script>
 <script src="/support-widget.js?v={WIDGET_VERSION}" defer></script>
 </body>

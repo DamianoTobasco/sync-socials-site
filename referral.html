@@ -1194,6 +1194,7 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
 [data-theme="dark"] .rf-tier--gold .rf-tier__cumulative { color: #e7c558; }
 
   </style>
+  <link rel="stylesheet" href="sky.css?v=1" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1245,7 +1246,7 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
   }
   </script>
 </head>
-<body>
+<body class="has-sky-hero">
   <!-- ===== Header ===== -->
   <header class="site-header" id="top">
     <div class="container nav">
@@ -1288,8 +1289,7 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
 
   <main>
     <!-- ===== Hero ===== -->
-    <section class="hero rf-hero">
-      <div class="hero-glow" aria-hidden="true"></div>
+    <section class="hero rf-hero hero--sky">
       <div class="container hero-inner">
         <span class="eyebrow">
           <span class="dot"></span> Sync Socials · Partner Program
@@ -1590,7 +1590,7 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
 
     <!-- ===== Final CTA ===== -->
     <section class="section cta-band">
-      <div class="container cta-inner">
+      <div class="container cta-inner" data-sky="night">
         <h2>Start earning with Sync Socials.</h2>
         <p>Free to join, no follower minimum, and your commission never expires. Grab your link and start sharing today.</p>
         <a class="btn btn-primary btn-lg" href="https://app.sync-socials.com/login?next=%2Fapp%2Freferrals">Become a partner</a>
@@ -1766,6 +1766,7 @@ h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; letter-spacing: 
     slider.addEventListener('input', updateCalc);
     updateCalc();
   </script>
+<script src="sky.js?v=1" defer></script>
 <script src="growth.js?v=4" data-endpoint="https://app.sync-socials.com/api/growth" defer></script>
 <script src="support-widget.js?v=3" defer></script>
 </body>

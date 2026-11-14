@@ -1,0 +1,120 @@
+/* =========================================================
+   Sync Socials — sky
+   One sky runs behind the whole site. sky.js draws what moves (clouds,
+   the airliner, birds, stars) onto .sky-canvas elements it adds itself;
+   this file is the colour of the air and the layering around it.
+
+   Load after the page's own styles. Markup hooks:
+     <body class="has-sky-hero">        page opens on a sky hero
+     <section class="hero hero--sky">   the hero itself
+     data-sky="night" / "stars"         a dark box as night sky
+   The far sky behind everything else needs no markup.
+   ========================================================= */
+
+/* ---------- Hero: open sky ---------- */
+.hero--sky {
+  --sky-0: #a3ceee;
+  --sky-1: #c5e1f4;
+  --sky-2: #e2eff6;
+  --sky-3: #f4f0e6;
+  --sky-orb: rgba(255, 243, 208, .85);
+  --sky-veil: rgba(255, 255, 255, .5);
+  /* slide under the sticky header so the sky reaches the top of the page */
+  margin-top: -69px;
+  padding-top: 141px;
+}
+[data-theme="dark"] .hero--sky {
+  --sky-0: #03060d;
+  --sky-1: #07101f;
+  --sky-2: #0b1a31;
+  --sky-3: #08111d;
+  --sky-orb: rgba(120, 150, 230, .16);
+  --sky-veil: rgba(3, 6, 13, .34);
+}
+/* The sky itself: a soft veil behind the copy, the sun's (or moon's) glow,
+   and the gradient, which thins to nothing at the foot so the hero runs
+   into the far sky behind the rest of the page with no edge. */
+.hero--sky::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  -webkit-mask-image: none; mask-image: none;
+  background:
+    radial-gradient(46% 300px at 50% 260px, var(--sky-veil), transparent 72%),
+    radial-gradient(520px 380px at 87% 100px, var(--sky-orb), transparent 70%),
+    linear-gradient(180deg, var(--sky-0) 0%, var(--sky-1) 26%, var(--sky-2) 52%,
+      color-mix(in srgb, var(--sky-3) 60%, transparent) 78%, transparent 100%);
+}
+.hero--sky .hero-glow { display: none; }
+.hero--sky .hero-sub,
+.hero--sky .hero-note { color: color-mix(in srgb, var(--text) 68%, var(--muted)); }
+.hero-sky__front {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none; overflow: hidden;
+  -webkit-mask-image: linear-gradient(180deg, #000 calc(100% - 120px), transparent);
+  mask-image: linear-gradient(180deg, #000 calc(100% - 120px), transparent);
+}
+.hero-sky__front canvas { position: absolute; left: 0; top: 0; will-change: transform; }
+/* Until the page scrolls, the header is clear glass over the sky. */
+.has-sky-hero .site-header:not(.scrolled):not(:has(.nav-toggle[aria-expanded="true"])) {
+  background: transparent; backdrop-filter: none;
+}
+@media (max-width: 640px) {
+  .hero--sky { padding-top: 158px; }   /* open sky above the copy for the plane and birds */
+}
+
+/* ---------- Canvases ---------- */
+.sky-canvas { position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; }
+.hero--sky > .sky-canvas { z-index: 0; }
+
+/* ---------- The far sky, behind every section ----------
+   Fixed to the window: a wash of air, deepest at the top and thinning
+   toward the bottom, with the clouds from sky.js over it. sky.js moves
+   --sky-air and --sky-dusk as the page scrolls: morning blue at the top,
+   clear through the middle, golden by the foot. */
+.sky-ambient {
+  --sky-air: 1;
+  --sky-dusk: 0;
+  --air-0: rgba(160, 206, 238, .72);
+  --air-1: rgba(203, 227, 243, .42);
+  --air-2: rgba(222, 236, 245, .2);
+  --dusk-0: rgba(255, 190, 132, .5);
+  --dusk-1: rgba(255, 219, 204, .3);
+  --dusk-2: rgba(255, 232, 220, .14);
+  position: fixed; left: 0; top: 0; width: 100%; height: 100vh; height: 100lvh;
+  z-index: -1; pointer-events: none; overflow: hidden;
+}
+[data-theme="dark"] .sky-ambient {
+  --air-0: rgba(11, 26, 52, .95);
+  --air-1: rgba(8, 17, 32, .55);
+  --air-2: rgba(6, 10, 18, .2);
+  --dusk-0: rgba(34, 22, 66, .9);
+  --dusk-1: rgba(16, 13, 38, .5);
+  --dusk-2: rgba(8, 6, 18, .2);
+}
+.sky-ambient::before,
+.sky-ambient::after { content: ""; position: absolute; inset: 0; }
+.sky-ambient::before {
+  background: linear-gradient(180deg, var(--air-0) 0%, var(--air-1) 42%, var(--air-2) 100%);
+  opacity: var(--sky-air);
+}
+.sky-ambient::after {
+  background: linear-gradient(180deg, var(--dusk-0) 0%, var(--dusk-1) 42%, var(--dusk-2) 100%);
+  opacity: var(--sky-dusk);
+}
+.sky-ambient > .sky-canvas { z-index: 1; }
+
+/* Bands that used to be solid let a little of the sky through, so it reads
+   as one sky from top to bottom rather than stopping at each of them. Only
+   once sky.js is running: without it they stay solid. */
+.sky-on .marquee-wrap { background: color-mix(in srgb, var(--bg-2) 58%, transparent); }
+.sky-on .ss-mcp { background: color-mix(in srgb, var(--ss-bg) 80%, transparent); }
+.sky-on .site-footer { background: color-mix(in srgb, var(--bg-2) 76%, transparent); }
+
+/* ---------- Dark boxes: night ---------- */
+.cta-inner > .sky-canvas { position: absolute; }
+.studio-shell > .sky-canvas {
+  position: absolute; z-index: 0; height: min(100%, 760px);
+  -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent);
+  mask-image: linear-gradient(180deg, #000 55%, transparent);
+}
+/* stars take the place of the dot grid */
+.sky-on .cta-inner[data-sky]::before,
+.sky-on .studio-shell[data-sky]::before { display: none; }
