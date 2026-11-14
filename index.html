@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Sora:wght@600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=21" />
+  <link rel="stylesheet" href="styles.css?v=22" />
   <link rel="stylesheet" href="sky.css?v=2" />
 
   <!-- Structured data for search engines and AI assistants -->
@@ -438,11 +438,80 @@
         <div class="studio-shell" data-sky="stars">
         <div class="section-head">
           <p class="kicker">Content Studio</p>
-          <h2>Turn your website into scroll&#8209;stopping videos.</h2>
-          <p class="lead">Paste a link. The studio learns your brand, writes eight short-video ideas, and turns
-            the ones you approve into videos ready to post.</p>
+          <h2>Finished videos, without filming a thing.</h2>
+          <p class="lead">Pick a proven format and put your brand on it, or paste your website and approve the
+            ideas you like. Either way, a ready-to-post video lands in your drafts.</p>
         </div>
 
+        <div class="studio-modes" role="tablist" aria-label="Two ways to make a video">
+          <button class="studio-mode is-active" type="button" role="tab" id="studio-tab-machine" aria-controls="studio-machine" aria-selected="true">Templates <em>New</em></button>
+          <button class="studio-mode" type="button" role="tab" id="studio-tab-site" aria-controls="studio-site" aria-selected="false" tabindex="-1">From your website</button>
+        </div>
+        <noscript><style>.studio-modes{display:none}#studio-site[hidden]{display:block}.cm{display:none}</style></noscript>
+
+        <!-- Content Machine: the app's own template engine, playing live. content-machine.js drives it. -->
+        <div class="cm" id="studio-machine" role="tabpanel" aria-labelledby="studio-tab-machine" data-content-machine>
+          <div class="cm-grid">
+            <div class="cm-side">
+              <div class="cm-templates" role="radiogroup" aria-label="Video template">
+                <button class="cm-tpl is-active" type="button" role="radio" aria-checked="true" data-template="night-cam">
+                  <span class="cm-tpl__tile cm-tpl__tile--night" aria-hidden="true"></span>
+                  <span class="cm-tpl__copy"><strong>Night Cam</strong><span>A 3 AM scenario, told as security footage</span></span>
+                  <span class="cm-tpl__time" data-cm="time">0:20</span>
+                </button>
+                <button class="cm-tpl" type="button" role="radio" aria-checked="false" tabindex="-1" data-template="blueprint">
+                  <span class="cm-tpl__tile cm-tpl__tile--blueprint" aria-hidden="true"></span>
+                  <span class="cm-tpl__copy"><strong>Blueprint</strong><span>Your product or process as a technical drawing</span></span>
+                  <span class="cm-tpl__time" data-cm="time">0:24</span>
+                </button>
+                <button class="cm-tpl" type="button" role="radio" aria-checked="false" tabindex="-1" data-template="big-number">
+                  <span class="cm-tpl__tile cm-tpl__tile--number" aria-hidden="true"></span>
+                  <span class="cm-tpl__copy"><strong>Big Number</strong><span>One question, answered one number at a time</span></span>
+                  <span class="cm-tpl__time" data-cm="time">0:28</span>
+                </button>
+              </div>
+
+              <div class="cm-brand">
+                <label class="cm-brand__label" for="cmBrandName">Make it yours</label>
+                <div class="cm-brand__row">
+                  <input class="cm-brand__input" id="cmBrandName" type="text" maxlength="28" autocomplete="off" spellcheck="false" placeholder="Type your business name" />
+                  <div class="cm-swatches" role="radiogroup" aria-label="Brand colour">
+                    <button class="cm-swatch is-active" type="button" role="radio" aria-checked="true" data-accent="" aria-label="Template colour"></button>
+                    <button class="cm-swatch" type="button" role="radio" aria-checked="false" tabindex="-1" data-accent="#3ecf8e" style="--sw:#3ecf8e" aria-label="Green"></button>
+                    <button class="cm-swatch" type="button" role="radio" aria-checked="false" tabindex="-1" data-accent="#ff5d73" style="--sw:#ff5d73" aria-label="Coral"></button>
+                    <button class="cm-swatch" type="button" role="radio" aria-checked="false" tabindex="-1" data-accent="#b58cff" style="--sw:#b58cff" aria-label="Violet"></button>
+                    <button class="cm-swatch" type="button" role="radio" aria-checked="false" tabindex="-1" data-accent="#ffd24a" style="--sw:#ffd24a" aria-label="Yellow"></button>
+                  </div>
+                </div>
+                <p class="cm-brand__hint">Your name and colour go straight into the video. Watch the end card.</p>
+              </div>
+
+              <p class="cm-fit"><span>Works well for</span> <span data-cm="fit">Home services · Security &amp; IT · Insurance · Property · Auto</span></p>
+            </div>
+
+            <div class="cm-stage">
+              <div class="cm-phone">
+                <canvas class="cm-canvas" data-cm="canvas" width="540" height="960" role="img" aria-label="Preview of the Night Cam video template">Live preview of a video template.</canvas>
+              </div>
+              <div class="cm-bar">
+                <button class="cm-play" type="button" data-cm="play" aria-label="Pause preview">
+                  <svg class="cm-play__pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1.2"/><rect x="14" y="5" width="4" height="14" rx="1.2"/></svg>
+                  <svg class="cm-play__play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.2v13.6a1 1 0 0 0 1.5.86l11-6.8a1 1 0 0 0 0-1.72l-11-6.8A1 1 0 0 0 8 5.2Z"/></svg>
+                </button>
+                <div class="cm-segments" data-cm="segments" aria-hidden="true"></div>
+              </div>
+              <p class="cm-readout"><span class="cm-readout__dot" aria-hidden="true"></span>Live preview, drawn by the same code that renders your video</p>
+            </div>
+          </div>
+
+          <ol class="cm-flow" aria-label="How templates work">
+            <li><span class="cm-flow__n" aria-hidden="true">1</span><div><strong>Pick a format</strong><span>Three to start: Night Cam, Blueprint and Big Number.</span></div></li>
+            <li><span class="cm-flow__n" aria-hidden="true">2</span><div><strong>Hand the brief to your AI</strong><span>Copy the prompt into Claude or ChatGPT. It writes the script on your own plan.</span></div></li>
+            <li><span class="cm-flow__n" aria-hidden="true">3</span><div><strong>Find it in Drafts</strong><span>Sync Socials renders the video with music and saves it, ready to schedule.</span></div></li>
+          </ol>
+        </div>
+
+        <div class="studio-site" id="studio-site" role="tabpanel" aria-labelledby="studio-tab-site" hidden>
         <div class="studio-prompt" aria-hidden="true">
           <div class="sp-field">
             <svg class="sp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
@@ -530,6 +599,8 @@
           </aside>
         </div>
 
+        </div>
+
         <ul class="studio-facts" aria-label="Content Studio details">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m22 8-6 4 6 4Z"/></svg><strong>Your footage or ours</strong><span>Use the reaction-clip library or upload your own clips.</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg><strong>Nothing posts without you</strong><span>Every video waits for your approval first.</span></li>
@@ -540,6 +611,7 @@
         <div class="section-cta">
           <a class="btn btn-primary btn-lg" href="https://app.sync-socials.com/login?mode=signup&amp;next=%2Fcheckout%3FofferKey%3Dgrowth_monthly">Get started free</a>
           <p class="trial-disclosure">No card to start. Explore and draft for free; the 7-day Growth trial begins when you&rsquo;re ready to schedule or publish: $0 today, then $19.95/month. Cancel before it ends to avoid a charge.</p>
+        </div>
         </div>
       </div>
     </section>
@@ -1184,6 +1256,7 @@
 
   <script src="script.js?v=10"></script>
   <script src="sky.js?v=2" defer></script>
+  <script src="content-machine.js?v=1" defer></script>
 <script src="growth.js?v=4" data-ads="meta" data-endpoint="https://app.sync-socials.com/api/growth" defer></script>
 <script src="support-widget.js?v=3" defer></script>
 </body>
